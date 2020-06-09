@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Pr Youssouf EL ALLIOUI"
   avatar           : "profile.png"
-  bio              : "enseignant chercheur - Semantic web, machine learning, educational data mining (EDM)"
-  location         : "Morocco"
+  bio              : "Research scientist - Semantic web, machine learning, educational data mining (EDM)"
+  location         : "Khouribga, Morocco"
   employer         : "Université Sultan Moulay Slimane"
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ"
   email            : "y.elallioui@usms.ma"
   researchgate     :  "https://www.researchgate.net/profile/Youssouf_El_Allioui"
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : # "replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
