@@ -1,12 +1,23 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+I’m Youssouf EL ALLIOUI, an associate professor at the department of computer science, [University of Sultan Moulay Slimane] (http://www.usms.ac.ma/website/), Beni Mellal, Morocco. 
+I work in a multi-disciplinary environment involving machine learning, educational data mining (EDM), Semantic web, knowledge management, Web Personalization and Recommender Systems, E-learning, Semantic E-learning and applied to various real-world problems. 
+I have published several research papers at international journals and conferences. I have served as a member of the technical committees of several international conferences and workshops.
+Since 2013, I have been a member of the reading committee & program of several conferences and journals : [Journal of Big Data] (https://journalofbigdata.springeropen.com/), [Journal of e-Learning and Knowledge Society] (http://www.je-lks.org/ojs/index.php/Je-LKS_EN), [International Conference on Intelligent Systems and Computer Vision] (https://easychair.org/my/conference?conf=iscv2020), [The 3rd International Conference on Information Technology & Electrical Engineering]  (https://easychair.org/my/conference?conf=itee19), [International Conference on Intelligent Systems and Computer Vision 2018] (https://easychair.org/my/conference?conf=iscv2018), [The 4th International Conference On Big Data and Internet of Things] (https://easychair.org/my/conference?conf=bdiot19), [International Conference On Embedded Systems And Artificial Intelligence] (https://easychair.org/my/conference?conf=esai19), [The international conference on WIreless Technologies, embedded and intelligent Systems] (https://easychair.org/my/conference?conf=wits2019), [The 4th IEEE Conference on Information and Multimedia Processing] (https://easychair.org/my/conference?conf=ieeeimp2018), [The 3rd International Conference on Big Data, Cloud and Applications] (https://easychair.org/my/conference?conf=bdca18), [The 2nd International Conference on Big Data, Cloud and Applications] (https://easychair.org/my/conference?conf=bdca17).
+Since 2007, I teach computer science in several departments and several training courses (Initial, Master, engineer and professional) in several universities (public and private): Java EE Frameworks ([ESTA-OFPPT] (https://www.ofppt.ma/)), project management ([Sup'management] (https://www.supmanagement.ma/index.php)), advanced web development and Objective-C ([FST-Settat] (http://www.fsts.ac.ma/)), C++, UML, Algorithm ([FP-Khouribga] (http://www.fpk.ac.ma/)). For more information, please refer to my [CV page] (https://yelallioui.github.io/cv/).
+Currently, and since 2014, I am the Education Coordinator of the Mathematics and computer sciences branch, and I'm responsible for many modules: object-oriented programming, Unified Modeling Language (UML), algorithms and data structures, operating system, computer architecture, computer database, ...
+Within the [polydisciplinary faculty of Khouribga] ((http://www.fpk.ac.ma/)), I participated in interviews of candidates and preparing the competition to the recruitment of new specialized technicians in IT development and IT networks.
+
+I received my Ph.D from [Sidi Mohamed Ben Abdellah University] ( http://www.usmba.ac.ma/), Fez, Morocco.
+
+
 
 This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
