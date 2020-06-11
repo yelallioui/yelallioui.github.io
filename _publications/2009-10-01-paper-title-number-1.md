@@ -1,15 +1,15 @@
 ---
-title: "Paper Title Number 1"
+title: "Mining Learners’ Behaviors: An Approach Based on Educational Data Mining Techniques"
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+venue: 'Embedded Systems and Artificial Intelligence, Part of the Advances in Intelligent Systems and Computing book series (AISC, volume 1076)'
+paperurl: 'https://doi.org/10.1007/978-981-15-0947-6_62'
+citation: 'El Aissaoui O., El Alami El Madani Y., Oughdir L., Dakkak A., El Allioui Y. (2020) Mining Learners’ Behaviors: An Approach Based on Educational Data Mining Techniques. In: Bhateja V., Satapathy S., Satori H. (eds) Embedded Systems and Artificial Intelligence. Advances in Intelligent Systems and Computing, vol 1076. Springer, Singapore'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+Abstract : Educational data mining is a research field that aims to apply data mining techniques in educational environments. Many data mining techniques such as clustering, classification, and prediction can be performed on educational data in order to analyze the learner behaviors. In this work, we have used the clustering and classification techniques to predict the learners’ learning styles. The students’ behaviors while using the e-learning system have been captured from the log file and given as an input of a clustering algorithm to group them into 16 clusters. The resulted clusters were labeled with learning styles combinations based on the Felder and Silverman learning style model. Then the labeled behaviors were given as input to four classifiers: naive Bayes, Cart, Id3, and C4.5 to compare their performance in predicting students’ learning styles. The four classifiers were performed using Weka data mining tool, and the obtained results showed that Id3 yielded better results than the other classifiers.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](https://www.researchgate.net/profile/Youssouf_El_Allioui/publication/340497054_Mining_Learners%27_Behaviors_An_Approach_Based_on_Educational_Data_Mining_Techniques/links/5e98e1f792851c2f52a9e4c0/Mining-Learners-Behaviors-An-Approach-Based-on-Educational-Data-Mining-Techniques.pdf?origin=searchReact&_iepl%5BgeneralViewId%5D=3zkgk8xD7MY9n8JgdRXhBxc3R5s8FJuEJr3S&_iepl%5Bcontexts%5D%5B0%5D=searchReact&_iepl%5BviewId%5D=dPDJXj0oqWvIHI6cYmQKTFV2E1HiOMlg4RUH&_iepl%5BsearchType%5D=publication&_iepl%5Bdata%5D%5BcountLessEqual20%5D=1&_iepl%5Bdata%5D%5BinteractedWithPosition1%5D=1&_iepl%5Bdata%5D%5BwithEnrichment%5D=1&_iepl%5Bposition%5D=1&_iepl%5BrgKey%5D=PB%3A340497054&_iepl%5BinteractionType%5D=publicationDownload)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+Recommended citation: El Aissaoui O., El Alami El Madani Y., Oughdir L., Dakkak A., El Allioui Y. (2020) Mining Learners’ Behaviors: An Approach Based on Educational Data Mining Techniques. In: Bhateja V., Satapathy S., Satori H. (eds) Embedded Systems and Artificial Intelligence. Advances in Intelligent Systems and Computing, vol 1076. Springer, Singapore.
