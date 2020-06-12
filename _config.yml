@@ -84,12 +84,12 @@ author:
   avatar           : "moi.jpg"
   bio              : "Research scientist - Semantic web, machine learning, educational data mining (EDM)"
   location         : "Khouribga, Morocco"
-  employer         : [Université Sultan Moulay Slimane](http://www.usms.ac.ma/website/)
+  employer         : "Université Sultan Moulay Slimane"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ"
   email            : "y.elallioui@usms.ma"
   researchgate     :  "https://www.researchgate.net/profile/Youssouf_El_Allioui"
-  uri              :
+  uri              : "http://www.usms.ac.ma/website/"
   bitbucket        :
   codepen          :
   dribbble         :
