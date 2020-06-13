@@ -10,11 +10,15 @@ location: "Polydisciplinary faculty, Khouribga, Morocco"
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-Heading 1 Unified Modeling Language (UML)
+Polydisciplinary faculty, Khouribga, Morocco :
+======
+1. Unified Modeling Language (UML), Licence Pro., S6 (40 hours)
+1. Java Programming Language, Licence Pro., S6 (44 hours)
+1. Implementation of Algorithms in the C Programming Language, SMP, S4 (40 hours)
+1. Software engineering, Licence Pro., S4 (44 hours)
+
+Heading 2 
 ======
 
-Heading 2 Java Programming Language
-======
-
-Heading 3 Implementation of Algorithms in the C Programming Language 
+Heading 3  
 ======
