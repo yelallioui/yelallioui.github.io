@@ -9,14 +9,15 @@ redirect_from:
 
 Contact information is below, including email and various web services.  This is to make it easy for people to find me when they search for things like “Youssouf EL ALLIOUI email” and get wrong pages on my site.  Here are some other places on the Internet where I reside.
 
-E-mail: stuart [at] stuartgeiger.com
-Twitter: staeiou
-Academia.edu: RStuartGeiger
-Flickr: staeiou
-Google Scholar: author:geiger-r-stuart
-LinkedIn: rstuartgeiger
-Wikipedia: staeiou
-UC-Berkeley: Berkeley Institute for Data Science, School of Information
+* Name : 
+* E-mail: 
+* Twitter: 
+* Academia.edu: 
+* Flickr: 
+* Google Scholar: author:
+* LinkedIn: 
+* Wikipedia: 
+* UC-Berkeley: Berkeley Institute for Data Science, School of Information
 
 
 ## Locations of key files/directories
