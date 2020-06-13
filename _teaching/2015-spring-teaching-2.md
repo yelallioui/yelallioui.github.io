@@ -1,7 +1,7 @@
 ---
 title: "Teacher researcher"
 collection: teaching
-type: "Workshop"
+type: "aaaaa"
 permalink: /teaching/2015-spring-teaching-1
 venue: "Hassan First University (UHP), Computer sciences"
 date: 2013-02-01
