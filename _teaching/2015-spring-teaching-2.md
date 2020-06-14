@@ -8,7 +8,7 @@ date: 2013-02-01
 location: "Polydisciplinary faculty, Khouribga, Morocco"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Pour tout projet informatique d’envergure, il est aujourd’hui indispensable d’opter pour une réalisation orientée objet et de modéliser les besoins et les solutions informatiques envisagées à l’aide d’un langage commun bien adapté au raisonnement objet et indépendant du langage de programmation. Le langage UML est désormais incontournable et représente le seul moyen pour atteindre ces objectifs. L’objectif de ce cours et de donner à l’étudiant une formation UML complète basées sur plusieurs études de cas permettant à celui-ci de mener correctement une démarche d’analyse et de conception pour de grands projets informatiques.
 
 Polydisciplinary faculty, Khouribga, Morocco :
 ======
