@@ -1,9 +1,9 @@
 ---
-title: "Teacher researcher"
+title: "Unified Modeling Language (UML), Licence Pro., S6 (40 hours)"
 collection: teaching
-type: "aaaaa"
+type: "Teacher researcher"
 permalink: /teaching/2015-spring-teaching-1
-venue: "Hassan First University (UHP), Computer sciences"
+venue: "Université sultan moulay slimane (USMS), Computer sciences"
 date: 2013-02-01
 location: "Polydisciplinary faculty, Khouribga, Morocco"
 ---
