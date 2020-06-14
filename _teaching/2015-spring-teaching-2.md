@@ -12,13 +12,37 @@ Pour tout projet informatique d’envergure, il est aujourd’hui indispensable 
 
 Polydisciplinary faculty, Khouribga, Morocco :
 ======
-1. Unified Modeling Language (UML), Licence Pro., S6 (40 hours)
-1. Java Programming Language, Licence Pro., S6 (44 hours)
-1. Implementation of Algorithms in the C Programming Language, SMP, S4 (40 hours)
-1. Software engineering, Licence Pro., S4 (44 hours)
+1. Introduction à la conception orientée objets.
+1. Diagramme des cas d’utilisation.
+1. Diagramme de séquences.
+1. Diagramme de classes.
+1. Diagramme d’objets.
+1. Diagramme des composants.
+1. Diagramme des pacquages.
+1. Diagramme d’état transition.
+1. Diagramme d’activités.
+1. Les différents diagrammes sont illustrés à travers une étude de cas.
 
 Heading 2 
 ======
+  * Cours	: [Introduction à l'UML 2.0](/files/2013-UML.pdf)
+     * TD	: 
+        * Énoncé :
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+        * Correction :
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+			* [Diagramme de cas d'utilisation](/files/UML-UCD-enonce.pdf)
+       * Examens 
+			* [Examen de la session normale, SMI, S5, 2014](/files/UML-exam-2013.pdf)
+			* [Examen de la session de rattrapage, SMI, S5, 2014](/files/UML-exam-2013.pdf)
+			* [Examen de la session normale, SMI, S5, 2014](/files/UML-exam-2013.pdf)
 
 Heading 3  
 ======
