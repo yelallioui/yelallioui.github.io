@@ -1,6 +1,6 @@
 ---
 permalink: /markdown/
-title: "Contactez-moi"
+title: "Contact me"
 author_profile: true
 redirect_from: 
   - /md/
@@ -9,5 +9,5 @@ redirect_from:
 
 Contact information is below, including email and various web services.  This is to make it easy for people to find me when they search for things like “Youssouf EL ALLIOUI email” and get wrong pages on my site.  Here are some other places on the Internet where I reside.
 
-* Name : Youssouf EL ALLIOUI
+* Name  : Youssouf EL ALLIOUI
 * E-mail: y.elallioui@usms.ma
