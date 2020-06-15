@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "My CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -16,8 +16,8 @@ Education
   * Sujet : 
     * Une approche de gestion de profils et de personnalisation des réponses neurologiques dans un environnement mobile.
   * Partenaires : 
-    * Le Centre Hospitalier Universitaire Hassan II – CHU de Fès Service neurologique
-    * Laboratoire d’Architecture et d’Analyse des Systèmes : LAAS-CNRS - Toulouse
+    * Le Centre Hospitalier Universitaire Hassan II – [CHU de Fès](http://www.chu-fes.ma/), [Service de la neurologie](http://www.chu-fes.ma/neurologie/)
+    * Laboratoire d’Architecture et d’Analyse des Systèmes : [LAAS-CNRS - Toulouse](https://www.laas.fr/public/)
     
 * Diplôme d'Etudes Supérieures Spécialisées (DESS), Génie Informatique (GI), [USMBA](http://www.usmba.ac.ma/), 2007
 
