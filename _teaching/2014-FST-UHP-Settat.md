@@ -19,6 +19,6 @@ Modules enseignés :
 |:--------|:-------:|--------:|--------:|--------:|--------:|
 | Unified Modeling Language (UML) | Master | X | X | X | 10 séances |
 | Objective-C, Xcode - Apple Developer | Master | X | X | X | 10 séances |
-| HTML5 et CSS3 | Master | X | X |  | 8 séances |
+| HTML5 et CSS3 | Master | X | X | X | 8 séances |
 | Javascript | Master | X | X | X | 8 séances |
 | JQuery | Master | X | X | X | 4 séances |
