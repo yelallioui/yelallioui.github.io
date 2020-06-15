@@ -85,6 +85,18 @@ Single line blockquote:
 |=============================|
 | Foot1   | Foot2   | Foot3   |
 
+### Modules enseignés :
+
+| Intitulé du module | Niveau | Cours | TD | TP | V.H. |
+|:--------|:-------:|--------:|--------:|--------:|--------:|
+| Gestion de projets Informatique   | 4ème année Ingénierie des Systèmes d’information   | 16   | 16   | 32   | 64   |
+| Gestion de projet logiciel   | 5ème année Ingénierie des Systèmes d’information   | 12   | 10   | 10   | 32   |
+|-----------------------------------------------------------|
+| Méthodologie et outils pour l'ingénierie des SI   | 5ème année Ingénierie des Systèmes d’information   | 24   | 12   | 12   | 48   |
+| Structure de données   | 1ère année informatique   | 12   | 12   | 24   | 48   |
+|===========================================================|
+| Foot1   | Foot2   | Foot3   | Foot3   | Foot3   | Foot3   |
+
 ## Definition Lists
 
 Definition List Title
