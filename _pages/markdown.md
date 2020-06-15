@@ -89,12 +89,10 @@ Single line blockquote:
 
 | Intitulé du module | Niveau | Cours | TD | TP | V.H. |
 |:--------|:-------:|--------:|--------:|--------:|--------:|
-| Gestion de projets Informatique   | 4ème année Ingénierie des Systèmes d’information   | 16   | 16   | 32   | 64   |
-| Gestion de projet logiciel   | 5ème année Ingénierie des Systèmes d’information   | 12   | 10   | 10   | 32   |
-|-----------------------------------------------------------|
-| Méthodologie et outils pour l'ingénierie des SI   | 5ème année Ingénierie des Systèmes d’information   | 24   | 12   | 12   | 48   |
-| Structure de données   | 1ère année informatique   | 12   | 12   | 24   | 48   |
-|===========================================================|
+| Gestion de projets Informatique | 4ème année Ingénierie des Systèmes d’information | 16H   | 16H   | 32H   | 64H   |
+| Gestion de projet logiciel | 5ème année Ingénierie des Systèmes d’information | 12H   | 10H   | 10H   | 32H   |
+| Méthodologie et outils pour l'ingénierie des SI | 5ème année Ingénierie des Systèmes d’information | 24H   | 12H   | 12H   | 48H   |
+| Structure de données   | 1ère année informatique | 12H   | 12H   | 24H   | 48H   |
 | Foot1   | Foot2   | Foot3   | Foot3   | Foot3   | Foot3   |
 
 ## Definition Lists
