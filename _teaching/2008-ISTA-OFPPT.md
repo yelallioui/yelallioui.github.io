@@ -21,12 +21,14 @@ Modules enseignés :
 
 | Intitulé du module | Niveau | Cours | TD | TP | V.H. |
 |:--------|:-------:|--------:|--------:|--------:|--------:|
-| Techniques de base de programmation objet en Java | Technicien spécialisé en développement informatique | X |  | X | 60H |
-| Techniques avancées de programmation objet en Java | Technicien spécialisé en développement informatique | X |  | X | 90H |
-| Conception orientée objet | Technicien spécialisé en développement informatique | X | X | X | 60H |
-| Architecture J2EE et Composants web J2EE (JSP, Servlets) | Technicien spécialisé en développement informatique | X |  | X | 90H |
-| Framework de présentation (Struts, JSF) | Technicien spécialisé en développement informatique | X |  | X | 60H |
-| Composants métiers J2EE | Technicien spécialisé en développement informatique | X |  | X | 60H |
-| Services web | Technicien spécialisé en développement informatique | X |  | X | 30H |
-| Framework de persistance (Hibernate) | Technicien spécialisé en développement informatique | X |  | X | 40H |
-| Framework d’intégration (Spring) | Technicien spécialisé en développement informatique | X |  | X | 40H |
+| Techniques de base de programmation objet en Java | TSDI | X |  | X | 60H |
+| Techniques avancées de programmation objet en Java | TSDI | X |  | X | 90H |
+| Conception orientée objet | TSDI | X | X | X | 60H |
+| Architecture J2EE et Composants web J2EE (JSP, Servlets) | TSDI | X |  | X | 90H |
+| Framework de présentation (Struts, JSF) | TSDI | X |  | X | 60H |
+| Composants métiers J2EE | TSDI | X |  | X | 60H |
+| Services web | TSDI | X |  | X | 30H |
+| Framework de persistance (Hibernate) | TSDI | X |  | X | 40H |
+| Framework d’intégration (Spring) | TSDI | X |  | X | 40H |
+
+TSDI : Technicien spécialisé en développement informatique.
