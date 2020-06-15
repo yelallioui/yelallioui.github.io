@@ -11,30 +11,72 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Computer Sciences, [USMBA](http://www.usmba.ac.ma/), [LAAS-CNRS](https://www.laas.fr/), [CHU-Fès](http://www.chu-fes.ma/), 10/2012
+  * Projet : [Télé-NEuroScience sur une plateforme collaborative Mobile sur Internet](http://homepages.laas.fr/khalil/page/index.php?n=PROJETS.TENEMO)
+  * Sujet : 
+    * Une approche de gestion de profils et de personnalisation des réponses neurologiques dans un environnement mobile.
+  * Partenaires : 
+    * Le Centre Hospitalier Universitaire Hassan II – CHU de Fès Service neurologique
+    * Laboratoire d’Architecture et d’Analyse des Systèmes : LAAS-CNRS - Toulouse
+    
+* Diplôme d'Etudes Supérieures Spécialisées (DESS), Génie Informatique (GI), [USMBA](http://www.usmba.ac.ma/), 2007
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Depuis 02/2013: Enseignant Chercheur
+  * [Université Sultan Moulay Slimane](http://www.usms.ac.ma/)
+  * [Faculté Polydisciplinaire de Khouribga](fpk.ac.ma)
+  * Département des mathématiques et informatique
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 02/2013 – 01/2019 : Enseignant Vacataire
+  * [SUP’MANAGEMENT](https://www.supmanagement.ma/index.php)
+  * Ecole d’Ingénierie (School of Engineering)
+  
+* 02/2012 – 05/2012 : Enseignant Vacataire
+  * [IGA de Fès](https://iga.ac.ma/)
+  
+* 09/2008 – 07/2009 : Formateur
+  * [OFPPT](https://www.ofppt.ma/) - Office de la Formation Professionnelle et de la Promotion du Travail
+  * ISTA Al-Adarissa, Fès, Maroc
+  
+Workshop
+======
+* May 09-13, 2016 : [Big Data Training Workshop](http://med-space.org/iweek16/apply-for-big-data-workshop/ ), ENSIAS, Rabat, Morocco
+* May 10, 2016 : [Green ICT Workshop](http://med-space.org/iweek16/green-ict/ ), ENSIAS, Rabat, Morocco
+* May 11, 2016 : [IWTIE’16](http://med-space.org/iweek16/iwtie16/) - International Workshop of Technology Innovation and Entrepreneurship, ENSIAS, Rabat, Morocco
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Langages :
+  * Python, Objective-C, Java, C #, C/C++, VB.Net,
+  * XML, HTML, CSS, JavaScript, PHP, 
+  * PL/SQL, Transact SQL,
+  * Lisp, Prolog, 
+  * OWL, RDF, RDFS (Ontology)   
+* Analyse & Conception :
+  * UML, Merise 
+  * RUP, V, Y
+* Architectures :
+  * Java EE, DotNet, Web services, Design pattern
+* Technologies :
+  * Ontology, Jena, DataMaster
+  * Servlet, JSP, EJB, JSF, Struts, RMI, CORBA, Hibernate, TopLink,
+  * ASP.Net, ADO.Net, Winform
+* SGBDs :
+  * Oracle, SQL Server, MySQL, Access
+* Logiciels :
+  * PyCharm
+  * Protégé - ontology editor
+  * Xcode - Apple Developer
+  * Eclipse, NetBeans
+  * Microsoft Visual Studio .Net 
+  * Rational Rose, Power AMC Designer 
+* Serveurs :
+  * Apache, Tomcat, Jonas, Jboss, Glassfish
+  * IIS
+* Réseaux :
+  * TCP/IP, OSI, LAN, MAN, WAN, Ethernet
+
 
 Publications
 ======
@@ -56,4 +98,6 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Coordonnateur de la filière SMI – Sciences Mathématiques et Informatique 
+* Membre du collège du département Mathématiques et informatique
+* Chef de la commission Scientifique chargée de la recherche scientifique, de la bibliothèque et des archives. 
