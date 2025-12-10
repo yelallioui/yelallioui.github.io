@@ -22,4 +22,4 @@ main:
     url: /qcm/
     children:
       - title: "Use Case Diagram"
-        url: /qcm/use-case/
+        url: /use-case/
