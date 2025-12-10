@@ -4,12 +4,96 @@ title: "QCM"
 permalink: /qcm/
 ---
 
-<h1>QCM</h1>
+<style>
+/* --- Styles propres aux QCM --- */
+.qcm-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-<p>Bienvenue dans la rubrique des QCM UML.</p>
+.qcm-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
 
-<ul>
-  <li><a href="/qcm/use-case/">Use Case Diagram</a></li>
-  <!-- Tu ajouteras d’autres QCM ici -->
-</ul>
+.qcm-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
 
+/* --- Grid des cartes --- */
+.qcm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* --- Carte QCM --- */
+.qcm-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 25px;
+  background: #fafafa;
+  transition: 0.25s ease-in-out;
+  text-align: center;
+}
+
+.qcm-card:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.12);
+}
+
+/* --- Titre de la carte --- */
+.qcm-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+/* --- Bouton --- */
+.qcm-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2e6da4;
+  color: white !important;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.qcm-button:hover {
+  background: #1c4f78;
+  text-decoration: none;
+}
+</style>
+
+<div class="qcm-header">
+  <h1>QCM UML – Modélisation</h1>
+  <p>Sélectionnez un thème pour accéder au QCM associé.</p>
+</div>
+
+<div class="qcm-grid">
+
+  <!-- QCM Use Case Diagram -->
+  <div class="qcm-card">
+    <h3>Use Case Diagram</h3>
+    <p>Tester votre compréhension des acteurs, cas d'utilisation, include, extend...</p>
+    <a class="qcm-button" href="/qcm/use-case/">Accéder au QCM</a>
+  </div>
+
+  <!-- QCM à venir -->
+  <div class="qcm-card">
+    <h3>Class Diagram</h3>
+    <p>Relations, attributs, méthodes, associations, héritage... (bientôt disponible)</p>
+    <a class="qcm-button" href="#" onclick="alert('Ce QCM n’est pas encore disponible.'); return false;">Bientôt</a>
+  </div>
+
+  <div class="qcm-card">
+    <h3>Activity Diagram</h3>
+    <p>Flux de contrôle, décisions, parallélisme... (bientôt disponible)</p>
+    <a class="qcm-button" href="#" onclick="alert('Ce QCM n’est pas encore disponible.'); return false;">Bientôt</a>
+  </div>
+
+</div>
