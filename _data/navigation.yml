@@ -17,3 +17,9 @@ main:
     
   - title: "Contact me"
     url: /markdown/
+
+  - title: "QCM"
+    url: /qcm/
+    children:
+      - title: "Use Case Diagram"
+        url: /qcm/use-case/
