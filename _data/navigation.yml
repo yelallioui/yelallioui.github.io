@@ -14,9 +14,6 @@ main:
     
   - title: "CV"
     url: /cv/
-    
-  - title: "Contact me"
-    url: /markdown/
 
   - title: "Cours"
     url: /cours/
@@ -26,3 +23,6 @@ main:
     children:
       - title: "Use Case Diagram"
         url: /use-case/
+
+  - title: "Contact me"
+    url: /markdown/
