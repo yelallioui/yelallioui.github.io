@@ -24,5 +24,8 @@ main:
       - title: "Use Case Diagram"
         url: /use-case/
 
+  - title: "PH-PES"
+    url: /ph-pes/
+    
   - title: "Contact me"
     url: /markdown/
