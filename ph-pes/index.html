@@ -1,730 +1,806 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossier de Passage de Grade PH → PES | Prof. Youssouf EL ALLIOUI</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dossier de Passage de Grade PH → PES | Prof. Youssouf EL ALLIOUI</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="presentation-container">
-        <!-- Slide Navigation -->
-        <div class="navigation">
-            <button id="prevBtn" class="nav-btn" aria-label="Diapositive précédente">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-                Précédent
-            </button>
-            <div class="slide-counter">
-                <span id="currentSlide">1</span> / <span id="totalSlides">0</span>
-            </div>
-            <button id="nextBtn" class="nav-btn" aria-label="Diapositive suivante">
-                Suivant
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
+  <div class="presentation-container">
+
+    <!-- Top Utility Bar (NEW) -->
+    <header class="utility-bar" role="banner">
+      <div class="utility-left">
+        <div class="utility-brand">
+          <span class="brand-badge" style="width: 60px;"> USMS </span>
+          <span class="brand-title">Y. EL ALLIOUI - Dossier PH → PES (2019-2025)</span>
         </div>
+      </div>
 
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
+      <div class="utility-right">
+        <button id="toggleCommissionMode" class="utility-btn" type="button" aria-pressed="false">
+          Mode Commission : Off
+        </button>
+        <button id="printBtn" class="utility-btn primary" type="button">
+          Version imprimable / PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- Slide Navigation -->
+    <div class="navigation" role="navigation" aria-label="Navigation des diapositives">
+      <button id="prevBtn" class="nav-btn" aria-label="Diapositive précédente">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Précédent
+      </button>
+
+      <div class="slide-counter" aria-live="polite">
+        <span id="currentSlide">1</span> / <span id="totalSlides">0</span>
+      </div>
+
+      <button id="nextBtn" class="nav-btn" aria-label="Diapositive suivante">
+        Suivant
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" aria-hidden="true">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Slides Container -->
+    <main class="slides-wrapper" role="main">
+
+      <!-- Slide 1: Page de Garde -->
+      <section class="slide active" aria-label="Page de garde">
+        <div class="slide-content cover-slide">
+          <div class="university-logo">
+            <div class="logo-circle">USMS</div>
+          </div>
+
+          <h1 class="main-title">Dossier de Passage de Grade</h1>
+          <h2 class="subtitle">Professeur Habilité → Professeur de l'Enseignement Supérieur</h2>
+
+          <div class="candidate-info">
+            <h3>Pr. Youssouf EL ALLIOUI</h3>
+            <p class="position">Professeur de l'Enseignement Supérieur Habilité</p>
+            <p class="institution">Université Sultan Moulay Slimane de Béni Mellal</p>
+            <p class="department">Faculté Polydisciplinaire de Khouribga</p>
+            <p class="speciality">Département de Mathématiques et Informatique</p>
+          </div>
+
+          <div class="date-info">
+            <p><strong>Années universitaires valorisées : 2019–2025</strong></p>
+          </div>
         </div>
+      </section>
 
-        <!-- Slides Container -->
-        <div class="slides-wrapper">
-            <!-- Slide 1: Page de Garde -->
-            <div class="slide active">
-                <div class="slide-content cover-slide">
-                    <div class="university-logo">
-                        <div class="logo-circle">USMS</div>
-                    </div>
-                    <h1 class="main-title">Dossier de Passage de Grade</h1>
-                    <h2 class="subtitle">Professeur Habilité → Professeur de l'Enseignement Supérieur</h2>
-                    
-                    <div class="candidate-info">
-                        <h3>Pr. Youssouf EL ALLIOUI</h3>
-                        <p class="position">Professeur de l'Enseignement Supérieur Habilité</p>
-                        <p class="institution">Université Sultan Moulay Slimane de Béni Mellal</p>
-                        <p class="department">Faculté Polydisciplinaire de Khouribga</p>
-                        <p class="speciality">Département de Mathématiques et Informatique</p>
-                    </div>
+      <!-- Slide 2: Vue d'ensemble du dossier -->
+      <section class="slide" aria-label="Vue d'ensemble du dossier">
+        <div class="slide-content">
+          <h2 class="slide-title">Vue d'Ensemble du Dossier</h2>
 
-                    <div class="date-info">
-                        <p><strong>Années Universitaires 2019-2025</strong></p>
-                    </div>
+          <div class="overview-grid">
+            <article class="overview-card pedagogical">
+              <div class="card-header">
+                <div class="icon-circle">A</div>
+                <h3>Activités Pédagogiques</h3>
+              </div>
+
+              <div class="card-content">
+                <div class="score-display">
+                  <span class="score">29</span>
+                  <span class="max-score">/ 35</span>
                 </div>
+
+                <div class="meta-line">
+                  <span class="pill">Plafond : 35</span>
+                  <span class="pill success">Conforme</span>
+                </div>
+
+                <ul class="highlights">
+                  <li>A.1 – Production pédagogique (plafond atteint)</li>
+                  <li>A.2 – Encadrement pédagogique (14 PFE Licence)</li>
+                  <li>A.3 – Responsabilités pédagogiques (plafond atteint)</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="overview-card research">
+              <div class="card-header">
+                <div class="icon-circle">B</div>
+                <h3>Activités de Recherche</h3>
+              </div>
+
+              <div class="card-content">
+                <div class="score-display">
+                  <span class="score">29</span>
+                  <span class="max-score">/ 35</span>
+                </div>
+
+                <div class="meta-line">
+                  <span class="pill">Plafond : 35</span>
+                  <span class="pill success">Conforme</span>
+                </div>
+
+                <ul class="highlights">
+                  <li>B.1 – Production scientifique (plafond atteint)</li>
+                  <li>B.2 – Encadrement scientifique (Masters, jurys)</li>
+                  <li>B.3 – Responsabilités scientifiques (plafond atteint)</li>
+                  <li>B.4 – Rayonnement & expertise (plafond atteint)</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="total-score">
+            <h3>Score Total</h3>
+            <div class="total-display">
+              <span class="total-number">58</span>
+              <span class="total-max">/ 70</span>
+            </div>
+            <p class="note-muted">
+              Les éléments présentés correspondent strictement aux activités valorisables selon la grille nationale, sans cumul hors cadre réglementaire.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 (NEW): Conformité à la grille nationale -->
+      <section class="slide" aria-label="Conformité à la grille nationale">
+        <div class="slide-content">
+          <h2 class="slide-title">Conformité du dossier à la grille nationale PH → PES</h2>
+
+          <div class="score-badge">Validation structurée (critères ↔ sections ↔ scores)</div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Critère officiel</th>
+                  <th>Exigence</th>
+                  <th>Réalisé</th>
+                  <th>Référence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Volet A — Activités pédagogiques</strong></td>
+                  <td><strong>Atteindre le seuil requis</strong></td>
+                  <td><span class="status ok">✔️ CONFORME</span></td>
+                  <td><strong>Section A — 29/35</strong></td>
+                </tr>
+                <tr>
+                  <td>A.1 — Production pédagogique</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Plafond atteint</span></td>
+                  <td>A.1 — 15/15</td>
+                </tr>
+                <tr>
+                  <td>A.2 — Encadrement pédagogique</td>
+                  <td>Conformité selon barème</td>
+                  <td><span class="status ok">✔️ Conforme</span></td>
+                  <td>A.2 — 8/14</td>
+                </tr>
+                <tr>
+                  <td>A.3 — Responsabilités pédagogiques</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Plafond atteint</span></td>
+                  <td>A.3 — 6/6</td>
+                </tr>
+                <tr>
+                  <td><strong>Volet B — Activités de recherche</strong></td>
+                  <td><strong>Atteindre le seuil requis</strong></td>
+                  <td><span class="status ok">✔️ CONFORME</span></td>
+                  <td><strong>Section B — 29/35</strong></td>
+                </tr>
+                <tr>
+                  <td>B.1 — Production scientifique</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Plafond atteint</span></td>
+                  <td>B.1 — 16/16</td>
+                </tr>
+                <tr>
+                  <td>B.2 — Encadrement scientifique</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Conforme</span></td>
+                  <td>B.2 — 6/12</td>
+                </tr>
+                <tr>
+                  <td>B.3 — Responsabilités scientifiques</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Plafond atteint</span></td>
+                  <td>B.3 — 3/3</td>
+                </tr>
+                <tr>
+                  <td>B.4 — Rayonnement & expertise</td>
+                  <td>Plafond réglementaire</td>
+                  <td><span class="status ok">✔️ Plafond atteint</span></td>
+                  <td>B.4 — 4/4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight-box">
+            <p><strong>NB :</strong> Cette présentation numérique suit strictement la logique de la grille nationale : chaque activité est rattachée à une rubrique, documentée, et comptabilisée dans les plafonds réglementaires.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Section A - Introduction -->
+      <section class="slide" aria-label="Section A activités pédagogiques">
+        <div class="slide-content">
+          <div class="section-header section-a">
+            <h2 class="slide-title">Section A : Activités Pédagogiques</h2>
+            <div class="section-score">
+              <span class="score-label">Score obtenu :</span>
+              <span class="score-value">29 / 35</span>
+              <span class="score-sub">Plafond : 35 — <strong>Conforme</strong></span>
+            </div>
+          </div>
+
+          <div class="subsection-grid">
+            <div class="subsection-card">
+              <h3>A.1 – Production Pédagogique</h3>
+              <div class="subsection-score">15 / 15</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 15</span>
+                <span class="pill success">Plafond atteint</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>Manuels d'exercices corrigés :</strong> 3</li>
+                <li><strong>Polycopiés pédagogiques :</strong> 3</li>
+                <li><strong>Supports électroniques :</strong> 5</li>
+                <li><strong>Didacticiels :</strong> 3</li>
+                <li><strong>Plateformes en ligne :</strong> 3</li>
+              </ul>
             </div>
 
-            <!-- Slide 2: Vue d'ensemble du dossier -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">Vue d'Ensemble du Dossier</h2>
-                    <div class="overview-grid">
-                        <div class="overview-card pedagogical">
-                            <div class="card-header">
-                                <div class="icon-circle">A</div>
-                                <h3>Activités Pédagogiques</h3>
-                            </div>
-                            <div class="card-content">
-                                <div class="score-display">
-                                    <span class="score">29</span>
-                                    <span class="max-score">/ 35</span>
-                                </div>
-                                <ul class="highlights">
-                                    <li>A.1 – Production pédagogique complète (Manuel, Polycopiés, Diaporamas, Didacticiels, Pages web)</li>
-                                    <li>A.2 – Encadrement pédagogique (14 PFE Licence)</li>
-                                    <li>A.3 – Responsabilités pédagogiques complètes (coordinateur de filière, coordinateur de modules, membre élu du conseil, commissions)</li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="overview-card research">
-                            <div class="card-header">
-                                <div class="icon-circle">B</div>
-                                <h3>Activités de Recherche</h3>
-                            </div>
-                            <div class="card-content">
-                                <div class="score-display">
-                                    <span class="score">29</span>
-                                    <span class="max-score">/ 35</span>
-                                </div>
-                                <ul class="highlights">
-                                    <li>B.1 – Production scientifique (articles, ouvrages, chapitres et communications)</li>
-                                    <li>B.2 – Encadrement scientifique (master, rapporteur)</li>
-                                    <li>B.3 – Responsabilités scientifiques (Membre : labo, equipe et association, Réviseur journal) </li>
-                                    <li>B.4 – Rayonnement, Ouverture, Innovation et valorisation :</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="total-score">
-                        <h3>Score Total</h3>
-                        <div class="total-display">
-                            <span class="total-number">58</span>
-                            <span class="total-max">/ 70</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="subsection-card">
+              <h3>A.2 – Encadrement Pédagogique</h3>
+              <div class="subsection-score warning">8 / 14</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 14</span>
+                <span class="pill neutral">Conforme (barème)</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>PFE Licence :</strong> 14 encadrements</li>
+                <li>Période : 2019–2025</li>
+                <li>Domaines : Web, Mobile, ML, IA</li>
+              </ul>
             </div>
 
-            <!-- Slide 3: Section A - Introduction -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="section-header section-a">
-                        <h2 class="slide-title">Section A : Activités Pédagogiques</h2>
-                        <div class="section-score">
-                            <span class="score-label">Score obtenu :</span>
-                            <span class="score-value">29 / 35</span>
-                        </div>
-                    </div>
+            <div class="subsection-card">
+              <h3>A.3 – Responsabilités Pédagogiques</h3>
+              <div class="subsection-score">6 / 6</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 6</span>
+                <span class="pill success">Plafond atteint</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>Coordinateur filière SMI :</strong> 2015–2024</li>
+                <li><strong>Coordination modules :</strong> 5 modules</li>
+                <li><strong>Membre Conseil :</strong> 2021–2023</li>
+                <li><strong>Jurys de recrutement :</strong> 5</li>
+              </ul>
+            </div>
+          </div>
 
-                    <div class="subsection-grid">
-                        <div class="subsection-card">
-                            <h3>A.1 – Production Pédagogique</h3>
-                            <div class="subsection-score">15 / 15</div>
-                            <ul class="subsection-list">
-                                <li><strong>Manuels d'exercices corrigés :</strong> 3</li>
-                                <li><strong>Polycopiés pédagogiques :</strong> 3</li>
-                                <li><strong>Supports électroniques :</strong> 5</li>
-                                <li><strong>Didacticiels :</strong> 3</li>
-                                <li><strong>Plateformes en ligne :</strong> 3</li>
-                            </ul>
-                        </div>
+          <div class="highlight-box">
+            <p><strong>NB :</strong> Les éléments présentés correspondent aux activités valorisables selon la grille nationale, sans cumul hors cadre réglementaire.</p>
+          </div>
+        </div>
+      </section>
 
-                        <div class="subsection-card">
-                            <h3>A.2 – Encadrement Pédagogique</h3>
-                            <div class="subsection-score" style="background-color: darkorange;">8 / 14</div>
-                            <ul class="subsection-list">
-                                <li><strong>PFE Licence :</strong> 14 encadrements</li>
-                                <li>Périodes : 2019-2025</li>
-                                <li>Domaines variés : Web, Mobile, ML, IA</li>
-                            </ul>
-                        </div>
+      <!-- Slide 5: A/1.1 - Manuels d'exercices -->
+      <section class="slide" aria-label="A.1.1 Manuels d'exercices corrigés">
+        <div class="slide-content">
+          <h2 class="slide-title">A.1.1 – Manuels d'Exercices Corrigés</h2>
 
-                        <div class="subsection-card">
-                            <h3>A.3 – Responsabilités Pédagogiques</h3>
-                            <div class="subsection-score">6 / 6</div>
-                            <ul class="subsection-list">
-                                <li><strong>Coordinateur filière SMI :</strong> 2015-2024</li>
-                                <li><strong>Coordination modules :</strong> 5 modules</li>
-                                <li><strong>Membre Conseil FPK :</strong> 2021-2023</li>
-                                <li><strong>Participations jurys de recrutement :</strong> 5</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="score-badge">
+            Score : <strong>6</strong> points
+            <span class="badge-inline">Plafond : 6 — Plafond atteint</span>
+          </div>
+
+          <div class="publications-list">
+            <div class="publication-item">
+              <div class="pub-number">1</div>
+              <div class="pub-content">
+                <h4>Exercices corrigés (TP) : Programmation Web 2 (JavaScript)</h4>
+                <p class="pub-details">
+                  <span class="badge">TC MIP INFO</span>
+                  <span class="badge">Semestre 4</span>
+                </p>
+                <p class="pub-description">Manuel complet de TP avec solutions détaillées.</p>
+                <a href="https://fr.slideshare.net/slideshow/corriges-guides-des-travaux-pratiques-javascript-applications-interactives-et-gestion-de-donnees/283956841" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
             </div>
 
-            <!-- Slide 4: A/1.1 - Manuels d'exercices -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.1.1 – Manuels d'Exercices Corrigés</h2>
-                    <div class="score-badge">6 points (3 manuels × 2 points)</div>
-
-                    <div class="publications-list">
-                        <div class="publication-item">
-                            <div class="pub-number">1</div>
-                            <div class="pub-content">
-                                <h4>Exercices corrigés (TP) : Programmation Web 2 (JavaScript)</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière TC MIP INFO</span>
-                                    <span class="badge">Semestre 4</span>
-                                </p>
-                                <p class="pub-description">Manuel complet de travaux pratiques avec solutions détaillées pour l'apprentissage du JavaScript.</p>
-                                <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur SlideShare
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="pub-number">2</div>
-                            <div class="pub-content">
-                                <h4>Exercices corrigés (TP) : Programmation Orientée Objets (Python)</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière Licence SIIA</span>
-                                    <span class="badge">Semestre 6</span>
-                                </p>
-                                <p class="pub-description">Recueil d'exercices pratiques couvrant les concepts de la POO en Python avec corrections détaillées.</p>
-                                <a href="https://github.com/yelallioui" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur GitHub
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item">
-                            <div class="pub-number">3</div>
-                            <div class="pub-content">
-                                <h4>Exercices corrigés (TD) : Informatique 2 – Algorithmique I</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière SMI</span>
-                                    <span class="badge">Semestre 2</span>
-                                </p>
-                                <p class="pub-description">Série de travaux dirigés avec solutions pour l'initiation à l'algorithmique et aux structures de données.</p>
-                                <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur SlideShare
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="publication-item">
+              <div class="pub-number">2</div>
+              <div class="pub-content">
+                <h4>Exercices corrigés (TP) : Programmation Orientée Objets (Python)</h4>
+                <p class="pub-details">
+                  <span class="badge">Licence SIIA</span>
+                  <span class="badge">Semestre 6</span>
+                </p>
+                <p class="pub-description">Recueil d’exercices POO Python avec corrections.</p>
+                <a href="https://fr.slideshare.net/slideshow/solutions-detaillees-des-travaux-pratiques-python-analyse-mise-en-oeuvre-et-bonnes-pratiques/283956839" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
             </div>
 
-            <!-- Slide 5: A/1.2 - Polycopiés -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.1.2 – Polycopiés Pédagogiques</h2>
-                    <div class="score-badge">6 points (3 polycopiés × 2 points)</div>
+            <div class="publication-item">
+              <div class="pub-number">3</div>
+              <div class="pub-content">
+                <h4>Exercices corrigés (TD) : Informatique 2 – Algorithmique I</h4>
+                <p class="pub-details">
+                  <span class="badge">SMI</span>
+                  <span class="badge">Semestre 2</span>
+                </p>
+                <p class="pub-description">Série de TD avec solutions pour l’initiation à l’algorithmique.</p>
+                <a href="https://fr.slideshare.net/slideshow/corriges-complets-des-travaux-diriges-d-algorithmique-raisonnement-mise-en-oeuvre-et-validation/283926782" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <div class="publications-list">
-                        <div class="publication-item">
-                            <div class="pub-number">1</div>
-                            <div class="pub-content">
-                                <h4>Support de cours : Programmation Orientée Objets (Python)</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière Licence SIIA</span>
-                                    <span class="badge">Semestre 6</span>
-                                </p>
-                                <p class="pub-description">Cours complet sur les concepts de la programmation orientée objets avec Python, incluant théorie et exemples pratiques.</p>
-                                <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur SlideShare
-                                </a>
-                            </div>
-                        </div>
+      <!-- Slide 6: A/1.2 - Polycopiés -->
+      <section class="slide" aria-label="A.1.2 Polycopiés pédagogiques">
+        <div class="slide-content">
+          <h2 class="slide-title">A.1.2 – Polycopiés Pédagogiques</h2>
 
-                        <div class="publication-item">
-                            <div class="pub-number">2</div>
-                            <div class="pub-content">
-                                <h4>Support de cours : Programmation Web Avancée (PHP – MySQL)</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière Licence SIIA</span>
-                                    <span class="badge">Semestre 6</span>
-                                </p>
-                                <p class="pub-description">Polycopié détaillé couvrant le développement web avec PHP et MySQL, bases de données et applications dynamiques.</p>
-                                <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur SlideShare
-                                </a>
-                            </div>
-                        </div>
+          <div class="score-badge">
+            Score : <strong>6</strong> points
+            <span class="badge-inline">Plafond : 6 — Plafond atteint</span>
+          </div>
 
-                        <div class="publication-item">
-                            <div class="pub-number">3</div>
-                            <div class="pub-content">
-                                <h4>Support de cours : Programmation Web 2 (JavaScript)</h4>
-                                <p class="pub-details">
-                                    <span class="badge">Filière TC MIP INFO</span>
-                                    <span class="badge">Semestre 4</span>
-                                </p>
-                                <p class="pub-description">Document pédagogique structuré pour l'apprentissage du JavaScript, de la syntaxe de base aux concepts avancés.</p>
-                                <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    Voir sur SlideShare
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="publications-list">
+            <div class="publication-item">
+              <div class="pub-number">1</div>
+              <div class="pub-content">
+                <h4>Support de cours : Programmation Orientée Objets (Python)</h4>
+                <p class="pub-details">
+                  <span class="badge">Licence SIIA</span>
+                  <span class="badge">Semestre 6</span>
+                </p>
+                <p class="pub-description">Cours complet, structuré, avec exemples pratiques.</p>
+                <a href="https://fr.slideshare.net/slideshow/programmation-orientee-objets-python-concepts-pratiques-et-applications/283926543" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
             </div>
 
-            <!-- Slide 6: A/1.3 - Supports NTIC (Diaporamas) -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.1.3 – Supports Électroniques (Diaporamas)</h2>
-                    <div class="score-badge">5 points (5 supports × 1 point)</div>
-
-                    <div class="publications-list">
-                        <div class="publication-item compact">
-                            <div class="pub-number">1</div>
-                            <div class="pub-content">
-                                <h4>Programmation Web 2 (JavaScript)</h4>
-                                <p class="pub-details"><span class="badge">TC MI INFO – S4</span></p>
-                                <a href="https://fr.slideshare.net/slideshow/introduction-aux-bases-du-javascript-pour-le-developpement-web-interactif/283926648" class="resource-link" target="_blank">Voir sur SlideShare</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item compact">
-                            <div class="pub-number">2</div>
-                            <div class="pub-content">
-                                <h4>Conception Orientée Objets (UML)</h4>
-                                <p class="pub-details"><span class="badge">SMI – S5</span></p>
-                                <a href="https://fr.slideshare.net/slideshow/uml-2-2-introduction-complete-a-la-modelisation-orientee-objet-et-aux-diagrammes-uml/283926647" class="resource-link" target="_blank">Voir sur SlideShare</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item compact">
-                            <div class="pub-number">3</div>
-                            <div class="pub-content">
-                                <h4>Programmation Orientée Objet (Java)</h4>
-                                <p class="pub-details"><span class="badge">SMI – S5</span></p>
-                                <a href="https://fr.slideshare.net/slideshow/programmation-orientee-objet-en-java-concepts-fondamentaux-et-mise-en-pratique/283926644" class="resource-link" target="_blank">Voir sur SlideShare</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item compact">
-                            <div class="pub-number">4</div>
-                            <div class="pub-content">
-                                <h4>Gestion de Projet Informatique</h4>
-                                <p class="pub-details"><span class="badge">SMI – S6</span></p>
-                                <a href="https://fr.slideshare.net/slideshow/gestion-de-projet-informatique-methodes-outils-et-bonnes-pratiques-pour-reussir-un-projet-98-caracteres/283926646" class="resource-link" target="_blank">Voir sur SlideShare</a>
-                            </div>
-                        </div>
-
-                        <div class="publication-item compact">
-                            <div class="pub-number">5</div>
-                            <div class="pub-content">
-                                <h4>Programmation Web 1 : HTML & CSS</h4>
-                                <p class="pub-details"><span class="badge">TC MI INFO – S3</span></p>
-                                <a href="https://fr.slideshare.net/slideshow/cours-complet-de-programmation-web-1-introduction-pratique-a-html-et-css-pour-debutants/284158511" class="resource-link" target="_blank">Voir sur SlideShare</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="publication-item">
+              <div class="pub-number">2</div>
+              <div class="pub-content">
+                <h4>Support de cours : Programmation Web Avancée (PHP – MySQL)</h4>
+                <p class="pub-details">
+                  <span class="badge">Licence SIIA</span>
+                  <span class="badge">Semestre 6</span>
+                </p>
+                <p class="pub-description">Support détaillé : PHP, BD, applications dynamiques.</p>
+                <a href="https://fr.slideshare.net/slideshow/programmation-web-avancee-php-mysql-fondamentaux-poo-et-base-de-donnees/283926546" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
             </div>
 
-            <!-- Slide 7: A/1.3 - Didacticiels et Plateformes -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.1.3 – Didacticiels et Plateformes Pédagogiques</h2>
-                    
-                    <div class="two-column-layout">
-                        <div class="column">
-                            <h3>Didacticiels (3 points)</h3>
-                            <div class="publications-list">
-                                <div class="publication-item compact">
-                                    <div class="pub-number">1</div>
-                                    <div class="pub-content">
-                                        <h4>Modèle de rapport de PFE SMI</h4>
-                                        <p class="pub-description">Guide méthodologique pour la structuration, présentation et rédaction scientifique du mémoire de fin d'études.</p>
-                                        <a href="https://github.com/yelallioui" class="resource-link" target="_blank">Voir sur GitHub</a>
-                                    </div>
-                                </div>
+            <div class="publication-item">
+              <div class="pub-number">3</div>
+              <div class="pub-content">
+                <h4>Support de cours : Programmation Web 2 (JavaScript)</h4>
+                <p class="pub-details">
+                  <span class="badge">TC MIP INFO</span>
+                  <span class="badge">Semestre 4</span>
+                </p>
+                <p class="pub-description">Document structuré : de la base au niveau avancé.</p>
+                <a href="https://fr.slideshare.net/slideshow/programmation-web-2-langage-javascript/283926542" class="resource-link" target="_blank" rel="noopener">
+                  Voir sur SlideShare
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                                <div class="publication-item compact">
-                                    <div class="pub-number">2</div>
-                                    <div class="pub-content">
-                                        <h4>Mémo HTML</h4>
-                                        <p class="pub-description">Support didacticiel et aide-mémoire synthétique présentant les balises principales et bonnes pratiques.</p>
-                                        <a href="https://github.com/yelallioui" class="resource-link" target="_blank">Voir sur GitHub</a>
-                                    </div>
-                                </div>
+      <!-- Slide 7: A/1.3 - Supports NTIC -->
+      <section class="slide" aria-label="A.1.3 Supports électroniques">
+        <div class="slide-content">
+          <h2 class="slide-title">A.1.3 – Supports Électroniques (Diaporamas)</h2>
 
-                                <div class="publication-item compact">
-                                    <div class="pub-number">3</div>
-                                    <div class="pub-content">
-                                        <h4>Mémo CSS</h4>
-                                        <p class="pub-description">Aide-mémoire sur les propriétés fondamentales de mise en forme et structuration des feuilles de style.</p>
-                                        <a href="https://github.com/yelallioui" class="resource-link" target="_blank">Voir sur GitHub</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          <div class="score-badge">
+            Score : <strong>5</strong> points
+            <span class="badge-inline">Plafond : 5 — Plafond atteint</span>
+          </div>
 
-                        <div class="column">
-                            <h3>Plateformes Web (2 points)</h3>
-                            <div class="publications-list">
-                                <div class="publication-item compact">
-                                    <div class="pub-number">1</div>
-                                    <div class="pub-content">
-                                        <h4>GitHub</h4>
-                                        <p class="pub-description">Séries de TP, codes sources commentés, corrections d'exercices et projets étudiants.</p>
-                                        <a href="https://github.com/yelallioui" class="resource-link" target="_blank">
-                                            github.com/yelallioui
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item compact">
-                                    <div class="pub-number">2</div>
-                                    <div class="pub-content">
-                                        <h4>SlideShare</h4>
-                                        <p class="pub-description">Supports de cours, séries de TD et corrections pour modules d'informatique et programmation.</p>
-                                        <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank">
-                                            slideshare.net/yelallioui
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="publication-item compact">
-                                    <div class="pub-number">3</div>
-                                    <div class="pub-content">
-                                        <h4>Page Personnelle</h4>
-                                        <p class="pub-description">Ressources pédagogiques centralisées, référentiel scientifique, curriculum et publications.</p>
-                                        <a href="https://yelallioui.github.io" class="resource-link" target="_blank">
-                                            yelallioui.github.io
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="publications-list">
+            <div class="publication-item compact">
+              <div class="pub-number">1</div>
+              <div class="pub-content">
+                <h4>Programmation Web 2 (JavaScript)</h4>
+                <p class="pub-details"><span class="badge">TC MI INFO – S4</span></p>
+                <a href="https://fr.slideshare.net/slideshow/introduction-aux-bases-du-javascript-pour-le-developpement-web-interactif/283926648" class="resource-link" target="_blank" rel="noopener">Voir sur SlideShare</a>
+              </div>
             </div>
 
-            <!-- Slide 8: A/2 - Encadrement PFE (Part 1) -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.2 – Encadrement de Projets de Fin d'Études (1/2)</h2>
-                    <div class="score-badge">14 points (14 PFE × 1 point)</div>
-
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>N°</th>
-                                    <th>Étudiant(e)</th>
-                                    <th>Sujet du PFE</th>
-                                    <th>Année</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nisrine AMAOUI</td>
-                                    <td>Conception et réalisation d'un site web de formation à distance</td>
-                                    <td>2019/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Mohammed CHERKI</td>
-                                    <td>Conception et réalisation d'une application de chat (Flutter/Dart)</td>
-                                    <td>2019/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Zohair DIAB</td>
-                                    <td>Amélioration et optimisation d'un site web de recrutement</td>
-                                    <td>2019/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Rachid FAIZ</td>
-                                    <td>Reconnaissance de l'écriture arabe à l'aide des techniques de Machine Learning</td>
-                                    <td>2019/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Aymane HARKATI</td>
-                                    <td>Conception et réalisation d'une application mobile d'aide à la décision (Android/Kotlin)</td>
-                                    <td>2020/2021</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Zahra BAWAFI</td>
-                                    <td>Conception et réalisation d'une application mobile de covoiturage</td>
-                                    <td>2021/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Zakaria MEKKAOUI</td>
-                                    <td>Développement d'une application mobile/web pour la réservation d'hébergements en journée</td>
-                                    <td>2021/2022</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="publication-item compact">
+              <div class="pub-number">2</div>
+              <div class="pub-content">
+                <h4>Conception Orientée Objets (UML)</h4>
+                <p class="pub-details"><span class="badge">SMI – S5</span></p>
+                <a href="https://fr.slideshare.net/slideshow/uml-2-2-introduction-complete-a-la-modelisation-orientee-objet-et-aux-diagrammes-uml/283926647" class="resource-link" target="_blank" rel="noopener">Voir sur SlideShare</a>
+              </div>
             </div>
 
-            <!-- Slide 9: A/2 - Encadrement PFE (Part 2) -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.2 – Encadrement de Projets de Fin d'Études (2/2)</h2>
-                    <div class="score-badge">Suite : 7 PFE supplémentaires</div>
-
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>N°</th>
-                                    <th>Étudiant(e)</th>
-                                    <th>Sujet du PFE</th>
-                                    <th>Année</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Afafe BOUZIANE</td>
-                                    <td>Le Métavers : revue de littérature et exploration de ses applications potentielles</td>
-                                    <td>2021/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>Mohamed ETTAHAIRY</td>
-                                    <td>Développement d'une solution web pour la digitalisation des processus de gestion de la scolarité</td>
-                                    <td>2022/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Imane ELBAHAOUI</td>
-                                    <td>Conception d'un système intelligent de recommandation : comparaison d'algorithmes de Machine Learning en Python</td>
-                                    <td>2022/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td>Omar BELAIZI</td>
-                                    <td>Étude comparative des plateformes blockchain : avantages et limites selon les cas d'usage</td>
-                                    <td>2022/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>12</td>
-                                    <td>Achraf MANSARI</td>
-                                    <td>Conception et développement d'une application</td>
-                                    <td>2023/2024</td>
-                                </tr>
-                                <tr>
-                                    <td>13</td>
-                                    <td>Hicham BENOUKAISS</td>
-                                    <td>Conception et développement d'une application</td>
-                                    <td>2023/2024</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td>Maha EL ABADI</td>
-                                    <td>Smart Contract : fonctionnement, sécurité, réglementation et applications</td>
-                                    <td>2024/2025</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="highlight-box">
-                        <p><strong>Domaines couverts :</strong> Applications web/mobile, Machine Learning, Blockchain, Intelligence Artificielle</p>
-                        <p><strong>Technologies utilisées :</strong> Python, Flutter/Dart, Android/Kotlin, PHP/MySQL</p>
-                    </div>
-                </div>
+            <div class="publication-item compact">
+              <div class="pub-number">3</div>
+              <div class="pub-content">
+                <h4>Programmation Orientée Objet (Java)</h4>
+                <p class="pub-details"><span class="badge">SMI – S5</span></p>
+                <a href="https://fr.slideshare.net/slideshow/programmation-orientee-objet-en-java-concepts-fondamentaux-et-mise-en-pratique/283926644" class="resource-link" target="_blank" rel="noopener">Voir sur SlideShare</a>
+              </div>
             </div>
 
-            <!-- Slide 10: A/3 - Responsabilités Pédagogiques -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.3 – Responsabilités Pédagogiques</h2>
-                    <div class="score-badge">6 points</div>
-
-                    <div class="responsibilities-grid">
-                        <div class="responsibility-card highlight">
-                            <h3>Coordinateur de Filière SMI</h3>
-                            <div class="points-badge">2 points</div>
-                            <p class="period">Période : 2015 – 2024 (9 ans)</p>
-                            <p class="description">Coordination de la filière Sciences Mathématiques et Informatiques (SMI) à la Faculté Polydisciplinaire de Khouribga.</p>
-                        </div>
-
-                        <div class="responsibility-card">
-                            <h3>Coordination de Modules</h3>
-                            <div class="points-badge">5 points</div>
-                            <div class="modules-list">
-                                <h4>Filière SMI :</h4>
-                                <ul>
-                                    <li><strong>Semestre 4 :</strong>
-                                        <ul>
-                                            <li>M22 : Structures de Données</li>
-                                            <li>M23 : Systèmes d'Exploitation II</li>
-                                            <li>M25 : Architecture des Ordinateurs</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>Semestre 6 :</strong>
-                                        <ul>
-                                            <li>M34 : Base de Données Avancées (PL/SQL)</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h4>Filière SMA :</h4>
-                                <ul>
-                                    <li><strong>Semestre 4 :</strong>
-                                        <ul>
-                                            <li>M26 : Informatique 4 : Algorithmique et Structures de Données</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="publication-item compact">
+              <div class="pub-number">4</div>
+              <div class="pub-content">
+                <h4>Gestion de Projet Informatique</h4>
+                <p class="pub-details"><span class="badge">SMI – S6</span></p>
+                <a href="https://fr.slideshare.net/slideshow/gestion-de-projet-informatique-methodes-outils-et-bonnes-pratiques-pour-reussir-un-projet-98-caracteres/283926646" class="resource-link" target="_blank" rel="noopener">Voir sur SlideShare</a>
+              </div>
             </div>
 
-            <!-- Slide 11: A/3 - Autres Responsabilités -->
-            <div class="slide">
-                <div class="slide-content">
-                    <h2 class="slide-title">A.3 – Autres Responsabilités Institutionnelles</h2>
-                    <div class="score-badge">3 points</div>
+            <div class="publication-item compact">
+              <div class="pub-number">5</div>
+              <div class="pub-content">
+                <h4>Programmation Web 1 : HTML & CSS</h4>
+                <p class="pub-details"><span class="badge">TC MI INFO – S3</span></p>
+                <a href="https://fr.slideshare.net/slideshow/cours-complet-de-programmation-web-1-introduction-pratique-a-html-et-css-pour-debutants/284158511" class="resource-link" target="_blank" rel="noopener">Voir sur SlideShare</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <div class="responsibilities-list">
-                        <div class="responsibility-item">
-                            <div class="resp-icon">📋</div>
-                            <div class="resp-content">
-                                <h3>Membre Élu du Conseil de la Faculté</h3>
-                                <div class="points-inline">1 point</div>
-                                <p class="period">Mandature : 2021 – 2023</p>
-                                <p class="description">Participation aux décisions stratégiques de la Faculté Polydisciplinaire de Khouribga, USMS.</p>
-                            </div>
-                        </div>
+      <!-- Slide 8: A/1.3 - Didacticiels et Plateformes -->
+      <section class="slide" aria-label="A.1.3 Didacticiels et plateformes">
+        <div class="slide-content">
+          <h2 class="slide-title">A.1.3 – Didacticiels et Plateformes Pédagogiques</h2>
 
-                        <div class="responsibility-item">
-                            <div class="resp-icon">🔬</div>
-                            <div class="resp-content">
-                                <h3>Membre de la Commission de la Recherche Scientifique</h3>
-                                <div class="points-inline">1 point</div>
-                                <p class="period">Mandature : 2021 – 2023</p>
-                                <p class="description">Commission permanente émanant du Conseil de la Faculté.</p>
-                            </div>
-                        </div>
+          <div class="two-column-layout">
+            <div class="column">
+              <h3>Didacticiels</h3>
+              <div class="score-badge small">
+                Score : <strong>3</strong> points <span class="badge-inline">Plafond : 3 — Plafond atteint</span>
+              </div>
 
-                        <div class="responsibility-item">
-                            <div class="resp-icon">💰</div>
-                            <div class="resp-content">
-                                <h3>Membre de la Commission de Suivi du Budget</h3>
-                                <div class="points-inline">1 point</div>
-                                <p class="period">Mandature : 2021 – 2023</p>
-                                <p class="description">Commission permanente émanant du Conseil de la Faculté.</p>
-                            </div>
-                        </div>
-
-                        <div class="responsibility-item">
-                            <div class="resp-icon">👥</div>
-                            <div class="resp-content">
-                                <h3>Participation aux Jurys de Recrutement</h3>
-                                <div class="points-inline">3,75 points</div>
-                                <p class="period">Période : 2020 – 2022 (5 participations)</p>
-                                <ul class="jury-list">
-                                    <li><strong>ENS Fès (USMBA)</strong> – 15/08/2020 – Spécialité : Informatique</li>
-                                    <li><strong>FPK (USMS)</strong> – 15/11/2020 – Spécialité : Math-Info</li>
-                                    <li><strong>FPK (USMS)</strong> – 26/07/2021 – Spécialité : Informatique</li>
-                                    <li><strong>FPK (USMS)</strong> – 05/11/2021 – Spécialité : Informatique</li>
-                                    <li><strong>FPK (USMS)</strong> – 12/10/2022 – Spécialité : Informatique</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="publications-list">
+                <div class="publication-item compact">
+                  <div class="pub-number">1</div>
+                  <div class="pub-content">
+                    <h4>Modèle de rapport de PFE SMI</h4>
+                    <p class="pub-description">Guide méthodologique pour structuration et rédaction.</p>
+                    <a href="https://fr.slideshare.net/slideshow/modele-officiel-de-rapport-de-projet-de-fin-d-etudes-filiere-smi/284737662" class="resource-link" target="_blank" rel="noopener">Voir</a>
+                  </div>
                 </div>
+
+                <div class="publication-item compact">
+                  <div class="pub-number">2</div>
+                  <div class="pub-content">
+                    <h4>Mémo HTML</h4>
+                    <p class="pub-description">Aide-mémoire des balises principales et bonnes pratiques.</p>
+                    <a href="https://fr.slideshare.net/slideshow/memo-html5-balises-essentielles-pour-le-developpement-web/284737663" class="resource-link" target="_blank" rel="noopener">Voir</a>
+                  </div>
+                </div>
+
+                <div class="publication-item compact">
+                  <div class="pub-number">3</div>
+                  <div class="pub-content">
+                    <h4>Mémo CSS</h4>
+                    <p class="pub-description">Aide-mémoire des propriétés essentielles.</p>
+                    <a href="https://fr.slideshare.net/slideshow/memo-css3-aide-memoire-pratique-pour-le-developpement-web/284737664" class="resource-link" target="_blank" rel="noopener">Voir</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Slide 12: Section B - Introduction -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="section-header section-b">
-                        <h2 class="slide-title">Section B : Activités de Recherche</h2>
-                        <div class="section-score">
-                            <span class="score-label">Score obtenu :</span>
-                            <span class="score-value">29 / 35</span>
-                        </div>
-                    </div>
+            <div class="column">
+              <h3>Plateformes Web</h3>
+              <div class="score-badge small">
+                Score : <strong>2</strong> points <span class="badge-inline">Plafond : 2 — Plafond atteint</span>
+              </div>
 
-                    <div class="subsection-grid">
-                        <div class="subsection-card">
-                            <h3>B.1 – Production Scientifique</h3>
-                            <div class="subsection-score">16 / 16</div>
-                            <ul class="subsection-list">
-                                <li><strong>Revue indexée Scopus :</strong> 1 article</li>
-                                <li><strong>Ouvrages éditoriaux Springer :</strong> 2</li>
-                                <li><strong>Chapitres d'ouvrages :</strong> 6</li>
-                                <li><strong>Communication internationale :</strong> 1</li>
-                            </ul>
-                        </div>
-
-                        <div class="subsection-card">
-                            <h3>B.2 – Encadrement Scientifique</h3>
-                            <div class="subsection-score" style="background-color: darkorange;">6 / 12</div>
-                            <ul class="subsection-list">
-                                <li><strong>Co-encadrement Masters :</strong> 5</li>
-                                <li><strong>Jurys de thèse (Rapporteur) :</strong> 5</li>
-                            </ul>
-                        </div>
-
-                        <div class="subsection-card">
-                            <h3>B.3 – Responsabilités Scientifiques</h3>
-                            <div class="subsection-score">3 / 3</div>
-                            <ul class="subsection-list">
-                                <li>Membre structures de recherche</li>
-                                <li>Membre bureau association</li>
-                                <li>Réviseur revues internationales : 2</li>
-                                <li>Comités scientifiques : 7</li>
-                            </ul>
-                        </div>
-
-                        <div class="subsection-card">
-                            <h3>B.4 – Rayonnement International</h3>
-                            <div class="subsection-score">4 / 4</div>
-                            <ul class="subsection-list">
-                                <li><strong>Organisation conférences :</strong> 10</li>
-                                <li>Participation active écosystème recherche</li>
-                            </ul>
-                        </div>
-                    </div>
+              <div class="publications-list">
+                <div class="publication-item compact">
+                  <div class="pub-number">1</div>
+                  <div class="pub-content">
+                    <h4>GitHub</h4>
+                    <p class="pub-description">TP, codes commentés, corrections et projets étudiants.</p>
+                    <a href="https://github.com/yelallioui" class="resource-link" target="_blank" rel="noopener">github.com/yelallioui</a>
+                  </div>
                 </div>
+
+                <div class="publication-item compact">
+                  <div class="pub-number">2</div>
+                  <div class="pub-content">
+                    <h4>SlideShare</h4>
+                    <p class="pub-description">Supports de cours, TD/TP et corrections.</p>
+                    <a href="https://fr.slideshare.net/yelallioui/documents" class="resource-link" target="_blank" rel="noopener">slideshare.net/yelallioui</a>
+                  </div>
+                </div>
+
+                <div class="publication-item compact">
+                  <div class="pub-number">3</div>
+                  <div class="pub-content">
+                    <h4>Page personnelle</h4>
+                    <p class="pub-description">Ressources centralisées, CV, publications.</p>
+                    <a href="https://yelallioui.github.io" class="resource-link" target="_blank" rel="noopener">yelallioui.github.io</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="highlight-box">
+            <p><strong>NB :</strong> Les productions numériques sont comptabilisées uniquement dans les rubriques prévues par la grille nationale.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9: A/2 - Encadrement PFE (1/2) -->
+      <section class="slide" aria-label="A.2 Encadrement PFE 1">
+        <div class="slide-content">
+          <h2 class="slide-title">A.2 – Encadrement de Projets de Fin d'Études (1/2)</h2>
+
+          <div class="score-badge">
+            Score : <strong>14</strong> (activité) — <strong>8</strong> (retenu selon barème)
+            <span class="badge-inline">Plafond : 14</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>N°</th>
+                  <th>Étudiant(e)</th>
+                  <th>Sujet du PFE</th>
+                  <th>Année</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Nisrine AMAOUI</td><td>Site web de formation à distance</td><td>2019/2020</td></tr>
+                <tr><td>2</td><td>Mohammed CHERKI</td><td>Application de chat (Flutter/Dart)</td><td>2019/2020</td></tr>
+                <tr><td>3</td><td>Zohair DIAB</td><td>Optimisation d'un site web de recrutement</td><td>2019/2020</td></tr>
+                <tr><td>4</td><td>Rachid FAIZ</td><td>Reconnaissance de l'écriture arabe (Machine Learning)</td><td>2019/2020</td></tr>
+                <tr><td>5</td><td>Aymane HARKATI</td><td>Application mobile d'aide à la décision (Android/Kotlin)</td><td>2020/2021</td></tr>
+                <tr><td>6</td><td>Zahra BAWAFI</td><td>Application mobile de covoiturage</td><td>2021/2022</td></tr>
+                <tr><td>7</td><td>Zakaria MEKKAOUI</td><td>Réservation d'hébergements en journée (mobile/web)</td><td>2021/2022</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight-box">
+            <strong>NB :</strong> La valeur "retenue" suit strictement le barème et le plafond applicables dans la grille nationale.
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: A/2 - Encadrement PFE (2/2) -->
+      <section class="slide" aria-label="A.2 Encadrement PFE 2">
+        <div class="slide-content">
+          <h2 class="slide-title">A.2 – Encadrement de Projets de Fin d'Études (2/2)</h2>
+
+          <div class="score-badge">
+            Suite des encadrements
+            <span class="badge-inline">Rubrique A.2</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>N°</th>
+                  <th>Étudiant(e)</th>
+                  <th>Sujet du PFE</th>
+                  <th>Année</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>8</td><td>Afafe BOUZIANE</td><td>Métavers : revue de littérature et applications</td><td>2021/2022</td></tr>
+                <tr><td>9</td><td>Mohamed ETTAHAIRY</td><td>Digitalisation des processus de gestion de la scolarité</td><td>2022/2023</td></tr>
+                <tr><td>10</td><td>Imane ELBAHAOUI</td><td>Système de recommandation : comparaison ML (Python)</td><td>2022/2023</td></tr>
+                <tr><td>11</td><td>Omar BELAIZI</td><td>Comparatif plateformes blockchain : cas d’usage</td><td>2022/2023</td></tr>
+                <tr><td>12</td><td>Achraf MANSARI</td><td>Conception et développement d'une application</td><td>2023/2024</td></tr>
+                <tr><td>13</td><td>Hicham BENOUKAISS</td><td>Conception et développement d'une application</td><td>2023/2024</td></tr>
+                <tr><td>14</td><td>Maha EL ABADI</td><td>Smart Contract : sécurité, réglementation, applications</td><td>2024/2025</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight-box">
+            <p><strong>Domaines couverts :</strong> Web/Mobile, Machine Learning, Blockchain, IA</p>
+            <p><strong>Technologies :</strong> Python, Flutter/Dart, Android/Kotlin, PHP/MySQL</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11: A/3 - Responsabilités Pédagogiques -->
+      <section class="slide" aria-label="A.3 Responsabilités pédagogiques">
+        <div class="slide-content">
+          <h2 class="slide-title">A.3 – Responsabilités Pédagogiques</h2>
+
+          <div class="score-badge">
+            Score : <strong>6</strong> points
+            <span class="badge-inline">Plafond : 6 — Plafond atteint</span>
+          </div>
+
+          <div class="responsibilities-grid">
+            <div class="responsibility-card highlight">
+              <h3>Coordinateur de Filière SMI</h3>
+              <div class="points-badge">2 points</div>
+              <p class="period">2015 – 2024</p>
+              <p class="description">Coordination de la filière SMI (structuration pédagogique, suivi, harmonisation).</p>
+            </div>
+
+            <div class="responsibility-card">
+              <h3>Coordination de Modules</h3>
+              <div class="points-badge">5 points</div>
+              <div class="modules-list">
+                <br>
+                <h4>Filière SMI :</h4>
+                <ul>
+                  <li><strong>S4 :</strong> Structures de Données, Systèmes d'Exploitation II, Architecture des Ordinateurs</li>
+                  <li><strong>S6 :</strong> Base de Données Avancées (PL/SQL)</li>
+                </ul>
+                <br>
+                <h4>Filière SMA :</h4>
+                <ul>
+                  <li><strong>S4 :</strong> Algorithmique & Structures de Données</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <p><strong>NB :</strong> Les responsabilités sont présentées exclusivement dans les rubriques prévues par la grille nationale.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 12: Synthèse Section A (NEW) -->
+      <section class="slide" aria-label="Synthèse Section A">
+        <div class="slide-content">
+          <h2 class="slide-title">Synthèse – Section A (Activités Pédagogiques)</h2>
+
+          <div class="summary-card">
+            <div class="summary-top">
+              <div>
+                <div class="summary-title">Résultat global Section A</div>
+                <div class="summary-sub">Alignement strict sur la grille nationale</div>
+              </div>
+              <div class="summary-score">
+                29 <span>/ 35</span>
+              </div>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-item">
+                <div class="summary-k">A.1 Production</div>
+                <div class="summary-v">15/15</div>
+                <div class="summary-s ok">Plafond atteint</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-k">A.2 Encadrement</div>
+                <div class="summary-v">8/14</div>
+                <div class="summary-s neutral">Conforme</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-k">A.3 Responsabilités</div>
+                <div class="summary-v">6/6</div>
+                <div class="summary-s ok">Plafond atteint</div>
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <strong>NB : </strong>Les éléments présentés correspondent aux activités valorisables selon la grille nationale, sans cumul hors cadre réglementaire.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 13: Section B - Introduction -->
+      <section class="slide" aria-label="Section B activités de recherche">
+        <div class="slide-content">
+          <div class="section-header section-b">
+            <h2 class="slide-title">Section B : Activités de Recherche</h2>
+            <div class="section-score">
+              <span class="score-label">Score obtenu :</span>
+              <span class="score-value">29 / 35</span>
+              <span class="score-sub">Plafond : 35 — <strong>Conforme</strong></span>
+            </div>
+          </div>
+
+          <div class="subsection-grid">
+            <div class="subsection-card">
+              <h3>B.1 – Production Scientifique</h3>
+              <div class="subsection-score">16 / 16</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 16</span>
+                <span class="pill success">Plafond atteint</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>Revue indexée :</strong> 1 article</li>
+                <li><strong>Ouvrages Springer :</strong> 2</li>
+                <li><strong>Chapitres :</strong> 6</li>
+                <li><strong>Communication :</strong> 1</li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h3>B.2 – Encadrement Scientifique</h3>
+              <div class="subsection-score warning">6 / 12</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 12</span>
+                <span class="pill neutral">Conforme (barème)</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>Masters :</strong> 5 co-encadrements</li>
+                <li><strong>Jurys de thèse :</strong> 5 (rapporteur)</li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h3>B.3 – Responsabilités Scientifiques</h3>
+              <div class="subsection-score">3 / 3</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 3</span>
+                <span class="pill success">Plafond atteint</span>
+              </div>
+              <ul class="subsection-list">
+                <li>Membre structures de recherche (Labo & Equipe)</li>
+                <li>Membre bureau association (AMRSAI)</li>
+                <li>Réviseur revues : 2</li>
+                <li>Comités scientifiques : 7</li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h3>B.4 – Rayonnement & Expertise</h3>
+              <div class="subsection-score">4 / 4</div>
+              <div class="meta-line">
+                <span class="pill">Plafond : 4</span>
+                <span class="pill success">Plafond atteint</span>
+              </div>
+              <ul class="subsection-list">
+                <li><strong>Organisation :</strong> 10 conférences</li>
+                <li>Membre du comité scientifique de congrès internationaux</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <p><strong>NB :</strong> Les éléments présentés correspondent strictement aux activités valorisables selon la grille nationale, sans cumul hors cadre réglementaire.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
 
             <!-- Slide 13: B/1.1 - Article dans revue indexée -->
             <div class="slide">
@@ -1216,6 +1292,7 @@
                                 <li><strong>Laboratoire Multidisciplinaire de Recherche et Innovation (LMRI)</strong>
                                     <br><span class="institution-detail">FPK, USMS – Membre permanent</span>
                                 </li>
+                                <br>
                                 <li><strong>Équipe Mathématiques, Informatique et Applications (MIA)</strong>
                                     <br><span class="institution-detail">FPK, USMS – Membre permanent</span>
                                 </li>
@@ -1240,6 +1317,7 @@
                                     <br><span class="institution-detail">Elsevier/Scopus – Novembre 2024</span>
                                     <br><a href="https://www.sciencedirect.com/journal/expert-systems-with-applications" target="_blank" class="resource-link">Voir la revue</a>
                                 </li>
+                                <br>
                                 <li><strong>Neurocomputing</strong>
                                     <br><span class="institution-detail">Elsevier/Scopus – Juillet 2025</span>
                                     <br><a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank" class="resource-link">Voir la revue</a>
@@ -1437,10 +1515,62 @@
                 </div>
             </div>
 
+
+
+
+      <!-- Slide 14: Synthèse Section B (NEW) -->
+      <section class="slide" aria-label="Synthèse Section B">
+        <div class="slide-content">
+          <h2 class="slide-title">Synthèse – Section B (Activités de Recherche)</h2>
+
+          <div class="summary-card">
+            <div class="summary-top">
+              <div>
+                <div class="summary-title">Résultat global Section B</div>
+                <div class="summary-sub">Production, encadrement, responsabilités, rayonnement</div>
+              </div>
+              <div class="summary-score">
+                29 <span>/ 35</span>
+              </div>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-item">
+                <div class="summary-k">B.1 Production</div>
+                <div class="summary-v">16/16</div>
+                <div class="summary-s ok">Plafond atteint</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-k">B.2 Encadrement</div>
+                <div class="summary-v">6/12</div>
+                <div class="summary-s neutral">Conforme</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-k">B.3 Responsabilités</div>
+                <div class="summary-v">3/3</div>
+                <div class="summary-s ok">Plafond atteint</div>
+              </div>
+              <div class="summary-item">
+                <div class="summary-k">B.4 Rayonnement</div>
+                <div class="summary-v">4/4</div>
+                <div class="summary-s ok">Plafond atteint</div>
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <strong>NB : </strong>Les éléments présentés correspondent aux activités valorisables selon la grille nationale, sans cumul hors cadre réglementaire.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
             <!-- Slide 24: Synthèse Globale -->
             <div class="slide">
                 <div class="slide-content">
-                    <h2 class="slide-title">Synthèse Globale du Dossier</h2>
+                    <h2 class="slide-title">Synthèse Globale du Dossier (1/3)</h2>
 
                     <div class="synthesis-container">
                         <div class="synthesis-section">
@@ -1483,6 +1613,17 @@
                                 </div>
                             </div>
                         </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Synthèse Globale -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Synthèse Globale du Dossier (2/3)</h2>
+
 
                         <div class="synthesis-section">
                             <h3>Répartition des Points</h3>
@@ -1527,61 +1668,57 @@
                 </div>
             </div>
 
-            <!-- Slide 25: Conclusion -->
-            <div class="slide">
-                <div class="slide-content conclusion-slide">
-                    <h2 class="slide-title">Conclusion</h2>
 
-                    <div class="conclusion-content">
-                        <div class="total-score-display">
-                            <h3>Score Total du Dossier</h3>
-                            <div class="final-score">
-                                <span class="score-number">58</span>
-                                <span class="score-max">/ 70</span>
-                            </div>
-                            <p class="score-percentage">82,86%</p>
-                        </div>
 
-                        <div class="conclusion-text">
-                            <p class="highlight-statement">
-                                Ce dossier de passage de grade <strong>Professeur Habilité → Professeur de l'Enseignement Supérieur</strong> témoigne d'un parcours académique <strong>complet, cohérent et équilibré</strong> entre les activités pédagogiques et de recherche.
-                            </p>
 
-                            <div class="key-achievements">
-                                <h4>Réalisations Majeures :</h4>
-                                <ul>
-                                    <li><strong>Excellence pédagogique :</strong> Production complète de ressources (manuels, polycopiés, supports numériques) et encadrement continu d'étudiants</li>
-                                    <li><strong>Recherche de qualité :</strong> Publications dans des revues indexées Scopus, chapitres d'ouvrages chez Springer, et édition de 2 ouvrages internationaux</li>
-                                    <li><strong>Leadership institutionnel :</strong> 9 années de coordination de la filière SMI et participation active aux instances décisionnelles</li>
-                                    <li><strong>Rayonnement scientifique :</strong> Organisation et participation à de nombreuses conférences internationales, expertise pour des revues de renom</li>
-                                </ul>
-                            </div>
 
-                            <div class="future-perspective">
-                                <h4>Perspectives :</h4>
-                                <p>
-                                    Forte de cette expertise consolidée en Intelligence Artificielle, Machine Learning et Systèmes Adaptatifs, 
-                                    ma candidature au grade de Professeur de l'Enseignement Supérieur s'inscrit dans la continuité logique 
-                                    d'un engagement permanent au service de l'enseignement, de la recherche et du rayonnement scientifique 
-                                    de l'Université Sultan Moulay Slimane.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="contact-info">
-                            <p><strong>Pr. Youssouf EL ALLIOUI</strong></p>
-                            <p>Faculté Polydisciplinaire de Khouribga</p>
-                            <p>Université Sultan Moulay Slimane</p>
-                            <p>📧 y.elallioui@usms.ma | 📱 (+212) 0677 74 74 43</p>
-                            <p>🌐 <a href="https://yelallioui.github.io" target="_blank">yelallioui.github.io</a></p>
-                        </div>
-                    </div>
-                </div>
+
+
+      <!-- Slide 15: Synthèse globale -->
+      <section class="slide" aria-label="Synthèse globale">
+        <div class="slide-content">
+          <h2 class="slide-title">Synthèse Globale du Dossier (3/3)</h2>
+
+          <div class="total-score">
+            <h3>Score Total (A + B)</h3>
+            <div class="total-display">
+              <span class="total-number">58</span>
+              <span class="total-max">/ 70</span>
             </div>
 
-        </div>
-    </div>
+            <div class="meta-line center">
+              <span class="pill success">Dossier conforme à la grille nationale</span>
+              <span class="pill">A : 29/35</span>
+              <span class="pill">B : 29/35</span>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="highlight-box">
+              <p><strong>Lecture commission :</strong> équilibre enseignement–recherche, plafonds atteints sur les rubriques structurantes, responsabilités continues, rayonnement et expertise documentés.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 16: Conclusion -->
+      <section class="slide" aria-label="Conclusion">
+        <div class="slide-content">
+          <h2 class="slide-title">Conclusion</h2>
+
+          <div class="highlight-box">
+            <p><strong>Justification :</strong> Le dossier présente un parcours structuré et continu, conforme aux exigences réglementaires PH → PES, avec équilibre entre pédagogie, recherche, responsabilités et rayonnement.</p>
+            <p><strong>Projection :</strong> Consolidation de l’encadrement scientifique, structuration de la production et contribution au rayonnement de l’USMS.</p>
+          </div>
+
+          <div class="note-box">
+            <p><strong>Disponibilité :</strong> une version imprimable/PDF est accessible via le bouton en haut de page (utile pour archivage et annotation).</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
