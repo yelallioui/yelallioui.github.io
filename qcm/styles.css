@@ -1,0 +1,316 @@
+/* ===================================
+           Variables CSS (cohérentes avec le QCM)
+           =================================== */
+        :root {
+            --color-primary: #2563eb;
+            --color-primary-dark: #1e40af;
+            --color-success: #10b981;
+            --color-background: #f8fafc;
+            --color-surface: #ffffff;
+            --color-text: #1e293b;
+            --color-text-muted: #64748b;
+            --color-border: #e2e8f0;
+            --color-hover: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===================================
+           Reset et styles de base
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--color-text);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           En-tête QCM
+           =================================== */
+        .qcm-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .qcm-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-surface);
+            margin-bottom: 16px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .qcm-header p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===================================
+           Grille de cartes QCM
+           =================================== */
+        .qcm-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* ===================================
+           Carte QCM individuelle
+           =================================== */
+        .qcm-card {
+            background: var(--color-surface);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-base);
+            animation: fadeInUp 0.6s ease;
+            animation-fill-mode: both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Délai d'animation pour chaque carte */
+        .qcm-card:nth-child(1) { animation-delay: 0.1s; }
+        .qcm-card:nth-child(2) { animation-delay: 0.2s; }
+        .qcm-card:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .qcm-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Badge "Disponible" ou "Bientôt" */
+        .qcm-card::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-success);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+
+        .qcm-card.coming-soon::before {
+            background: var(--color-text-muted);
+            box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.2);
+        }
+
+        .qcm-card h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 16px;
+        }
+
+        .qcm-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 28px;
+            line-height: 1.6;
+            min-height: 48px;
+        }
+
+        /* ===================================
+           Bouton d'accès au QCM
+           =================================== */
+        .qcm-button {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: var(--color-surface);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-md);
+        }
+
+        .qcm-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .qcm-button:active {
+            transform: translateY(0);
+        }
+
+        /* Bouton désactivé pour les QCM "bientôt" */
+        .qcm-button.disabled {
+            background: linear-gradient(135deg, var(--color-text-muted), #475569);
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .qcm-button.disabled:hover {
+            transform: none;
+        }
+
+        /* ===================================
+           Footer (cohérent avec le QCM)
+           =================================== */
+        .qcm-footer {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #2b2c92, #6a4bcf);
+            color: #f5f7ff;
+            padding: 2.2rem 2rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow-xl);
+            font-family: "Inter", sans-serif;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .footer-column h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-column p {
+            margin: 0.3rem 0;
+            line-height: 1.45;
+            font-size: 0.95rem;
+            opacity: 0.92;
+        }
+
+        .footer-column a {
+            color: #ffffff;
+            opacity: 0.9;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .footer-column a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        /* ===================================
+           Responsive Design
+           =================================== */
+        @media (max-width: 900px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .qcm-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .qcm-header h1 {
+                font-size: 2.25rem;
+            }
+
+            .qcm-header p {
+                font-size: 1.1rem;
+            }
+
+            .qcm-card {
+                padding: 32px 24px;
+            }
+
+            .qcm-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .qcm-header h1 {
+                font-size: 1.875rem;
+            }
+
+            .qcm-header p {
+                font-size: 1rem;
+            }
+
+            .qcm-card {
+                padding: 24px 20px;
+            }
+        }
