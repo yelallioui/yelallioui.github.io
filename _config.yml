@@ -85,7 +85,7 @@ facebook:
   app_id        :
   publisher     :
 
-og_image        : "images/profile.jpg"   # 🔧 Image par défaut pour les partages (Facebook, LinkedIn...)
+og_image        : "profile.jpg"   # 🔧 Image par défaut pour les partages (Facebook, LinkedIn...)
 
 social:
   type          : "Person"               # 🔧 Données structurées Schema.org
@@ -120,7 +120,7 @@ author:
   # 🔧 IMPORTANT: Renommez votre photo en "profile.jpg" (sans espaces ni accents)
   #    et placez-la dans /images/
   #    Exemple: images/profile.jpg
-  avatar        : "images/profile.jpg"
+  avatar        : "profile.jpg"
 
   bio           : >-                      # 🔧 Bio plus professionnelle et complète
     Professeur-Chercheur en Informatique.
