@@ -85,7 +85,7 @@ facebook:
   app_id        :
   publisher     :
 
-og_image        : "images/profile.png"   # 🔧 Image par défaut pour les partages (Facebook, LinkedIn...)
+og_image        : "images/profile.jpg"   # 🔧 Image par défaut pour les partages (Facebook, LinkedIn...)
 
 social:
   type          : "Person"               # 🔧 Données structurées Schema.org
