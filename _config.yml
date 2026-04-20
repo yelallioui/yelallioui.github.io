@@ -107,7 +107,7 @@ social:
 analytics:
   provider      : "google-universal"
   google:
-    tracking_id :             # Ex: "G-XXXXXXXXXX" — à renseigner
+    tracking_id : G-QDVVK3ZH7Q             # Ex: "G-XXXXXXXXXX" — à renseigner
 
 
 # -----------------------------------------------------------------------------
