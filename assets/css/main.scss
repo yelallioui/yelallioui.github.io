@@ -9,41 +9,41 @@
 // OVERRIDES DE VARIABLES MINIMAL-MISTAKES (doivent être déclarés AVANT l'import)
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Couleurs principales
-$background-color    : #050b18  !default;
-$text-color          : #c8d8e8  !default;
-$muted-text-color    : #7a90a8  !default;
-$primary-color       : #00d4ff  !default;
-$success-color       : #00f5a0  !default;
-$warning-color       : #f5a623  !default;
-$danger-color        : #ff4d6d  !default;
-$info-color          : #6c63ff  !default;
-$link-color          : #00d4ff  !default;
-$link-color-hover    : #7df8ff  !default;
-$masthead-link-color         : #c8d8e8  !default;
-$masthead-link-color-hover   : #00d4ff  !default;
-$navicon-link-color-hover    : #00d4ff  !default;
+// Couleurs principales  (modif : !default)
+$background-color    : #050b18;
+$text-color          : #c8d8e8;
+$muted-text-color    : #7a90a8;
+$primary-color       : #00d4ff;
+$success-color       : #00f5a0;
+$warning-color       : #f5a623 ;
+$danger-color        : #ff4d6d ;
+$info-color          : #6c63ff ;
+$link-color          : #00d4ff ;
+$link-color-hover    : #7df8ff ;
+$masthead-link-color         : #c8d8e8 ;
+$masthead-link-color-hover   : #00d4ff ;
+$navicon-link-color-hover    : #00d4ff ;
 
 // Bordures & fonds
-$border-color        : rgba(0, 212, 255, 0.15)  !default;
-$border-radius       : 8px  !default;
-$box-shadow          : 0 4px 24px rgba(0, 0, 0, 0.5)  !default;
+$border-color        : rgba(0, 212, 255, 0.15) ;
+$border-radius       : 8px ;
+$box-shadow          : 0 4px 24px rgba(0, 0, 0, 0.5) ;
 
 // Typographie
-$global-font-size    : 16px  !default;
-$global-line-height  : 1.7  !default;
-$serif               : "Plus Jakarta Sans", -apple-system, sans-serif  !default;
-$sans-serif          : "Plus Jakarta Sans", -apple-system, sans-serif  !default;
-$monospace           : "JetBrains Mono", "Fira Code", monospace  !default;
-$type-size-1         : 2.441em  !default;
-$type-size-2         : 1.953em  !default;
-$type-size-3         : 1.563em  !default;
-$type-size-4         : 1.25em   !default;
-$type-size-5         : 1em      !default;
+$global-font-size    : 16px ;
+$global-line-height  : 1.7 ;
+$serif               : "Plus Jakarta Sans", -apple-system, sans-serif  ;
+$sans-serif          : "Plus Jakarta Sans", -apple-system, sans-serif  ;
+$monospace           : "JetBrains Mono", "Fira Code", monospace  ;
+$type-size-1         : 2.441em  ;
+$type-size-2         : 1.953em  ;
+$type-size-3         : 1.563em  ;
+$type-size-4         : 1.25em   ;
+$type-size-5         : 1em      ;
 
 // Sidebar
-$sidebar-width             : 220px !default;
-$author-profile-sidebar-bg : transparent !default;
+$sidebar-width             : 220px ;
+$author-profile-sidebar-bg : transparent ;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // IMPORT DU THÈME DE BASE
