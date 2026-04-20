@@ -1,45 +1,27 @@
 # =============================================================================
-# _config.yml — Site configuration for Pr. Youssouf EL ALLIOUI
-# Last updated: 2025
-# =============================================================================
-# NOTE: This file is NOT reloaded automatically when using `jekyll serve`.
-#       Restart the server after any changes here.
+# _config.yml CORRIGÉ — Pr. Youssouf EL ALLIOUI
+# BUG CORRIGÉ : avatar "images/profile.jpg" → "profile.jpg"
 # =============================================================================
 
-
-# -----------------------------------------------------------------------------
-# 1. SITE SETTINGS
-# -----------------------------------------------------------------------------
-
-locale          : "fr-FR"                        # 🔧 Changé: en-US → fr-FR (profil francophone)
+locale          : "fr-FR"
 title           : "Pr. Youssouf EL ALLIOUI"
-title_separator : "–"                            # 🔧 Tiret demi-cadratin plus élégant
+title_separator : "–"
 name            : "Youssouf EL ALLIOUI"
-
-description     : >-                             # 🔧 Description enrichie pour le SEO
+description     : >-
   Professeur-Chercheur en Informatique à l'Université Sultan Moulay Slimane (USMS),
-  Maroc. Domaines de recherche : Machine Learning, Semantic Web,
-  Educational Data Mining (EDM) et Intelligence Artificielle appliquée à l'éducation.
-
+  Maroc. Machine Learning · Semantic Web · Educational Data Mining (EDM) · IA.
 url             : "https://yelallioui.github.io"
 baseurl         : ""
 repository      : "yelallioui/yelallioui.github.io"
-
-teaser          : # Image de remplacement pour les aperçus d'articles (ex: "teaser.png")
-breadcrumbs     : true                           # 🔧 Activé: améliore la navigation et le SEO
+teaser          :
+breadcrumbs     : true
 words_per_minute: 160
 future          : true
 read_more       : "enabled"
 talkmap_link    : false
 
-
-# -----------------------------------------------------------------------------
-# 2. COMMENTAIRES (désactivés par défaut — activer si souhaité)
-# -----------------------------------------------------------------------------
-
 comments:
   provider      : false
-  # Pour activer Disqus, remplacer false par "disqus" et renseigner shortname:
   disqus:
     shortname   :
   staticman:
@@ -58,37 +40,23 @@ comments:
         type      : "date"
         options:
           format  : "iso8601"
-
 atom_feed:
   path          :
 
-
-# -----------------------------------------------------------------------------
-# 3. SEO — VÉRIFICATION DE SITE
-# -----------------------------------------------------------------------------
-# 🔧 Renseignez ces codes après avoir vérifié votre site dans chaque console
-
-google_site_verification  :   # Google Search Console → Paramètres → Vérification
-bing_site_verification    :   # Bing Webmaster Tools
-yandex_site_verification  :   # Yandex.Webmaster (optionnel)
-
-
-# -----------------------------------------------------------------------------
-# 4. RÉSEAUX SOCIAUX — PARTAGE & OPEN GRAPH
-# -----------------------------------------------------------------------------
+google_site_verification  :
+bing_site_verification    :
+yandex_site_verification  :
 
 twitter:
-  username      :             # Votre @handle Twitter/X si vous en avez un
-
+  username      :
 facebook:
   username      : "yelallioui"
   app_id        :
   publisher     :
-
-og_image        : "/profile.jpg"   # 🔧 Image par défaut pour les partages (Facebook, LinkedIn...)
+og_image        : "images/profile.jpg"
 
 social:
-  type          : "Person"               # 🔧 Données structurées Schema.org
+  type          : "Person"
   name          : "Youssouf EL ALLIOUI"
   links:
     - "https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ"
@@ -97,66 +65,40 @@ social:
     - "https://www.linkedin.com/in/yelallioui"
     - "https://github.com/yelallioui"
 
-
-# -----------------------------------------------------------------------------
-# 5. ANALYTICS — GOOGLE ANALYTICS
-# -----------------------------------------------------------------------------
-# 🔧 Pour activer le suivi : créez une propriété sur analytics.google.com
-#    et copiez votre Tracking ID ici (format: G-XXXXXXXXXX ou UA-XXXXXXXX-X)
-
 analytics:
   provider      : "google-universal"
   google:
-    tracking_id : G-QDVVK3ZH7Q             # Ex: "G-XXXXXXXXXX" — à renseigner
+    tracking_id :
 
-
-# -----------------------------------------------------------------------------
-# 6. PROFIL AUTEUR — Section latérale du site
-# -----------------------------------------------------------------------------
-
+# ─────────────────────────────────────────────────────────────────────────────
+# PROFIL AUTEUR
+# ✅ CORRECTIF : avatar = "profile.jpg"  (PAS "images/profile.jpg")
+#    Le thème ajoute /images/ automatiquement → /images/profile.jpg
+#    Mettre "images/profile.jpg" donnait → /images/images/profile.jpg  ❌
+# ─────────────────────────────────────────────────────────────────────────────
 author:
   name          : "Pr. Youssouf EL ALLIOUI"
-
-  # 🔧 IMPORTANT: Renommez votre photo en "profile.jpg" (sans espaces ni accents)
-  #    et placez-la dans /images/
-  #    Exemple: images/profile.jpg
   avatar        : "profile.jpg"
-
-  bio           : >-                      # 🔧 Bio plus professionnelle et complète
+  bio           : >-
     Professeur-Chercheur en Informatique.
     PhD (2012) — Université Sidi Mohamed Ben Abdellah, Fès.
-    Domaines : Machine Learning · Semantic Web · Educational Data Mining (EDM) · IA & Éducation.
-
+    Machine Learning · Semantic Web · EDM · IA & Éducation.
   location      : "Khouribga, Maroc"
   employer      : "Université Sultan Moulay Slimane (USMS)"
-
-  # --- Liens académiques ---
   googlescholar : "https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ"
-  orcid         : "https://orcid.org/0000-0001-7176-7434"      # 🔧 Corrigé: http → https
+  orcid         : "https://orcid.org/0000-0001-7176-7434"
   researchgate  : "https://www.researchgate.net/profile/Youssouf_El_Allioui"
-  impactstory   :             # Ex: "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  pubmed        :             # Lien PubMed si applicable
-
-  # --- Contact & Site institutionnel ---
+  impactstory   :
+  pubmed        :
   email         : "y.elallioui@usms.ma"
   uri           : "http://www.usms.ac.ma/website/"
-
-  # --- Réseaux professionnels ---
   linkedin      : "yelallioui"
   github        : "yelallioui"
   facebook      : "yelallioui"
-
-  # --- Non utilisés (laisser vide ou supprimer) ---
   twitter       :
   youtube       :
   instagram     :
   stackoverflow :
-  kaggle        :             # 🔧 Nouveau: utile si vous avez des notebooks/datasets publics
-
-
-# -----------------------------------------------------------------------------
-# 7. LECTURE DE FICHIERS
-# -----------------------------------------------------------------------------
 
 include:
   - .htaccess
@@ -173,7 +115,7 @@ exclude:
   - CHANGELOG
   - Capfile
   - Gemfile
-  - Gemfile.lock                        # 🔧 Ajouté: évite les conflits de versions
+  - Gemfile.lock
   - Gruntfile.js
   - LICENSE
   - README
@@ -186,10 +128,10 @@ exclude:
   - log
   - node_modules
   - package.json
-  - package-lock.json                   # 🔧 Ajouté
+  - package-lock.json
   - tmp
   - vendor
-  - markdown_generator                  # 🔧 Ajouté: dossier utilitaire, pas à publier
+  - markdown_generator
 
 keep_files:
   - .git
@@ -197,11 +139,6 @@ keep_files:
 
 encoding         : "utf-8"
 markdown_ext     : "markdown,mkdown,mkdn,mkd,md"
-
-
-# -----------------------------------------------------------------------------
-# 8. CONVERSION MARKDOWN
-# -----------------------------------------------------------------------------
 
 markdown    : kramdown
 highlighter : rouge
@@ -219,11 +156,6 @@ kramdown:
   smart_quotes   : lsquo,rsquo,ldquo,rdquo
   enable_coderay : false
 
-
-# -----------------------------------------------------------------------------
-# 9. COLLECTIONS ACADÉMIQUES
-# -----------------------------------------------------------------------------
-
 collections:
   teaching:
     output    : true
@@ -238,34 +170,23 @@ collections:
     output    : true
     permalink : /:collection/:path/
 
-
-# -----------------------------------------------------------------------------
-# 10. VALEURS PAR DÉFAUT DES PAGES
-# -----------------------------------------------------------------------------
-
 defaults:
-
-  # Posts de blog
   - scope:
       path : ""
       type : posts
     values:
-      layout       : single
+      layout        : single
       author_profile: true
-      read_time    : true
-      comments     : false
-      share        : true
-      related      : true
-
-  # Pages statiques
+      read_time     : true
+      comments      : false
+      share         : true
+      related       : true
   - scope:
       path : ""
       type : pages
     values:
       layout        : single
       author_profile: true
-
-  # Enseignement
   - scope:
       path : ""
       type : teaching
@@ -274,8 +195,6 @@ defaults:
       author_profile: true
       share         : true
       comments      : false
-
-  # Publications
   - scope:
       path : ""
       type : publications
@@ -284,8 +203,6 @@ defaults:
       author_profile: true
       share         : true
       comments      : false
-
-  # Portfolio / Projets
   - scope:
       path : ""
       type : portfolio
@@ -294,8 +211,6 @@ defaults:
       author_profile: true
       share         : true
       comments      : false
-
-  # Conférences / Talks
   - scope:
       path : ""
       type : talks
@@ -304,38 +219,19 @@ defaults:
       author_profile: true
       share         : true
 
-
-# -----------------------------------------------------------------------------
-# 11. SASS / SCSS
-# -----------------------------------------------------------------------------
-
 sass:
   sass_dir : _sass
   style    : compressed
 
-
-# -----------------------------------------------------------------------------
-# 12. PERMALIENS & PAGINATION
-# -----------------------------------------------------------------------------
-
 permalink  : /:categories/:title/
-timezone   : "Africa/Casablanca"   # 🔧 Corrigé: America/Los_Angeles → Africa/Casablanca (Maroc)
-
-# paginate      : 5
-# paginate_path : /page:num/
-
-
-# -----------------------------------------------------------------------------
-# 13. PLUGINS JEKYLL
-# -----------------------------------------------------------------------------
+timezone   : "Africa/Casablanca"
 
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap        # Génère automatiquement sitemap.xml → bon pour le SEO
+  - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed           # Génère un flux RSS/Atom
+  - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-seo-tag        # 🔧 Ajouté: balises SEO automatiques (title, description, og:*)
 
 whitelist:
   - jekyll-paginate
@@ -343,13 +239,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-seo-tag
   - jemoji
-
-
-# -----------------------------------------------------------------------------
-# 14. ARCHIVES (catégories & tags)
-# -----------------------------------------------------------------------------
 
 category_archive:
   type : liquid
@@ -358,11 +248,6 @@ category_archive:
 tag_archive:
   type : liquid
   path : /tags/
-
-
-# -----------------------------------------------------------------------------
-# 15. COMPRESSION HTML
-# -----------------------------------------------------------------------------
 
 compress_html:
   clippings : all
