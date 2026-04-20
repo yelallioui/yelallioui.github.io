@@ -1,123 +1,75 @@
 // =============================================================================
-// _sass/_custom.scss
-// Thème "Deep Space Academic" — Pr. Youssouf EL ALLIOUI
-// Design : Dark Navy · Cyan Électrique · Glassmorphism · CS Premium
+// _sass/_custom.scss  —  Thème "Deep Space Academic"
+// Pr. Youssouf EL ALLIOUI  ·  yelallioui.github.io
+// Version : 2.0 CORRIGÉE — zéro @extend, zéro :has(), compatible Jekyll/GH-Pages
 // =============================================================================
 
-
 // ─────────────────────────────────────────────────────────────────────────────
-// 0. IMPORTS GOOGLE FONTS
+// 0. GOOGLE FONTS
 // ─────────────────────────────────────────────────────────────────────────────
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 1. VARIABLES CSS GLOBALES (Custom Properties)
+// 1. VARIABLES CSS
 // ─────────────────────────────────────────────────────────────────────────────
 :root {
-  // Palette de couleurs
-  --bg-base        : #050b18;
-  --bg-deep        : #030810;
-  --bg-surface     : #0d1b2e;
-  --bg-card        : #0f2040;
-  --bg-card-hover  : #162a50;
-  --bg-glass       : rgba(13, 27, 46, 0.85);
-
-  // Accents
-  --cyan           : #00d4ff;
-  --cyan-dim       : rgba(0, 212, 255, 0.15);
-  --cyan-glow      : rgba(0, 212, 255, 0.35);
-  --purple         : #6c63ff;
-  --green-neon     : #00f5a0;
-  --amber          : #f5a623;
-
-  // Texte
-  --text-primary   : #e0ecf8;
-  --text-secondary : #7a90a8;
-  --text-muted     : #4a6080;
-  --text-heading   : #ffffff;
-
-  // Bordures
-  --border         : rgba(0, 212, 255, 0.12);
-  --border-strong  : rgba(0, 212, 255, 0.30);
-
-  // Ombres & effets
-  --shadow-sm      : 0 2px 12px rgba(0, 0, 0, 0.4);
-  --shadow-md      : 0 8px 32px rgba(0, 0, 0, 0.6);
-  --shadow-lg      : 0 16px 64px rgba(0, 0, 0, 0.8);
-  --glow-cyan      : 0 0 20px rgba(0, 212, 255, 0.25), 0 0 60px rgba(0, 212, 255, 0.08);
-  --glow-strong    : 0 0 30px rgba(0, 212, 255, 0.5);
-
-  // Typographie
-  --font-display   : 'Syne', sans-serif;
-  --font-body      : 'Plus Jakarta Sans', sans-serif;
-  --font-mono      : 'JetBrains Mono', monospace;
-
-  // Transitions
-  --ease           : cubic-bezier(0.23, 1, 0.32, 1);
-  --transition     : 0.3s var(--ease);
+  --bg-base      : #050b18;
+  --bg-deep      : #030810;
+  --bg-surface   : #0d1b2e;
+  --bg-card      : #0f2040;
+  --bg-glass     : rgba(13, 27, 46, 0.85);
+  --cyan         : #00d4ff;
+  --cyan-dim     : rgba(0, 212, 255, 0.12);
+  --cyan-glow    : rgba(0, 212, 255, 0.30);
+  --purple       : #6c63ff;
+  --green-neon   : #00f5a0;
+  --amber        : #f5a623;
+  --text-primary : #e0ecf8;
+  --text-secondary: #7a90a8;
+  --text-muted   : #4a6080;
+  --text-heading : #ffffff;
+  --border       : rgba(0, 212, 255, 0.12);
+  --border-strong: rgba(0, 212, 255, 0.28);
+  --shadow-sm    : 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md    : 0 8px 32px rgba(0, 0, 0, 0.6);
+  --glow-cyan    : 0 0 20px rgba(0, 212, 255, 0.22), 0 0 60px rgba(0, 212, 255, 0.07);
+  --font-display : 'Syne', sans-serif;
+  --font-body    : 'Plus Jakarta Sans', sans-serif;
+  --font-mono    : 'JetBrains Mono', monospace;
+  --ease         : cubic-bezier(0.23, 1, 0.32, 1);
+  --t            : 0.3s var(--ease);
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 2. RESET & BASE GLOBALE
+// 2. BASE & FOND
 // ─────────────────────────────────────────────────────────────────────────────
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
-  background-color : var(--bg-base);
-  color            : var(--text-primary);
-  font-family      : var(--font-body);
-  font-size        : 16px;
-  line-height      : 1.75;
-  -webkit-font-smoothing  : antialiased;
-  -moz-osx-font-smoothing : grayscale;
-
-  // Grille subtile en arrière-plan (effet circuit board)
-  background-image: radial-gradient(
-      circle at 20% 20%,
-      rgba(0, 212, 255, 0.03) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(108, 99, 255, 0.04) 0%,
-      transparent 50%
-    ),
-    linear-gradient(
-      rgba(0, 212, 255, 0.015) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(0, 212, 255, 0.015) 1px,
-      transparent 1px
-    );
-  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-color  : var(--bg-base) !important;
+  color             : var(--text-primary) !important;
+  font-family       : var(--font-body) !important;
+  -webkit-font-smoothing : antialiased;
+  background-image  :
+    radial-gradient(circle at 18% 18%, rgba(0,212,255,0.035) 0%, transparent 50%),
+    radial-gradient(circle at 82% 82%, rgba(108,99,255,0.04) 0%, transparent 50%),
+    linear-gradient(rgba(0,212,255,0.013) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.013) 1px, transparent 1px);
+  background-size   : 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   background-attachment: fixed;
 }
 
-// Animation d'entrée de page
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes glowPulse {
-  0%, 100% { box-shadow: var(--glow-cyan); }
-  50%       { box-shadow: var(--glow-strong); }
-}
-
-@keyframes scanLine {
-  0%   { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  0%, 100% { box-shadow: 0 0 18px rgba(0,212,255,0.22), 0 0 50px rgba(0,212,255,0.07); }
+  50%       { box-shadow: 0 0 28px rgba(0,212,255,0.45), 0 0 80px rgba(0,212,255,0.15); }
 }
 
 @keyframes borderFlow {
@@ -130,36 +82,33 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // 3. TYPOGRAPHIE
 // ─────────────────────────────────────────────────────────────────────────────
-
 h1, h2, h3, h4, h5, h6 {
-  font-family    : var(--font-display);
-  color          : var(--text-heading);
-  font-weight    : 700;
+  font-family    : var(--font-display) !important;
+  color          : var(--text-heading) !important;
   letter-spacing : -0.02em;
   line-height    : 1.25;
-  margin-top     : 1.75em;
-  margin-bottom  : 0.6em;
 }
 
-h1 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; }
-h2 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); }
-h3 { font-size: clamp(1.1rem, 1.8vw, 1.35rem); }
+h1 { font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+h2 { font-weight: 700; font-size: clamp(1.25rem, 2.2vw, 1.65rem); }
+h3 { font-weight: 600; font-size: 1.1rem; }
 
-// Titres avec ligne d'accentuation latérale cyan
+// H2 : barre latérale dégradée cyan→purple
 h2 {
-  position      : relative;
-  padding-left  : 1rem;
-  padding-bottom: 0.35rem;
+  position       : relative;
+  padding-left   : 1rem;
+  padding-bottom : 0.3rem;
+  margin-top     : 2rem;
 
   &::before {
-    content       : '';
-    position      : absolute;
-    left          : 0;
-    top           : 0.1em;
-    bottom        : 0.1em;
-    width         : 3px;
-    background    : linear-gradient(180deg, var(--cyan), var(--purple));
-    border-radius : 2px;
+    content      : '';
+    position     : absolute;
+    left         : 0;
+    top          : 0.1em;
+    bottom       : 0.1em;
+    width        : 3px;
+    background   : linear-gradient(180deg, var(--cyan), var(--purple));
+    border-radius: 2px;
   }
 
   &::after {
@@ -173,44 +122,38 @@ h2 {
   }
 }
 
+// H3 : style étiquette technique
 h3 {
-  color: var(--cyan);
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 600;
+  color          : var(--cyan) !important;
+  font-size      : 0.92rem !important;
+  text-transform : uppercase;
+  letter-spacing : 0.07em;
 }
 
-// Paragraphes
 p {
-  color         : var(--text-primary);
-  margin-bottom : 1.2em;
+  color       : var(--text-primary);
+  line-height : 1.78;
 }
 
-// Liens
 a {
-  color           : var(--cyan);
+  color           : var(--cyan) !important;
   text-decoration : none;
-  transition      : color var(--transition), text-shadow var(--transition);
+  transition      : color var(--t), text-shadow var(--t);
 
-  &:hover {
-    color       : #7df8ff;
-    text-shadow : 0 0 12px rgba(0, 212, 255, 0.5);
+  &:hover, &:focus {
+    color       : #7df8ff !important;
+    text-shadow : 0 0 10px rgba(0,212,255,0.45);
   }
 }
 
-// Texte en gras
-strong, b {
-  color       : var(--text-heading);
-  font-weight : 600;
-}
+strong, b { color: var(--text-heading); font-weight: 600; }
 
-// Texte monospace inline
+// Inline code
 code {
-  font-family      : var(--font-mono);
-  font-size        : 0.88em;
-  background-color : rgba(0, 212, 255, 0.08);
-  color            : var(--cyan);
+  font-family      : var(--font-mono) !important;
+  font-size        : 0.87em;
+  background-color : rgba(0, 212, 255, 0.09);
+  color            : var(--cyan) !important;
   padding          : 0.15em 0.45em;
   border-radius    : 4px;
   border           : 1px solid var(--border);
@@ -218,481 +161,326 @@ code {
 
 // Blockquote
 blockquote {
-  border-left  : 3px solid var(--cyan);
-  background   : rgba(0, 212, 255, 0.04);
-  padding      : 1rem 1.25rem;
-  margin       : 1.5rem 0;
-  border-radius: 0 8px 8px 0;
-  color        : var(--text-secondary);
-  font-style   : normal;
+  border-left   : 3px solid var(--cyan);
+  background    : rgba(0, 212, 255, 0.04);
+  padding       : 0.9rem 1.2rem;
+  margin        : 1.5rem 0;
+  border-radius : 0 8px 8px 0;
+  color         : var(--text-secondary) !important;
+  font-style    : normal !important;
 
-  p { margin: 0; color: var(--text-secondary); }
+  p { color: var(--text-secondary) !important; margin: 0; }
 }
 
-// Séparateurs horizontaux
 hr {
-  border      : none;
-  height      : 1px;
-  background  : linear-gradient(90deg, transparent, var(--border-strong), transparent);
-  margin      : 2.5rem 0;
+  border     : none;
+  height     : 1px;
+  background : linear-gradient(90deg, transparent, var(--border-strong), transparent);
+  margin     : 2.2rem 0;
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 4. NAVIGATION / MASTHEAD
+// 4. MASTHEAD / NAVIGATION
 // ─────────────────────────────────────────────────────────────────────────────
-
 .masthead {
-  background    : rgba(5, 11, 24, 0.92);
-  backdrop-filter: blur(16px);
+  background      : rgba(5, 11, 24, 0.94) !important;
+  backdrop-filter : blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom : 1px solid var(--border);
-  box-shadow    : 0 1px 0 var(--border), 0 4px 24px rgba(0, 0, 0, 0.6);
-  position      : sticky;
-  top           : 0;
-  z-index       : 100;
-  transition    : background var(--transition);
+  border-bottom   : 1px solid var(--border) !important;
+  box-shadow      : 0 4px 24px rgba(0,0,0,0.55) !important;
+  position        : sticky;
+  top             : 0;
+  z-index         : 100;
 
-  &__inner-wrap {
-    max-width  : 1200px;
-    padding    : 0.75rem 1.5rem;
-  }
+  &__inner-wrap { padding: 0.7rem 1.5rem; }
 
-  &__menu {
+  &__menu-item {
     a {
-      font-family    : var(--font-display);
-      font-size      : 0.82rem;
-      font-weight    : 600;
-      letter-spacing : 0.08em;
-      text-transform : uppercase;
-      color          : var(--text-secondary);
-      padding        : 0.4rem 0.75rem;
+      font-family    : var(--font-display) !important;
+      font-size      : 0.8rem !important;
+      font-weight    : 600 !important;
+      letter-spacing : 0.08em !important;
+      text-transform : uppercase !important;
+      color          : var(--text-secondary) !important;
+      padding        : 0.35rem 0.7rem !important;
       border-radius  : 6px;
-      transition     : all var(--transition);
-      position       : relative;
-
-      &::after {
-        content    : '';
-        position   : absolute;
-        bottom     : -2px;
-        left       : 50%;
-        right      : 50%;
-        height     : 2px;
-        background : var(--cyan);
-        transition : all var(--transition);
-      }
+      transition     : all var(--t);
 
       &:hover {
-        color      : var(--cyan);
-        background : var(--cyan-dim);
-        text-shadow: none;
-
-        &::after {
-          left  : 0;
-          right : 0;
-        }
+        color      : var(--cyan) !important;
+        background : var(--cyan-dim) !important;
+        text-shadow: none !important;
       }
     }
   }
 }
 
-// Nom du site dans le masthead
-.site-title, .site-subtitle {
-  font-family    : var(--font-display);
-  font-weight    : 800;
+.site-title {
+  font-family    : var(--font-display) !important;
+  font-weight    : 800 !important;
   color          : var(--text-heading) !important;
-  letter-spacing : -0.02em;
+  letter-spacing : -0.02em !important;
 
-  &:hover {
-    color      : var(--cyan) !important;
-    text-shadow: var(--glow-cyan);
-  }
+  &:hover { color: var(--cyan) !important; text-shadow: var(--glow-cyan) !important; }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 5. SIDEBAR — PROFIL AUTEUR
 // ─────────────────────────────────────────────────────────────────────────────
-
 .sidebar {
-  animation: fadeInUp 0.6s var(--ease) both;
+  animation: fadeUp 0.6s var(--ease) both;
+
+  // Fond transparent
+  &.sticky { background: transparent !important; }
 }
 
+// Avatar avec anneau animé
 .author__avatar {
+  text-align : center;
+
   img {
-    border-radius : 50%;
-    border        : 3px solid transparent;
-    background    : linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
-                    linear-gradient(135deg, var(--cyan), var(--purple)) border-box;
-    box-shadow    : var(--glow-cyan);
-    transition    : all 0.4s var(--ease);
-    animation     : glowPulse 4s ease-in-out infinite;
-    width         : 140px !important;
-    height        : 140px !important;
-    object-fit    : cover;
-  }
+    border-radius    : 50% !important;
+    border           : 3px solid transparent !important;
+    background-image : linear-gradient(var(--bg-surface), var(--bg-surface)),
+                       linear-gradient(135deg, var(--cyan), var(--purple));
+    background-origin: border-box;
+    background-clip  : padding-box, border-box;
+    box-shadow       : var(--glow-cyan) !important;
+    animation        : glowPulse 4s ease-in-out infinite;
+    transition       : transform 0.4s var(--ease);
+    width            : 130px !important;
+    height           : 130px !important;
+    object-fit       : cover;
 
-  &:hover img {
-    transform  : scale(1.04);
-    box-shadow : var(--glow-strong);
+    &:hover { transform: scale(1.05); }
   }
 }
 
-.author__content {
-  text-align: center;
-  padding   : 0.5rem 0;
-}
+.author__content { text-align: center; }
 
 .author__name {
-  font-family    : var(--font-display);
-  font-weight    : 800;
-  font-size      : 1.05rem;
+  font-family    : var(--font-display) !important;
+  font-weight    : 800 !important;
+  font-size      : 1rem !important;
   color          : var(--text-heading) !important;
-  letter-spacing : -0.01em;
-  line-height    : 1.2;
-  margin-bottom  : 0.4rem;
+  letter-spacing : -0.01em !important;
 }
 
 .author__bio {
-  font-size   : 0.8rem;
-  color       : var(--text-secondary);
-  line-height : 1.55;
-  font-style  : normal;
+  font-size  : 0.8rem !important;
+  color      : var(--text-secondary) !important;
+  font-style : normal !important;
+  line-height: 1.6 !important;
 }
 
 .author__urls-wrapper {
   margin-top: 1rem;
 
-  button {
-    display        : none; // Toujours visible sur desktop
-  }
-}
+  // Bouton "Follow" masqué sur desktop, visible sur mobile
+  button.btn {
+    background    : var(--cyan-dim) !important;
+    color         : var(--cyan) !important;
+    border        : 1px solid var(--border-strong) !important;
+    border-radius : 7px !important;
+    font-family   : var(--font-display) !important;
+    font-size     : 0.78rem !important;
+    font-weight   : 600 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding       : 0.4rem 1rem !important;
+    width         : 100% !important;
 
-.author__urls {
-  display        : flex !important;
-  flex-direction : column;
-  gap            : 0.3rem;
-  padding        : 0.75rem;
-  background     : var(--bg-surface);
-  border         : 1px solid var(--border);
-  border-radius  : 12px;
-  box-shadow     : var(--shadow-sm);
-
-  li {
-    list-style : none;
-    margin     : 0;
-
-    a {
-      display         : flex;
-      align-items     : center;
-      gap             : 0.55rem;
-      padding         : 0.4rem 0.65rem;
-      border-radius   : 7px;
-      font-size       : 0.8rem;
-      font-weight     : 500;
-      color           : var(--text-secondary);
-      transition      : all var(--transition);
-      text-decoration : none;
-
-      .fa, .fab, .fas, .far, svg {
-        width      : 16px;
-        color      : var(--text-muted);
-        transition : color var(--transition);
-        flex-shrink: 0;
-      }
-
-      &:hover {
-        color      : var(--cyan);
-        background : var(--cyan-dim);
-
-        .fa, .fab, .fas, .far, svg {
-          color: var(--cyan);
-        }
-      }
+    &:hover {
+      background : rgba(0,212,255,0.2) !important;
+      box-shadow : 0 0 12px rgba(0,212,255,0.3) !important;
     }
   }
 }
 
-// Liens spéciaux — mise en valeur Google Scholar
-.author__urls a[href*="scholar"] {
-  background : rgba(66, 133, 244, 0.08);
-  border     : 1px solid rgba(66, 133, 244, 0.2);
+.author__urls {
+  background    : var(--bg-surface) !important;
+  border        : 1px solid var(--border) !important;
+  border-radius : 10px !important;
+  padding       : 0.65rem !important;
+  box-shadow    : var(--shadow-sm) !important;
+
+  li {
+    a {
+      display         : flex !important;
+      align-items     : center !important;
+      gap             : 0.5rem !important;
+      padding         : 0.38rem 0.6rem !important;
+      border-radius   : 6px !important;
+      font-size       : 0.8rem !important;
+      font-weight     : 500 !important;
+      color           : var(--text-secondary) !important;
+      transition      : all var(--t) !important;
+      text-decoration : none !important;
+
+      &:hover {
+        color      : var(--cyan) !important;
+        background : var(--cyan-dim) !important;
+        text-shadow: none !important;
+      }
+    }
+
+    // Icônes
+    .fa, .fab, .fas, .far {
+      color       : var(--text-muted) !important;
+      width       : 16px;
+      text-align  : center;
+      flex-shrink : 0;
+      font-size   : 0.85em !important;
+    }
+  }
 }
 
-.author__urls a[href*="orcid"] {
-  background : rgba(166, 206, 57, 0.08);
-  border     : 1px solid rgba(166, 206, 57, 0.2);
-}
-
-.author__urls a[href*="researchgate"] {
-  background : rgba(0, 204, 187, 0.08);
-  border     : 1px solid rgba(0, 204, 187, 0.2);
-}
+// Mise en valeur liens académiques
+.author__urls li a[href*="scholar"]     { background: rgba(66,133,244,0.07) !important; }
+.author__urls li a[href*="orcid"]       { background: rgba(166,206,57,0.07) !important; }
+.author__urls li a[href*="researchgate"]{ background: rgba(0,204,187,0.07) !important; }
+.author__urls li a[href*="linkedin"]    { background: rgba(10,102,194,0.07) !important; }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 6. LAYOUT PRINCIPAL
 // ─────────────────────────────────────────────────────────────────────────────
-
-#main {
-  animation : fadeInUp 0.5s var(--ease) 0.1s both;
-}
+#main { animation: fadeUp 0.5s var(--ease) 0.1s both; }
 
 .page {
-  background    : transparent;
-  max-width     : 860px;
+  background : transparent !important;
 
   &__title {
-    font-family    : var(--font-display);
-    font-weight    : 800;
-    font-size      : clamp(1.6rem, 3vw, 2.2rem);
-    color          : var(--text-heading);
-    letter-spacing : -0.03em;
-    margin-bottom  : 0.25rem;
+    font-family    : var(--font-display) !important;
+    font-weight    : 800 !important;
+    color          : var(--text-heading) !important;
+    letter-spacing : -0.03em !important;
+    font-size      : clamp(1.5rem, 3vw, 2.1rem) !important;
+    padding-left   : 0 !important;
+    margin-bottom  : 0.2rem !important;
 
-    // Ligne décorative sous le titre de page
+    // Ligne décorative sous le titre principal
     &::after {
-      content    : '';
-      display    : block;
-      width      : 48px;
-      height     : 3px;
-      background : linear-gradient(90deg, var(--cyan), var(--purple));
+      content      : '';
+      display      : block;
+      width        : 40px;
+      height       : 3px;
+      background   : linear-gradient(90deg, var(--cyan), var(--purple));
       border-radius: 2px;
-      margin-top : 0.5rem;
+      margin-top   : 0.45rem;
     }
   }
 
-  &__meta {
-    color     : var(--text-muted);
-    font-size : 0.82rem;
-    font-family: var(--font-mono);
-    letter-spacing: 0.04em;
-  }
-}
+  &__content {
+    color: var(--text-primary);
 
-// Zone de contenu principal
-.page__content {
-  color: var(--text-primary);
-
-  // Premier paragraphe — légèrement mis en valeur
-  > p:first-of-type {
-    font-size   : 1.05rem;
-    color       : var(--text-primary);
-    line-height : 1.8;
+    > p:first-of-type {
+      font-size  : 1.04rem;
+      line-height: 1.8;
+    }
   }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 7. TABLEAUX — style glassmorphism / data-viz
+// 7. TABLEAUX
 // ─────────────────────────────────────────────────────────────────────────────
-
 table {
-  width          : 100%;
-  border-collapse: separate;
-  border-spacing : 0;
-  margin         : 1.75rem 0;
-  background     : var(--bg-surface);
-  border-radius  : 12px;
-  overflow       : hidden;
-  border         : 1px solid var(--border);
-  box-shadow     : var(--shadow-sm);
-  font-size      : 0.9rem;
+  width            : 100%;
+  border-collapse  : separate;
+  border-spacing   : 0;
+  margin           : 1.75rem 0;
+  background       : var(--bg-surface) !important;
+  border-radius    : 10px;
+  overflow         : hidden;
+  border           : 1px solid var(--border) !important;
+  box-shadow       : var(--shadow-sm);
+  font-size        : 0.9rem;
 
-  thead {
-    tr {
-      background: linear-gradient(135deg,
-        rgba(0, 212, 255, 0.15) 0%,
-        rgba(108, 99, 255, 0.15) 100%
-      );
-      border-bottom: 1px solid var(--border-strong);
-    }
+  thead tr {
+    background : linear-gradient(135deg,
+      rgba(0,212,255,0.12) 0%,
+      rgba(108,99,255,0.12) 100%
+    ) !important;
+    border-bottom: 1px solid var(--border-strong);
+  }
 
-    th {
-      padding        : 0.85rem 1.1rem;
-      text-align     : left;
-      font-family    : var(--font-display);
-      font-weight    : 700;
-      font-size      : 0.78rem;
-      text-transform : uppercase;
-      letter-spacing : 0.1em;
-      color          : var(--cyan);
-      white-space    : nowrap;
-    }
+  th {
+    padding        : 0.8rem 1rem !important;
+    font-family    : var(--font-display) !important;
+    font-weight    : 700 !important;
+    font-size      : 0.75rem !important;
+    text-transform : uppercase !important;
+    letter-spacing : 0.1em !important;
+    color          : var(--cyan) !important;
+    white-space    : nowrap;
+    border-bottom  : 1px solid var(--border-strong) !important;
   }
 
   tbody {
     tr {
-      border-bottom : 1px solid rgba(0, 212, 255, 0.06);
-      transition    : background var(--transition);
+      border-bottom : 1px solid rgba(0,212,255,0.055);
+      transition    : background var(--t);
 
       &:last-child { border-bottom: none; }
-
-      &:hover {
-        background: rgba(0, 212, 255, 0.04);
-      }
+      &:hover      { background: rgba(0,212,255,0.035) !important; }
     }
 
     td {
-      padding     : 0.75rem 1.1rem;
-      color       : var(--text-primary);
-      vertical-align: middle;
-      line-height : 1.5;
-    }
-  }
-}
-
-// ── Tableau spécial Métriques (about.md — section 📊)
-// Ciblage via structure : tableau centré avec 4 colonnes de chiffres
-table:has(td:first-child:contains("📄")),
-.page__content > table:nth-of-type(1) {
-  background  : transparent;
-  border      : none;
-  box-shadow  : none;
-
-  thead th {
-    display: none; // Pas d'en-tête visible si alignement personnalisé
-  }
-
-  tbody td {
-    text-align      : center;
-    padding         : 1.5rem 0.75rem;
-    background      : var(--bg-card);
-    border          : 1px solid var(--border);
-    border-radius   : 12px;
-    font-family     : var(--font-display);
-    font-weight     : 800;
-    font-size       : 1.6rem;
-    color           : var(--cyan);
-    position        : relative;
-    overflow        : hidden;
-    transition      : all 0.4s var(--ease);
-
-    &::before {
-      content    : '';
-      position   : absolute;
-      inset      : 0;
-      background : linear-gradient(135deg, rgba(0,212,255,0.05), transparent);
-      opacity    : 0;
-      transition : opacity var(--transition);
-    }
-
-    &:hover {
-      border-color: var(--border-strong);
-      box-shadow  : var(--glow-cyan);
-      transform   : translateY(-3px);
-
-      &::before { opacity: 1; }
+      padding    : 0.7rem 1rem !important;
+      color      : var(--text-primary) !important;
+      border-top : none !important;
     }
   }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 8. LISTES — Publications, enseignements, recherche
+// 8. LISTES
 // ─────────────────────────────────────────────────────────────────────────────
-
 ul, ol {
-  padding-left: 1.5rem;
-
   li {
-    margin-bottom: 0.5rem;
-    color        : var(--text-primary);
-    line-height  : 1.7;
+    color       : var(--text-primary);
+    line-height : 1.75;
 
-    &::marker {
-      color: var(--cyan);
-    }
+    &::marker { color: var(--cyan); }
   }
 }
 
-// Listes de domaines de recherche (emojis + texte)
-.page__content ul li:has(strong) {
-  padding         : 0.5rem 0.75rem 0.5rem 1rem;
-  margin-bottom   : 0.4rem;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 9. BADGES SHIELDS (about.md)
+// ─────────────────────────────────────────────────────────────────────────────
+p[align="center"] {
+  display         : flex !important;
+  flex-wrap       : wrap;
+  justify-content : center;
+  align-items     : center;
+  gap             : 0.55rem;
+  padding         : 1.1rem;
   background      : var(--bg-surface);
   border          : 1px solid var(--border);
-  border-left     : 3px solid var(--cyan);
-  border-radius   : 0 8px 8px 0;
-  list-style      : none;
-  margin-left     : -1.5rem;
-  transition      : all var(--transition);
-
-  &:hover {
-    background    : var(--bg-card-hover);
-    border-left-color: var(--purple);
-    transform     : translateX(4px);
-  }
-}
-
-// Publications — blocs de texte bold + lien DOI
-.page__content p:has(strong:first-child) {
-  background    : var(--bg-surface);
-  border        : 1px solid var(--border);
-  border-left   : 3px solid transparent;
-  border-image  : linear-gradient(180deg, var(--cyan), var(--purple)) 1;
-  border-radius : 0 10px 10px 0;
-  padding       : 1rem 1.25rem;
-  margin-bottom : 0.85rem;
-  transition    : all var(--transition);
-  position      : relative;
-
-  &::before {
-    content  : '"';
-    position : absolute;
-    top      : 0.4rem;
-    right    : 0.75rem;
-    font-size: 2.5rem;
-    color    : var(--cyan-dim);
-    font-family: Georgia, serif;
-    line-height: 1;
-  }
-
-  &:hover {
-    background  : var(--bg-card-hover);
-    box-shadow  : var(--shadow-sm), inset 0 0 0 1px var(--border-strong);
-    transform   : translateX(3px);
-  }
-}
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 9. BADGES / SHIELDS (section about.md — liens académiques)
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Conteneur de badges (p align="center")
-p[align="center"] {
-  display        : flex;
-  flex-wrap      : wrap;
-  justify-content: center;
-  align-items    : center;
-  gap            : 0.6rem;
-  padding        : 1.25rem;
-  background     : var(--bg-surface);
-  border         : 1px solid var(--border);
-  border-radius  : 14px;
-  margin-bottom  : 2rem;
-
-  img {
-    border-radius: 6px;
-    transition   : all 0.3s var(--ease);
-    height       : 28px;
-    width        : auto;
-
-    &:hover {
-      transform  : translateY(-3px) scale(1.05);
-      box-shadow : 0 6px 20px rgba(0, 0, 0, 0.5);
-      filter     : brightness(1.1);
-    }
-  }
+  border-radius   : 12px;
+  margin-bottom   : 2rem;
 
   a {
-    display       : inline-flex;
-    border-radius : 6px;
-    transition    : all 0.3s var(--ease);
+    display      : inline-flex;
+    border-radius: 6px;
+    transition   : all var(--t);
+    text-shadow  : none !important;
 
-    &:hover {
-      text-shadow : none;
+    img {
+      height       : 26px;
+      width        : auto;
+      border-radius: 4px;
+      transition   : all var(--t);
+
+      &:hover {
+        transform : translateY(-2px) scale(1.06);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+      }
     }
   }
 }
@@ -701,173 +489,131 @@ p[align="center"] {
 // ─────────────────────────────────────────────────────────────────────────────
 // 10. BLOCS DE CODE
 // ─────────────────────────────────────────────────────────────────────────────
-
 pre {
-  background    : #020813;
-  border        : 1px solid var(--border);
-  border-radius : 10px;
-  padding       : 1.25rem 1.5rem;
+  background    : #020813 !important;
+  border        : 1px solid var(--border) !important;
+  border-radius : 10px !important;
+  padding       : 1.2rem 1.5rem !important;
   overflow-x    : auto;
-  box-shadow    : var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.03);
-  position      : relative;
-  font-family   : var(--font-mono);
-  font-size     : 0.875rem;
+  box-shadow    : var(--shadow-md);
+  font-family   : var(--font-mono) !important;
+  font-size     : 0.875rem !important;
   line-height   : 1.7;
-
-  // Barre de titre de code (effet terminal)
-  &::before {
-    content     : '● ● ●';
-    display     : block;
-    color       : var(--text-muted);
-    font-size   : 0.65rem;
-    letter-spacing: 0.3em;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom : 1px solid var(--border);
-  }
+  color         : #c8d8e8 !important;
 
   code {
-    background : transparent;
-    border     : none;
-    padding    : 0;
-    color      : #c8d8e8;
-    font-size  : inherit;
+    background : transparent !important;
+    border     : none !important;
+    padding    : 0 !important;
+    color      : #c8d8e8 !important;
+    font-size  : inherit !important;
   }
 }
 
-// Coloration syntaxique (Rogue/Pygments — dark theme)
 .highlight {
-  background  : #020813 !important;
-  border-radius: 10px;
+  background    : #020813 !important;
+  border-radius : 10px;
+  border        : 1px solid var(--border);
+  margin        : 1.5rem 0;
 
-  .k, .kd, .kn { color: #c678dd; }   // keywords — violet
-  .s, .s1, .s2 { color: #98c379; }   // strings — vert
-  .c, .c1, .cm { color: #5c6370; font-style: italic; } // commentaires
-  .n, .nb      { color: #e06c75; }   // names — rouge
-  .mi, .mf     { color: #d19a66; }   // numbers — orange
-  .o           { color: var(--cyan); } // opérateurs
-  .nf          { color: #61afef; }   // fonctions — bleu
-  .nn          { color: #e5c07b; }   // namespaces
+  .k, .kd, .kn { color: #c678dd; }
+  .s, .s1, .s2 { color: #98c379; }
+  .c, .c1, .cm { color: #5c6370; font-style: italic; }
+  .mi, .mf     { color: #d19a66; }
+  .o            { color: var(--cyan); }
+  .nf, .n       { color: #61afef; }
+  .nb           { color: #e06c75; }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 11. ARCHIVE / LISTES DE PAGES (Publications, Teaching, Talks)
+// 11. ARCHIVES (Publications, Teaching, Talks)
 // ─────────────────────────────────────────────────────────────────────────────
-
 .archive {
-  animation: fadeInUp 0.5s var(--ease) 0.15s both;
+  animation: fadeUp 0.5s var(--ease) 0.12s both;
 }
 
+.list__item,
 .archive__item {
   background    : var(--bg-surface);
   border        : 1px solid var(--border);
-  border-radius : 12px;
-  padding       : 1.25rem 1.5rem;
-  margin-bottom : 1rem;
-  transition    : all 0.35s var(--ease);
+  border-radius : 10px;
+  padding       : 1.1rem 1.35rem;
+  margin-bottom : 0.85rem;
+  transition    : all 0.32s var(--ease);
   position      : relative;
   overflow      : hidden;
 
   &::before {
-    content    : '';
-    position   : absolute;
-    left       : 0;
-    top        : 0;
-    bottom     : 0;
-    width      : 3px;
-    background : linear-gradient(180deg, var(--cyan), var(--purple));
-    border-radius: 0 0 0 0;
-    opacity    : 0;
-    transition : opacity var(--transition);
+    content      : '';
+    position     : absolute;
+    left         : 0; top: 0; bottom: 0;
+    width        : 3px;
+    background   : linear-gradient(180deg, var(--cyan), var(--purple));
+    opacity      : 0;
+    transition   : opacity var(--t);
   }
 
   &:hover {
-    background  : var(--bg-card-hover);
-    border-color: var(--border-strong);
-    box-shadow  : var(--shadow-md);
-    transform   : translateX(6px);
+    background   : #162a50;
+    border-color : var(--border-strong);
+    box-shadow   : var(--shadow-md);
+    transform    : translateX(5px);
 
     &::before { opacity: 1; }
   }
+}
 
-  &-title {
-    font-family    : var(--font-display);
-    font-size      : 1.05rem;
-    font-weight    : 700;
-    color          : var(--text-heading);
-    letter-spacing : -0.01em;
-    margin-bottom  : 0.3rem;
+.archive__item-title {
+  font-family    : var(--font-display) !important;
+  font-size      : 1.05rem !important;
+  font-weight    : 700 !important;
+  color          : var(--text-heading) !important;
+  letter-spacing : -0.01em !important;
+  margin-bottom  : 0.25rem !important;
 
-    a {
-      color       : var(--text-heading);
-      text-decoration: none;
-      transition  : color var(--transition);
-
-      &:hover { color: var(--cyan); text-shadow: none; }
-    }
-  }
-
-  &-excerpt {
-    font-size   : 0.875rem;
-    color       : var(--text-secondary);
-    line-height : 1.65;
-    margin      : 0;
-    
-    // Tag "Abstract"
-    &::before {
-      content        : 'ABSTRACT';
-      display        : inline-block;
-      font-family    : var(--font-mono);
-      font-size      : 0.65rem;
-      font-weight    : 600;
-      letter-spacing : 0.12em;
-      color          : var(--cyan);
-      background     : var(--cyan-dim);
-      padding        : 0.1rem 0.45rem;
-      border-radius  : 4px;
-      margin-bottom  : 0.5rem;
-      margin-right   : 0.5rem;
-      vertical-align : middle;
-    }
+  a {
+    color       : var(--text-heading) !important;
+    &:hover { color: var(--cyan) !important; text-shadow: none !important; }
   }
 }
 
-// Date en style mono
+.archive__item-excerpt {
+  font-size  : 0.875rem !important;
+  color      : var(--text-secondary) !important;
+  line-height: 1.65 !important;
+}
+
+// Date mono
 .page__date,
-time {
-  font-family    : var(--font-mono);
-  font-size      : 0.75rem;
-  color          : var(--text-muted);
-  letter-spacing : 0.06em;
+.page__meta time {
+  font-family    : var(--font-mono) !important;
+  font-size      : 0.75rem !important;
+  color          : var(--text-muted) !important;
   background     : rgba(0,212,255,0.06);
-  padding        : 0.15rem 0.5rem;
+  padding        : 0.12rem 0.45rem;
   border-radius  : 4px;
   border         : 1px solid var(--border);
   display        : inline-block;
 }
 
-// Étiquettes de catégories/tags
-.page__taxonomy-item,
-.label {
-  font-family    : var(--font-mono);
-  font-size      : 0.72rem;
-  font-weight    : 600;
-  letter-spacing : 0.08em;
-  padding        : 0.2rem 0.65rem;
-  border-radius  : 20px;
-  background     : rgba(108, 99, 255, 0.12);
-  color          : #a89cf8;
-  border         : 1px solid rgba(108, 99, 255, 0.25);
-  transition     : all var(--transition);
-  text-decoration: none;
-  display        : inline-block;
-  margin         : 0.15rem;
+// Tags
+.page__taxonomy-item {
+  font-family    : var(--font-mono) !important;
+  font-size      : 0.72rem !important;
+  font-weight    : 600 !important;
+  letter-spacing : 0.08em !important;
+  padding        : 0.18rem 0.6rem !important;
+  border-radius  : 20px !important;
+  background     : rgba(108,99,255,0.1) !important;
+  color          : #a89cf8 !important;
+  border         : 1px solid rgba(108,99,255,0.22) !important;
+  transition     : all var(--t) !important;
 
   &:hover {
-    background : rgba(108, 99, 255, 0.25);
-    color      : #c8bcff;
-    text-shadow: none;
+    background : rgba(108,99,255,0.22) !important;
+    color      : #c8bcff !important;
+    text-shadow: none !important;
   }
 }
 
@@ -875,343 +621,205 @@ time {
 // ─────────────────────────────────────────────────────────────────────────────
 // 12. BOUTONS
 // ─────────────────────────────────────────────────────────────────────────────
-
 .btn {
-  font-family    : var(--font-display);
-  font-weight    : 600;
-  font-size      : 0.82rem;
-  letter-spacing : 0.06em;
-  text-transform : uppercase;
-  padding        : 0.6rem 1.4rem;
-  border-radius  : 8px;
-  border         : none;
-  transition     : all 0.3s var(--ease);
-  cursor         : pointer;
-  text-decoration: none;
-  display        : inline-flex;
-  align-items    : center;
-  gap            : 0.4rem;
+  font-family    : var(--font-display) !important;
+  font-weight    : 600 !important;
+  font-size      : 0.8rem !important;
+  letter-spacing : 0.06em !important;
+  text-transform : uppercase !important;
+  padding        : 0.55rem 1.3rem !important;
+  border-radius  : 7px !important;
+  transition     : all 0.28s var(--ease) !important;
 
   &--primary, &--inverse {
-    background : linear-gradient(135deg, var(--cyan) 0%, #0099cc 100%);
-    color      : var(--bg-deep);
-    box-shadow : 0 4px 16px rgba(0, 212, 255, 0.3);
+    background : linear-gradient(135deg, var(--cyan), #0099cc) !important;
+    color      : var(--bg-deep) !important;
+    border     : none !important;
+    box-shadow : 0 4px 14px rgba(0,212,255,0.28) !important;
 
     &:hover {
-      transform  : translateY(-2px);
-      box-shadow : 0 8px 24px rgba(0, 212, 255, 0.5);
-      color      : var(--bg-deep);
-      text-shadow: none;
+      transform  : translateY(-2px) !important;
+      box-shadow : 0 7px 22px rgba(0,212,255,0.48) !important;
+      text-shadow: none !important;
     }
   }
 
   &--light-outline {
-    background : transparent;
-    color      : var(--cyan);
-    border     : 1px solid var(--border-strong);
+    background : transparent !important;
+    color      : var(--cyan) !important;
+    border     : 1px solid var(--border-strong) !important;
 
     &:hover {
-      background : var(--cyan-dim);
-      border-color: var(--cyan);
-      transform  : translateY(-2px);
-      text-shadow: none;
+      background : var(--cyan-dim) !important;
+      border-color: var(--cyan) !important;
+      transform  : translateY(-2px) !important;
+      text-shadow: none !important;
     }
   }
 }
 
-// Bouton "Read more"
-.page__meta-readtime,
-a.btn--primary[rel="permalink"] {
-  @extend .btn;
-  @extend .btn--light-outline;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 13. NOTICES / ALERTES
+// ─────────────────────────────────────────────────────────────────────────────
+.notice {
+  background    : var(--bg-surface) !important;
+  border-left   : 4px solid var(--cyan) !important;
+  border-top    : 1px solid var(--border) !important;
+  border-right  : 1px solid var(--border) !important;
+  border-bottom : 1px solid var(--border) !important;
+  border-radius : 0 8px 8px 0 !important;
+  color         : var(--text-primary) !important;
+
+  &--info    { border-left-color: #61afef !important; }
+  &--warning { border-left-color: var(--amber) !important; }
+  &--success { border-left-color: var(--green-neon) !important; }
+  &--danger  { border-left-color: #ff4d6d !important; }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 13. NAVIGATION DES PAGES (Prev / Next)
+// 14. PAGINATION
 // ─────────────────────────────────────────────────────────────────────────────
-
-.page__footer-follow li a {
-  color       : var(--text-secondary);
-  font-family : var(--font-mono);
-  font-size   : 0.78rem;
-
-  &:hover { color: var(--cyan); }
-}
-
 .pagination {
-  .disabled {
-    color: var(--text-muted);
+  .current {
+    background    : var(--cyan-dim) !important;
+    color         : var(--cyan) !important;
+    border        : 1px solid var(--border-strong) !important;
+    border-radius : 7px !important;
+    font-family   : var(--font-display) !important;
+    font-weight   : 700 !important;
   }
 
   a {
-    background  : var(--bg-surface);
-    border      : 1px solid var(--border);
-    border-radius: 8px;
-    color       : var(--text-primary);
-    padding     : 0.5rem 1rem;
-    transition  : all var(--transition);
+    background    : var(--bg-surface) !important;
+    color         : var(--text-primary) !important;
+    border        : 1px solid var(--border) !important;
+    border-radius : 7px !important;
+    transition    : all var(--t) !important;
 
     &:hover {
-      background  : var(--cyan-dim);
-      border-color: var(--border-strong);
-      color       : var(--cyan);
-      text-shadow : none;
+      background   : var(--cyan-dim) !important;
+      border-color : var(--border-strong) !important;
+      color        : var(--cyan) !important;
+      text-shadow  : none !important;
     }
   }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 14. FOOTER
+// 15. FOOTER
 // ─────────────────────────────────────────────────────────────────────────────
-
 .page__footer {
-  background    : var(--bg-deep);
-  border-top    : 1px solid var(--border);
-  padding-top   : 1.5rem;
-  margin-top    : 3rem;
+  background  : var(--bg-deep) !important;
+  border-top  : 1px solid var(--border) !important;
+  margin-top  : 3rem;
+  position    : relative;
 
-  footer {
-    max-width : 1200px;
-    margin    : 0 auto;
-    padding   : 0 1.5rem 1.5rem;
-  }
-
-  p, a {
-    font-family : var(--font-mono);
-    font-size   : 0.75rem;
-    color       : var(--text-muted);
-    letter-spacing: 0.04em;
-  }
-
-  a:hover { color: var(--cyan); }
-
-  // Ligne décorative en haut du footer
   &::before {
-    content    : '';
-    display    : block;
-    height     : 2px;
-    background : linear-gradient(90deg,
+    content   : '';
+    display   : block;
+    height    : 2px;
+    background: linear-gradient(90deg,
       transparent 0%,
       var(--cyan) 20%,
       var(--purple) 50%,
       var(--cyan) 80%,
       transparent 100%
     );
-    background-size : 200% 100%;
-    animation  : borderFlow 4s linear infinite;
-    margin-bottom: 0;
+    background-size: 200% 100%;
+    animation : borderFlow 5s linear infinite;
   }
+
+  footer { max-width: 1200px; margin: 0 auto; padding: 0.75rem 1.5rem 1.25rem; }
+
+  p, a {
+    font-family    : var(--font-mono) !important;
+    font-size      : 0.74rem !important;
+    color          : var(--text-muted) !important;
+    letter-spacing : 0.04em;
+  }
+
+  a:hover { color: var(--cyan) !important; text-shadow: none !important; }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 15. COMPOSANTS SPÉCIAUX — Spécifiques au profil académique
+// 16. FIL D'ARIANE
 // ─────────────────────────────────────────────────────────────────────────────
-
-// ── Fil d'Ariane (breadcrumbs — activés dans _config.yml)
 .breadcrumbs {
-  background     : transparent;
-  padding        : 0.4rem 0;
-  margin-bottom  : 0.5rem;
-
   ol {
+    font-family : var(--font-mono) !important;
+    font-size   : 0.73rem !important;
     padding     : 0;
     margin      : 0;
     list-style  : none;
     display     : flex;
     flex-wrap   : wrap;
-    gap         : 0;
-    font-family : var(--font-mono);
-    font-size   : 0.72rem;
   }
 
   li {
-    color       : var(--text-muted);
-    margin      : 0;
+    color: var(--text-muted) !important;
 
-    &::marker { content: none; }
-
-    a {
-      color       : var(--text-secondary);
-      padding     : 0 0.3rem;
-      &:hover     { color: var(--cyan); }
-    }
-
-    &.active {
-      color       : var(--cyan);
-      padding     : 0 0.3rem;
-      font-weight : 500;
-    }
+    a   { color: var(--text-secondary) !important; &:hover { color: var(--cyan) !important; } }
   }
-
-  span[aria-hidden="true"] {
-    color   : var(--text-muted);
-    padding : 0 0.15rem;
-  }
-}
-
-// ── Bandeau d'avertissement / notice
-.notice {
-  &, &--info, &--warning, &--success, &--danger {
-    border-radius : 10px;
-    border-left   : 4px solid var(--cyan);
-    background    : var(--bg-surface);
-    border-top    : 1px solid var(--border);
-    border-right  : 1px solid var(--border);
-    border-bottom : 1px solid var(--border);
-    padding       : 1rem 1.25rem;
-    font-size     : 0.9rem;
-    color         : var(--text-primary);
-  }
-
-  &--info    { border-left-color: #61afef; background: rgba(97,175,239,0.05); }
-  &--warning { border-left-color: var(--amber); background: rgba(245,166,35,0.05); }
-  &--success { border-left-color: var(--green-neon); background: rgba(0,245,160,0.05); }
-  &--danger  { border-left-color: #ff4d6d; background: rgba(255,77,109,0.05); }
-}
-
-// ── Icône de section (émoji en début de h2)
-h2:not(.author__name) {
-  // Alignement des émojis avec le texte
-  &[id] {
-    scroll-margin-top: 80px; // Offset pour le header sticky
-  }
-}
-
-// ── Effet "terminal" pour les sections de contact
-.page__content > h2:last-of-type + p {
-  font-family : var(--font-mono);
-  font-size   : 0.9rem;
-  line-height : 1.9;
-  color       : var(--text-secondary);
-}
-
-// ── Ligne de mise à jour en bas de page
-.page__content > p:last-child {
-  font-family    : var(--font-mono);
-  font-size      : 0.72rem;
-  color          : var(--text-muted);
-  letter-spacing : 0.06em;
-  border-top     : 1px solid var(--border);
-  padding-top    : 0.75rem;
-  margin-top     : 2rem;
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 16. MEDIA QUERIES — Responsive design
+// 17. RESPONSIVE
 // ─────────────────────────────────────────────────────────────────────────────
-
-@media screen and (max-width: 1024px) {
-  .sidebar {
-    width   : 200px !important;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  body {
-    background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
-  }
+  body { background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px; }
 
-  // Masthead mobile
-  .masthead {
-    &__inner-wrap { padding: 0.6rem 1rem; }
-  }
+  p[align="center"] { gap: 0.35rem; padding: 0.85rem; img { height: 22px; } }
 
-  // Badges : disposition verticale
-  p[align="center"] {
-    flex-direction  : row;
-    justify-content : center;
-    gap             : 0.4rem;
-    padding         : 1rem;
-
-    img { height: 24px; }
-  }
-
-  // Tableaux — scroll horizontal
   .page__content table {
-    display        : block;
-    overflow-x     : auto;
+    display    : block;
+    overflow-x : auto;
     -webkit-overflow-scrolling: touch;
-    font-size      : 0.82rem;
-
-    th, td { padding: 0.6rem 0.75rem; }
+    font-size  : 0.82rem;
   }
 
-  // Archives
-  .archive__item {
-    padding: 1rem;
-    &:hover { transform: none; }
-  }
+  .archive__item:hover { transform: none; }
 
-  // Sidebar profil en haut sur mobile
   .author__avatar img {
-    width  : 100px !important;
-    height : 100px !important;
+    width  : 90px !important;
+    height : 90px !important;
   }
-
-  h2 {
-    font-size   : 1.2rem;
-    padding-left: 0.75rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .page__content > h2::before {
-    width: 2px;
-  }
-
-  pre { padding: 1rem; font-size: 0.8rem; }
-
-  p[align="center"] img { height: 22px; }
 }
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 17. PRINT — Styles d'impression (pour CV/Publications)
+// 18. IMPRESSION
 // ─────────────────────────────────────────────────────────────────────────────
-
 @media print {
   body {
-    background : white;
-    color      : #1a1a1a;
+    background : white !important;
+    color      : #1a1a1a !important;
+    background-image: none !important;
     font-size  : 11pt;
-    background-image: none;
   }
 
-  .masthead,
-  .sidebar,
-  .page__footer,
-  .page__share,
-  .page__comments { display: none; }
+  .masthead, .sidebar,
+  .page__footer, .page__share,
+  .page__comments { display: none !important; }
 
-  .page__content {
-    max-width : 100%;
-    padding   : 0;
-  }
-
-  h2 { color: #1a1a1a; }
-  h2::before { background: #1a1a1a; }
-
-  a {
-    color          : #1a1a1a;
-    text-decoration: underline;
-  }
+  h1, h2, h3, h4 { color: #1a1a1a !important; }
+  h2::before      { background: #333 !important; }
+  a               { color: #1a1a1a !important; text-decoration: underline !important; }
 
   table {
-    background  : white;
-    border-color: #ddd;
-
-    thead tr { background: #f5f5f5; }
-    th        { color: #1a1a1a; }
-    td        { color: #333; }
+    background   : white !important;
+    border-color : #ccc !important;
+    th { color: #333 !important; background: #f0f0f0 !important; }
+    td { color: #333 !important; }
   }
 
   .archive__item {
-    background  : white;
-    border-color: #ddd;
-    break-inside: avoid;
+    background   : white !important;
+    border-color : #ddd !important;
+    break-inside : avoid;
   }
 }
