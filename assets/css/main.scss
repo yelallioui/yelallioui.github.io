@@ -1,41 +1,56 @@
 ---
+# assets/css/main.scss
+# Point d'entrée principal — ne pas supprimer le front matter (les trois tirets)
 ---
 
-/*
- *    Minimal Mistakes Jekyll Theme
- *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
- *
-*/
+@charset "utf-8";
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
+// ─────────────────────────────────────────────────────────────────────────────
+// OVERRIDES DE VARIABLES MINIMAL-MISTAKES (doivent être déclarés AVANT l'import)
+// ─────────────────────────────────────────────────────────────────────────────
 
-@import "reset";
-@import "base";
+// Couleurs principales
+$background-color    : #050b18  !default;
+$text-color          : #c8d8e8  !default;
+$muted-text-color    : #7a90a8  !default;
+$primary-color       : #00d4ff  !default;
+$success-color       : #00f5a0  !default;
+$warning-color       : #f5a623  !default;
+$danger-color        : #ff4d6d  !default;
+$info-color          : #6c63ff  !default;
+$link-color          : #00d4ff  !default;
+$link-color-hover    : #7df8ff  !default;
+$masthead-link-color         : #c8d8e8  !default;
+$masthead-link-color-hover   : #00d4ff  !default;
+$navicon-link-color-hover    : #00d4ff  !default;
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+// Bordures & fonds
+$border-color        : rgba(0, 212, 255, 0.15)  !default;
+$border-radius       : 8px  !default;
+$box-shadow          : 0 4px 24px rgba(0, 0, 0, 0.5)  !default;
 
-@import "forms";
+// Typographie
+$global-font-size    : 16px  !default;
+$global-line-height  : 1.7  !default;
+$serif               : "Plus Jakarta Sans", -apple-system, sans-serif  !default;
+$sans-serif          : "Plus Jakarta Sans", -apple-system, sans-serif  !default;
+$monospace           : "JetBrains Mono", "Fira Code", monospace  !default;
+$type-size-1         : 2.441em  !default;
+$type-size-2         : 1.953em  !default;
+$type-size-3         : 1.563em  !default;
+$type-size-4         : 1.25em   !default;
+$type-size-5         : 1em      !default;
 
-@import "page";
-@import "archive";
-@import "sidebar";
+// Sidebar
+$sidebar-width             : 220px !default;
+$author-profile-sidebar-bg : transparent !default;
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
+// ─────────────────────────────────────────────────────────────────────────────
+// IMPORT DU THÈME DE BASE
+// ─────────────────────────────────────────────────────────────────────────────
+@import "minimal-mistakes";
+
+// ─────────────────────────────────────────────────────────────────────────────
+// IMPORT DU THÈME CUSTOM (overrides complets après le thème de base)
+// ─────────────────────────────────────────────────────────────────────────────
+@import "custom";
