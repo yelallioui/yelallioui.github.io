@@ -9,7 +9,8 @@ title_separator : "–"
 name            : "Youssouf EL ALLIOUI"
 description     : >-
   Professeur-Chercheur en Informatique à l'Université Sultan Moulay Slimane (USMS),
-  Maroc. Machine Learning · Semantic Web · Educational Data Mining (EDM) · IA.
+  Faculté Polydisciplinaire de Khouribga, Maroc.
+  Machine Learning · Deep Learning · Semantic Web · Educational Data Mining (EDM) · IA Générative.
 url             : "https://yelallioui.github.io"
 baseurl         : ""
 repository      : "yelallioui/yelallioui.github.io"
@@ -80,9 +81,9 @@ author:
   name          : "Pr. Youssouf EL ALLIOUI"
   avatar        : "profile.jpg"
   bio           : >-
-    Professeur-Chercheur en Informatique.
-    PhD (2012) — Université Sidi Mohamed Ben Abdellah, Fès.
-    Machine Learning · Semantic Web · EDM · IA & Éducation.
+    Professeur-Chercheur en Informatique, USMS — FPK.
+    PhD (2012) — USMBA Fès / LAAS-CNRS Toulouse.
+    Machine Learning · Deep Learning · Semantic Web · EDM · IA & Éducation.
   location      : "Khouribga, Maroc"
   employer      : "Université Sultan Moulay Slimane (USMS)"
   googlescholar : "https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ"

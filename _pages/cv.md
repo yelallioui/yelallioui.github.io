@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "My CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,95 +9,153 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Computer Sciences, [USMBA](http://www.usmba.ac.ma/), [LAAS-CNRS](https://www.laas.fr/), [CHU-Fès](http://www.chu-fes.ma/), 10/2012
-  * Projet : [Télé-NEuroScience sur une plateforme collaborative Mobile sur Internet](http://homepages.laas.fr/khalil/page/index.php?n=PROJETS.TENEMO)
-  * Sujet : 
-    * Une approche de gestion de profils et de personnalisation des réponses neurologiques dans un environnement mobile.
-  * Partenaires : 
-    * Le Centre Hospitalier Universitaire Hassan II – [CHU de Fès](http://www.chu-fes.ma/), [Service de la neurologie](http://www.chu-fes.ma/neurologie/)
-    * Laboratoire d’Architecture et d’Analyse des Systèmes : [LAAS-CNRS - Toulouse](https://www.laas.fr/public/)
-    
-* Diplôme d'Etudes Supérieures Spécialisées (DESS), Génie Informatique (GI), [USMBA](http://www.usmba.ac.ma/), 2007
+---
 
-Work experience
-======
-* Depuis 02/2013: Enseignant Chercheur
-  * [Université Sultan Moulay Slimane](http://www.usms.ac.ma/)
-  * [Faculté Polydisciplinaire de Khouribga](fpk.ac.ma)
-  * Département des mathématiques et informatique
+## Informations Générales
 
-* 02/2013 – 01/2019 : Enseignant Vacataire
-  * [SUP’MANAGEMENT](https://www.supmanagement.ma/index.php)
-  * Ecole d’Ingénierie (School of Engineering)
-  
-* 02/2012 – 05/2012 : Enseignant Vacataire
-  * [IGA de Fès](https://iga.ac.ma/)
-  
-* 09/2008 – 07/2009 : Formateur
-  * [OFPPT](https://www.ofppt.ma/) - Office de la Formation Professionnelle et de la Promotion du Travail
-  * ISTA Al-Adarissa, Fès, Maroc
-  
-Workshop
-======
-* May 09-13, 2016 : [Big Data Training Workshop](http://med-space.org/iweek16/apply-for-big-data-workshop/ ), ENSIAS, Rabat, Morocco
-* May 10, 2016 : [Green ICT Workshop](http://med-space.org/iweek16/green-ict/ ), ENSIAS, Rabat, Morocco
-* May 11, 2016 : [IWTIE’16](http://med-space.org/iweek16/iwtie16/) - International Workshop of Technology Innovation and Entrepreneurship, ENSIAS, Rabat, Morocco
-  
-Skills
-======
-* Langages :
-  * Python, Objective-C, Java, C #, C/C++, VB.Net,
-  * XML, HTML, CSS, JavaScript, PHP, 
-  * PL/SQL, Transact SQL,
-  * Lisp, Prolog, 
-  * OWL, RDF, RDFS (Ontology)   
-* Analyse & Conception :
-  * UML, Merise 
-  * RUP, V, Y
-* Architectures :
-  * Java EE, DotNet, Web services, Design pattern
-* Technologies :
-  * Ontology, Jena, DataMaster
-  * Servlet, JSP, EJB, JSF, Struts, RMI, CORBA, Hibernate, TopLink,
-  * ASP.Net, ADO.Net, Winform
-* SGBDs :
-  * Oracle, SQL Server, MySQL, Access
-* Logiciels :
-  * PyCharm
-  * Protégé - ontology editor
-  * Xcode - Apple Developer
-  * Eclipse, NetBeans
-  * Microsoft Visual Studio .Net 
-  * Rational Rose, Power AMC Designer 
-* Serveurs :
-  * Apache, Tomcat, Jonas, Jboss, Glassfish
-  * IIS
-* Réseaux :
-  * TCP/IP, OSI, LAN, MAN, WAN, Ethernet
+**Pr. Youssouf EL ALLIOUI**  
+Professeur-Chercheur en Informatique  
+Faculté Polydisciplinaire de Khouribga — Université Sultan Moulay Slimane (USMS), Maroc  
+[y.elallioui@usms.ma](mailto:y.elallioui@usms.ma) · [yelallioui@gmail.com](mailto:yelallioui@gmail.com)  
+[ORCID](https://orcid.org/0000-0001-7176-7434) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ) · [ResearchGate](https://www.researchgate.net/profile/Youssouf_El_Allioui) · [LinkedIn](https://www.linkedin.com/in/yelallioui)
 
+---
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Coordonnateur de la filière SMI – Sciences Mathématiques et Informatique 
-* Membre du collège du département Mathématiques et informatique
-* Chef de la commission Scientifique chargée de la recherche scientifique, de la bibliothèque et des archives. 
+## Formation
+
+**Doctorat en Informatique** — 2012  
+Université Sidi Mohamed Ben Abdellah (USMBA), Fès, Maroc  
+En partenariat avec : [LAAS-CNRS](https://www.laas.fr/), Toulouse · [CHU Hassan II](http://www.chu-fes.ma/), Fès  
+*Thèse : Une approche de gestion de profils et de personnalisation des réponses neurologiques dans un environnement mobile (Projet TENEMO — Télé-NEuroScience Mobile)*
+
+**Diplôme d'Études Supérieures Spécialisées (DESS)** — Génie Informatique — 2007  
+Université Sidi Mohamed Ben Abdellah (USMBA), Fès, Maroc
+
+---
+
+## Expérience Professionnelle
+
+**Enseignant-Chercheur** — *depuis février 2013*  
+Université Sultan Moulay Slimane (USMS)  
+Faculté Polydisciplinaire de Khouribga — Département des Mathématiques et Informatique  
+- Enseignement de modules en Licence et Master (POO, Génie Logiciel, Web Dynamique)
+- Encadrement de projets de fin d'études et mémoires de Master
+- Activités de recherche en Machine Learning, EDM, Semantic Web
+- Responsabilités administratives et coordination pédagogique
+
+**Enseignant Vacataire** — *2013 – 2019*  
+[SUP'MANAGEMENT](https://www.supmanagement.ma/) — École d'Ingénierie, Maroc
+
+**Enseignant Vacataire** — *février – mai 2012*  
+[IGA de Fès](https://iga.ac.ma/), Maroc
+
+**Formateur Certifié Java EE** — *septembre 2008 – juillet 2009*  
+[OFPPT](https://www.ofppt.ma/) — ISTA Al-Adarissa, Fès, Maroc  
+- Formation qualifiante : Concepteur Réalisateur Java EE
+
+---
+
+## Enseignement
+
+| Module | Niveau | Institution | Période |
+|--------|--------|-------------|---------|
+| Programmation Orientée Objet (Java) | Licence Pro., S6 | USMS — FPK | depuis 2020 |
+| Web Dynamique (PHP & MySQL) | Licence Fund., SMI, S6 | USMS — FPK | depuis 2018 |
+| UML & Génie Logiciel | Licence, S5 | USMS — FPK | depuis 2013 |
+| Informatique avancée | Master II, Formation continue | FST USMS | depuis 2014 |
+| Concepteur Réalisateur Java EE | Formation qualifiante | ISTA-OFPPT | 2008–2011 |
+
+---
+
+## Compétences Techniques
+
+**Langages de programmation**
+- Python, Java, Java EE, PHP, SQL, R, JavaScript
+- C/C++, C#, VB.Net, Objective-C
+- XML, HTML/CSS, OWL, RDF, RDFS
+
+**Machine Learning & Intelligence Artificielle**
+- Scikit-learn, TensorFlow, Keras, PyTorch
+- Hugging Face Transformers, NLTK, spaCy
+- Weka, Jupyter Notebook
+
+**Semantic Web & Ontologies**
+- RDF, OWL, SPARQL, Protégé, Apache Jena
+
+**Bases de données**
+- MySQL, PostgreSQL, MongoDB, Oracle, SQL Server, MS Access
+
+**Analyse & Conception**
+- UML, Merise · Méthodes : RUP, cycle en V
+- Design Patterns (GoF), Architecture MVC
+
+**Technologies & Frameworks**
+- Java EE (Servlet, JSP, EJB, JSF, Struts, Hibernate, RMI)
+- ASP.Net, ADO.Net · Web Services (REST, SOAP)
+
+**Outils & Environnements**
+- Git, GitHub, Docker
+- PyCharm, Eclipse, NetBeans, Visual Studio .Net
+- LaTeX, Jekyll
+- Rational Rose, PowerAMC Designer
+- Protégé (ontology editor), Xcode (Apple Developer)
+
+**Serveurs & Réseaux**
+- Apache, Tomcat, JBoss, GlassFish, IIS
+- TCP/IP, OSI, LAN/WAN/MAN
+
+---
+
+## Publications
+
+<ul>{% for post in site.publications %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+---
+
+## Communications & Conférences
+
+<ul>{% for post in site.talks %}
+  {% include archive-single-talk-cv.html %}
+{% endfor %}</ul>
+
+**Workshops :**
+- **Big Data Training Workshop** — ENSIAS, Rabat (mai 2016)
+- **Green ICT Workshop** — ENSIAS, Rabat (mai 2016)
+- **IWTIE'16** — International Workshop on Technology Innovation and Entrepreneurship, ENSIAS, Rabat (mai 2016)
+
+---
+
+## Activités Pédagogiques
+
+<ul>{% for post in site.teaching %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+---
+
+## Responsabilités & Service Académique
+
+- **Coordonnateur** de la filière SMI (Sciences Mathématiques et Informatique), USMS
+- **Chef de la Commission Scientifique** chargée de la recherche, de la bibliothèque et des archives
+- **Membre** du Collège du Département des Mathématiques et Informatique
+- **Membre** des Commissions de Recrutement des postes d'enseignants-chercheurs
+- **Membre de comités de programme** de conférences et workshops internationaux (AI2SD, ICDS, ESAI)
+- **Reviewer** pour des revues et conférences internationales indexées
+
+---
+
+## Affiliations & Profils Académiques
+
+| Plateforme | Lien |
+|------------|------|
+| Google Scholar | [Profil Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ) |
+| ResearchGate | [Profil ResearchGate](https://www.researchgate.net/profile/Youssouf_El_Allioui) |
+| ORCID | [0000-0001-7176-7434](https://orcid.org/0000-0001-7176-7434) |
+| LinkedIn | [yelallioui](https://www.linkedin.com/in/yelallioui) |
+| GitHub | [yelallioui](https://github.com/yelallioui) |
+
+---
+
+*Dernière mise à jour : {{ site.time | date: "%B %Y" }}*

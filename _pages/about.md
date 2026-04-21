@@ -1,16 +1,12 @@
 ---
 permalink: /
 title: "À propos"
-excerpt: "Professeur-Chercheur en Informatique — Machine Learning, Semantic Web, Educational Data Mining"
+excerpt: "Professeur-Chercheur en Informatique — Machine Learning · Deep Learning · Semantic Web · Educational Data Mining"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
-
-<!-- ═══════════════════════════════════════════════════════
-     BANNIÈRE D'ACCROCHE RAPIDE (liens académiques)
-     ═══════════════════════════════════════════════════════ -->
 
 <p align="center">
   <a href="https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ" target="_blank">
@@ -32,45 +28,45 @@ redirect_from:
 
 ---
 
-## 👤 Biographie
+## Biographie
 
-Je suis **Professeur-Chercheur en Informatique** au Département d'Informatique de l'**Université Sultan Moulay Slimane (USMS)**, Béni Mellal, Maroc.
+Je suis **Professeur-Chercheur en Informatique** au Département des Mathématiques et Informatique de la **Faculté Polydisciplinaire de Khouribga**, Université Sultan Moulay Slimane (USMS), Maroc.
 
-J'ai obtenu mon **Doctorat en 2012** à l'Université Sidi Mohamed Ben Abdellah, Fès, Maroc. Mes travaux de recherche s'articulent autour de plusieurs domaines pluridisciplinaires à fort impact : le **Machine Learning**, le **Semantic Web**, la **gestion des connaissances**, la **personnalisation web**, les **systèmes de recommandation**, l'**e-learning adaptatif** et l'**Educational Data Mining (EDM)**.
+Titulaire d'un **Doctorat en Informatique (2012)** obtenu à l'Université Sidi Mohamed Ben Abdellah (USMBA), Fès, en collaboration avec le **LAAS-CNRS** de Toulouse et le **CHU Hassan II** de Fès, mes travaux portaient sur la gestion de profils et la personnalisation des réponses neurologiques dans un environnement mobile.
 
-Mon objectif est de développer des solutions intelligentes pour les défis éducatifs du monde réel, en exploitant des approches basées sur les données et l'intelligence artificielle pour améliorer l'expérience d'apprentissage et les résultats des étudiants.
+Depuis plus de **15 ans d'enseignement et de recherche**, je développe des solutions intelligentes basées sur l'**Intelligence Artificielle** et l'**analyse des données** pour répondre aux défis éducatifs contemporains : personnalisation des parcours d'apprentissage, prédiction des performances, systèmes de recommandation adaptatifs, et représentation sémantique des connaissances.
 
-J'ai publié de nombreux articles de recherche dans des **revues et conférences internationales** (Springer, Elsevier, IEEE), et j'ai siégé dans les comités techniques de diverses conférences et workshops internationaux. Je participe également aux **commissions de recrutement** des postes d'enseignants-chercheurs et je m'implique activement dans la gestion académique et les activités de recherche de l'institution.
+Je publie régulièrement dans des **revues et conférences internationales indexées** (Springer, Elsevier, IEEE) et participe aux comités de programme de plusieurs conférences internationales.
 
 ---
 
-## 📊 Métriques de Recherche
+## Métriques de Recherche
 
-| 📄 Publications | 🏆 Citations | 👁️ Lectures | 🎓 Doctorat |
+| Publications | Citations | Lectures | Doctorat |
 |:-:|:-:|:-:|:-:|
 | **18+** | **365+** | **14 700+** | **2012** |
 
-> *Sources : [ResearchGate](https://www.researchgate.net/profile/Youssouf_El_Allioui) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ)*  
-> ⚠️ *Mettez à jour ces chiffres régulièrement pour refléter votre impact actuel.*
+*Sources : [ResearchGate](https://www.researchgate.net/profile/Youssouf_El_Allioui) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ)*
 
 ---
 
-## 🔬 Domaines de Recherche
+## Domaines de Recherche
 
 Mes travaux couvrent les axes thématiques suivants :
 
-- 🤖 **Machine Learning & IA** — Algorithmes supervisés/non supervisés, modèles prédictifs, apprentissage automatique appliqué à l'éducation
-- 🎓 **Educational Data Mining (EDM)** — Analyse des comportements d'apprentissage, prédiction de la performance des étudiants, détection des styles d'apprentissage
-- 🌐 **Semantic Web & Ontologies** — Représentation des connaissances, RDF/OWL, requêtes sémantiques, ontologies de domaine
-- 💡 **Systèmes de Recommandation** — Filtrage collaboratif, personnalisation des contenus, profils utilisateurs
-- 📚 **E-learning Adaptatif** — Plateformes adaptatives, personnalisation pédagogique, modèles d'apprenants
-- 📱 **Web3 & Environnements Mobiles** — Services contextuels, découverte de ressources mobiles, gestion des profils
+- **Machine Learning & Deep Learning** — Algorithmes supervisés/non supervisés, réseaux de neurones profonds, modèles prédictifs appliqués à l'éducation
+- **Intelligence Artificielle Générative & LLM** — Modèles de langage à grande échelle, IA générative pour la personnalisation pédagogique
+- **Educational Data Mining (EDM)** — Analyse des comportements d'apprentissage, prédiction de la performance, détection des styles d'apprentissage
+- **Semantic Web & Ontologies** — Représentation des connaissances, RDF/OWL/SPARQL, ontologies de domaine, Web sémantique
+- **Systèmes de Recommandation** — Filtrage collaboratif, personnalisation de contenu, modèles de profils apprenants
+- **E-learning Adaptatif** — Plateformes adaptatives, personnalisation pédagogique, ingénierie des connaissances
+- **Traitement du Langage Naturel (NLP)** — Analyse textuelle, extraction d'information, classification sémantique
 
 ---
 
-## 🏆 Publications Récentes Sélectionnées
+## Publications Récentes Sélectionnées
 
-> 📎 Liste complète disponible sur la page [Publications](/publications/) et [Google Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ).
+> Liste complète disponible sur [Publications](/publications/) et [Google Scholar](https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ).
 
 **[2020]** El Aissaoui O., El Alami El Madani Y., Oughdir L., Dakkak A., **El Allioui Y.** —
 *A Multiple Linear Regression-Based Approach to Predict Student Performance.*
@@ -90,7 +86,7 @@ In: Embedded Systems and Artificial Intelligence. **Springer**, AISC vol. 1076.
 **Education and Information Technologies**, 24, 1943–1959. Springer.
 [DOI](https://doi.org/10.1007/s10639-018-9820-5)
 
-**[2019]** **Allioui Y. El** —
+**[2019]** **El Allioui Y.** —
 *Advanced prediction of learner's profile based on Felder-Silverman learning styles using web usage mining and fuzzy c-means algorithm.*
 **International Journal of Computer Aided Engineering and Technology**, 11(4/5), 495.
 [DOI](https://doi.org/10.1504/IJCAET.2019.100447)
@@ -101,55 +97,71 @@ In: Advanced Intelligent Systems for Sustainable Development (AI2SD'2018). **Spr
 
 ---
 
-## 🎤 Conférences & Communications
+## Conférences & Communications
 
-J'ai présenté mes travaux dans plusieurs conférences internationales, notamment :
+Présentations dans des conférences internationales reconnues :
 
-- **ISCV 2018** — International Conference on Intelligent Systems and Computer Vision, Fès, Maroc
-- **AI2SD 2018** — International Conference on Advanced Intelligent Systems for Sustainable Development, Tanger, Maroc
-- **ICDS 2018** — International Conference on Intelligent Computing in Data Sciences, Fès, Maroc
-- **ESAI 2019** — International Conference on Embedded Systems and Artificial Intelligence, Fès, Maroc
-- **ICDS 2019** — Third International Conference on Intelligent Computing in Data Sciences, Marrakech, Maroc
-- **IWTIE 2016** — International Workshop of Technology Innovation and Entrepreneurship, ENSIAS, Rabat, Maroc
+| Conférence | Lieu | Année |
+|------------|------|-------|
+| ESAI — International Conference on Embedded Systems and Artificial Intelligence | Fès, Maroc | 2019 |
+| AI2SD — Advanced Intelligent Systems for Sustainable Development | Tanger, Maroc | 2018–2019 |
+| ICDS — International Conference on Intelligent Computing in Data Sciences | Fès & Marrakech | 2018–2019 |
+| ISCV — International Conference on Intelligent Systems and Computer Vision | Fès, Maroc | 2018 |
+| IWTIE — International Workshop of Technology Innovation and Entrepreneurship | ENSIAS, Rabat | 2016 |
 
-> 📎 Liste complète sur la page [Talks](/talks/).
-
----
-
-## 🎓 Enseignement
-
-Depuis plus de **15 ans**, j'enseigne des modules d'informatique à différents niveaux (Licence, Master, Formation continue) :
-
-| Module | Niveau | Établissement |
-|--------|--------|---------------|
-| Programmation Orientée Objet (Java) | Licence Pro., S6 | USMS — depuis 2020 |
-| Web Dynamique (PHP & MySQL) | Licence Fund., SMI, S6 | USMS — depuis 2018 |
-| UML & Génie Logiciel | Licence, S5 | USMS — depuis 2013 |
-| Informatique avancée (Master II) | Master, Formation continue | FST — depuis 2014 |
-| Concepteur Réalisateur Java EE | Formation qualifiante | ISTA-OFPPT — 2008–2011 |
-
-> 📎 Détails et supports de cours sur la page [Teaching](/teaching/).
+> Liste complète sur la page [Talks](/talks/).
 
 ---
 
-## 🛠️ Compétences Techniques
+## Enseignement
 
-**Langages & Frameworks :** Python · Java · Java EE · PHP · SQL · R  
-**Machine Learning :** Scikit-learn · TensorFlow · Keras · Weka  
-**Semantic Web :** RDF · OWL · SPARQL · Protégé · Jena  
-**Bases de données :** MySQL · PostgreSQL · MongoDB  
-**Outils :** Git · GitHub · Jupyter Notebook · LaTeX · Jekyll
+Plus de **15 ans d'expérience** d'enseignement à différents niveaux (Licence, Master, Formation continue) :
+
+| Module | Niveau | Institution | Depuis |
+|--------|--------|-------------|--------|
+| Programmation Orientée Objet (Java) | Licence Pro., S6 | USMS — FPK | 2020 |
+| Web Dynamique (PHP & MySQL) | Licence, SMI, S6 | USMS — FPK | 2018 |
+| UML & Génie Logiciel | Licence, S5 | USMS — FPK | 2013 |
+| Informatique avancée | Master, Formation continue | FST USMS | 2014 |
+| Concepteur Réalisateur Java EE | Formation qualifiante | ISTA-OFPPT | 2008–2011 |
+
+> Supports de cours disponibles sur la page [Teaching](/teaching/) et [Cours](/cours/).
 
 ---
 
-## 📬 Contact
+## Compétences Techniques
+
+**Langages & Web :** Python · Java · Java EE · PHP · SQL · R · JavaScript · HTML/CSS
+
+**Machine Learning & IA :** Scikit-learn · TensorFlow · Keras · PyTorch · Hugging Face · Weka
+
+**IA Générative & NLP :** Transformers · LLMs · NLTK · spaCy
+
+**Semantic Web :** RDF · OWL · SPARQL · Protégé · Apache Jena
+
+**Bases de données :** MySQL · PostgreSQL · MongoDB · Oracle
+
+**Outils & DevOps :** Git · GitHub · Docker · Jupyter Notebook · LaTeX · Jekyll
+
+---
+
+## Responsabilités Académiques
+
+- **Coordonnateur** de la filière SMI (Sciences Mathématiques et Informatique)
+- **Chef de la Commission Scientifique** chargée de la recherche, de la bibliothèque et des archives
+- Membre du **Collège du Département** Mathématiques et Informatique
+- Membre des **Commissions de Recrutement** des postes d'enseignants-chercheurs
+
+---
+
+## Contact
 
 Pour toute collaboration scientifique, invitation à des comités de programme, ou demande d'encadrement :
 
-- 📧 **Email institutionnel :** [y.elallioui@usms.ma](mailto:y.elallioui@usms.ma)
-- 📧 **Email personnel :** [yelallioui@gmail.com](mailto:yelallioui@gmail.com)
-- 🌐 **Site institutionnel USMS :** [www.usms.ac.ma](http://www.usms.ac.ma/website/)
-- 🔗 **ORCID :** [0000-0001-7176-7434](https://orcid.org/0000-0001-7176-7434)
+- **Email institutionnel :** [y.elallioui@usms.ma](mailto:y.elallioui@usms.ma)
+- **Email personnel :** [yelallioui@gmail.com](mailto:yelallioui@gmail.com)
+- **Site USMS :** [www.usms.ac.ma](http://www.usms.ac.ma/website/)
+- **ORCID :** [0000-0001-7176-7434](https://orcid.org/0000-0001-7176-7434)
 
 ---
 
