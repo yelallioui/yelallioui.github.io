@@ -2,16 +2,19 @@
 main:
   - title: "About me"
     url: /about/
-    
+
   - title: "Publications"
     url: /publications/
 
   - title: "Talks"
-    url: /talks/    
+    url: /talks/
+
+  - title: "Portfolio"
+    url: /portfolio/
 
   - title: "Teaching"
-    url: /teaching/    
-    
+    url: /teaching/
+
   - title: "CV"
     url: /cv/
 
@@ -24,8 +27,5 @@ main:
       - title: "Use Case Diagram"
         url: /use-case/
 
-  #- title: "PH-PES"
-  #  url: /ph-pes/
-    
-  - title: "Contact me"
-    url: /markdown/
+  - title: "Contact"
+    url: /contact/
