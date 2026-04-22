@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cours magistraux — Pr. Youssouf EL ALLIOUI, USMS Khouribga." />
+  <title>Cours — Enseignement — Pr. Youssouf EL ALLIOUI</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="icon" type="image/png" href="../../images/profile.png" />
+</head>
+<body>
+
+  <!-- ══ Navigation principale ══ -->
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="../../index.html" class="nav-brand">Pr. EL ALLIOUI</a>
+        <ul class="nav-links">
+          <li><a href="../../index.html">About</a></li>
+          <li><a href="../index.html" class="active">Enseignement</a></li>
+          <li><a href="../../recherche/index.html">Recherche</a></li>
+          <li><a href="../../cv/index.html">CV</a></li>
+          <li><a href="../../qcm/index.html">QCM</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="../../index.html">About</a>
+        <a href="../index.html" class="active">Enseignement</a>
+        <a href="../../recherche/index.html">Recherche</a>
+        <a href="../../cv/index.html">CV</a>
+        <a href="../../qcm/index.html">QCM</a>
+        <a href="../../contact/index.html">Contact</a>
+      </nav>
+    </nav>
+
+    <!-- ══ Sous-menu Enseignement ══ -->
+    <div class="subnav">
+      <div class="subnav-inner">
+        <a href="../index.html">Vue d'ensemble</a>
+        <a href="index.html" class="active">Cours</a>
+        <a href="../td/index.html">TD</a>
+        <a href="../tp/index.html">TP</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ Contenu ══ -->
+  <main>
+    <div class="container">
+
+      <div class="page-header fade-up">
+        <h1>Cours Magistraux</h1>
+        <p>Supports de cours · Polycopiés · Slides</p>
+      </div>
+
+      <div class="cards-grid" id="cards">
+        <!-- Rendu dynamique depuis data.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span class="current-year"></span> Pr. Youssouf EL ALLIOUI ·
+      <a href="mailto:y.elallioui@usms.ma">y.elallioui@usms.ma</a> ·
+      <a href="http://www.usms.ac.ma/" target="_blank">USMS</a>
+    </p>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script src="data.js"></script>
+  <script>
+    function renderCards(data) {
+      const container = document.getElementById('cards');
+      if (!data || data.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <span style="font-size:2rem;">📂</span>
+            <p>Aucun cours disponible pour le moment.</p>
+          </div>`;
+        return;
+      }
+      container.innerHTML = data.map(item => `
+        <div class="card observe">
+          <div class="card-meta">
+            <h4>${item.module}</h4>
+            <span class="tag">${item.niveau}</span>
+          </div>
+          <p class="card-sub">${item.filiere} &nbsp;·&nbsp; ${item.institution}</p>
+          <p style="font-size:.9rem;">${item.description}</p>
+          <div class="card-actions">
+            <span class="mono" style="font-size:.78rem; color:var(--text-dim);">📅 ${item.annee}</span>
+            ${item.pdf
+              ? `<a href="${item.pdf}" class="btn btn-outline" target="_blank">📄 Télécharger</a>`
+              : `<span style="color:var(--text-dim); font-size:.78rem; font-family:var(--font-mono);">PDF bientôt disponible</span>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+    renderCards(DATA);
+  </script>
+</body>
+</html>
