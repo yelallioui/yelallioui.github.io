@@ -1,116 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM UML - Modélisation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="QCM UML — Testez vos connaissances en modélisation UML. Pr. Youssouf EL ALLIOUI, USMS Khouribga." />
+  <title>QCM UML — Pr. Youssouf EL ALLIOUI</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../images/profile.png" />
 </head>
 <body>
 
-    <!-- En-tête principale -->
-    <div class="qcm-header">
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="../index.html" class="nav-brand">Pr. EL ALLIOUI</a>
+        <ul class="nav-links">
+          <li><a href="../index.html">About</a></li>
+          <li><a href="../enseignement/index.html">Enseignement</a></li>
+          <li><a href="../recherche/index.html">Recherche</a></li>
+          <li><a href="../cv/index.html">CV</a></li>
+          <li><a href="index.html" class="active">QCM</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="../index.html">About</a>
+        <a href="../enseignement/index.html">Enseignement</a>
+        <a href="../recherche/index.html">Recherche</a>
+        <a href="../cv/index.html">CV</a>
+        <a href="index.html" class="active">QCM</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container" style="padding-top:2.5rem; padding-bottom:4rem;">
+
+      <div class="page-header fade-up">
         <h1>QCM UML – Modélisation</h1>
-        <p>Sélectionnez un thème pour accéder au QCM associé.</p>
-    </div>
+        <p>Testez vos connaissances en UML. Sélectionnez un thème pour démarrer le quiz.</p>
+      </div>
 
-    <!-- Grille des QCM disponibles -->
-    <div class="qcm-grid">
+      <div class="cards-grid">
 
-        <!-- QCM Use Case Diagram (Disponible) -->
-        <div class="qcm-card">
+        <div class="card observe">
+          <div class="card-meta">
             <h3>Use Case Diagram</h3>
-            <p>Testez votre compréhension des acteurs, cas d'utilisation, include, extend...</p>
-            <a class="qcm-button" href="/qcm/use-case/">Accéder au QCM</a>
+            <span class="tag" style="color:var(--green); border-color:var(--green);">Disponible</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            Acteurs, cas d'utilisation, relations include / extend, frontières du système.
+          </p>
+          <div class="card-actions">
+            <span class="tag">30 questions</span>
+            <a href="use-case/index.html" class="btn btn-primary">Démarrer →</a>
+          </div>
         </div>
 
-        <!-- QCM Class Diagram (À venir) -->
-        <div class="qcm-card">
+        <div class="card observe" style="animation-delay:.08s">
+          <div class="card-meta">
             <h3>Class Diagram</h3>
-            <p>Testez votre compréhension des Classes, Relations, attributs, méthodes, associations, héritage...</p>
-            <a class="qcm-button" href="/qcm/class-diagram/">Accéder au QCM</a>
+            <span class="tag" style="color:var(--green); border-color:var(--green);">Disponible</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            Classes, attributs, méthodes, associations, héritage, composition, agrégation.
+          </p>
+          <div class="card-actions">
+            <span class="tag">30 questions</span>
+            <a href="class-diagram/index.html" class="btn btn-primary">Démarrer →</a>
+          </div>
         </div>
 
-        <!-- QCM Activity Diagram (À venir) -->
-        <div class="qcm-card coming-soon">
+        <div class="card observe" style="animation-delay:.16s; opacity:.65;">
+          <div class="card-meta">
             <h3>Activity Diagram</h3>
-            <p>Flux de contrôle, décisions, parallélisme... (bientôt disponible)</p>
-            <a class="qcm-button disabled" href="#" onclick="alert('Ce QCM n\'est pas encore disponible.'); return false;">Bientôt disponible</a>
+            <span class="tag">Bientôt</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            Flux de contrôle, décisions, parallélisme, partitions.
+          </p>
+          <div class="card-actions">
+            <span></span>
+            <button class="btn btn-outline" disabled style="opacity:.5; cursor:not-allowed;">Bientôt disponible</button>
+          </div>
         </div>
 
-        <!-- QCM Sequence Diagram (À venir) -->
-        <div class="qcm-card coming-soon">
+        <div class="card observe" style="animation-delay:.24s; opacity:.65;">
+          <div class="card-meta">
             <h3>Sequence Diagram</h3>
-            <p>Interactions temporelles, messages, lignes de vie... (bientôt disponible)</p>
-            <a class="qcm-button disabled" href="#" onclick="alert('Ce QCM n\'est pas encore disponible.'); return false;">Bientôt disponible</a>
+            <span class="tag">Bientôt</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            Interactions temporelles, messages, lignes de vie, fragments combinés.
+          </p>
+          <div class="card-actions">
+            <span></span>
+            <button class="btn btn-outline" disabled style="opacity:.5; cursor:not-allowed;">Bientôt disponible</button>
+          </div>
         </div>
 
-        <!-- QCM State Diagram (À venir) -->
-        <div class="qcm-card coming-soon">
+        <div class="card observe" style="animation-delay:.32s; opacity:.65;">
+          <div class="card-meta">
             <h3>State Diagram</h3>
-            <p>États, transitions, événements... (bientôt disponible)</p>
-            <a class="qcm-button disabled" href="#" onclick="alert('Ce QCM n\'est pas encore disponible.'); return false;">Bientôt disponible</a>
+            <span class="tag">Bientôt</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            États, transitions, événements, états composites.
+          </p>
+          <div class="card-actions">
+            <span></span>
+            <button class="btn btn-outline" disabled style="opacity:.5; cursor:not-allowed;">Bientôt disponible</button>
+          </div>
         </div>
 
-        <!-- QCM Component Diagram (À venir) -->
-        <div class="qcm-card coming-soon">
+        <div class="card observe" style="animation-delay:.40s; opacity:.65;">
+          <div class="card-meta">
             <h3>Component Diagram</h3>
-            <p>Composants, interfaces, dépendances... (bientôt disponible)</p>
-            <a class="qcm-button disabled" href="#" onclick="alert('Ce QCM n\'est pas encore disponible.'); return false;">Bientôt disponible</a>
+            <span class="tag">Bientôt</span>
+          </div>
+          <p style="font-size:.9rem; color:var(--text-dim); margin:.75rem 0 1.25rem;">
+            Composants, interfaces, dépendances, connecteurs.
+          </p>
+          <div class="card-actions">
+            <span></span>
+            <button class="btn btn-outline" disabled style="opacity:.5; cursor:not-allowed;">Bientôt disponible</button>
+          </div>
         </div>
 
+      </div>
     </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="qcm-footer">
-        <div class="footer-content">
-            <!-- Colonne Auteur -->
-            <div class="footer-column">
-                <h3>Auteur</h3>
-                <p><strong>Pr Youssouf EL ALLIOUI</strong></p>
-                <p>
-                    <a href="https://yelallioui.github.io/" target="_blank">Site Web professionnel</a><br>
-                    <a href="mailto:y.elallioui@usms.ma">y.elallioui@usms.ma</a>
-                </p>
-            </div>
+  <footer class="footer">
+    <p>© <span class="current-year"></span> Pr. Youssouf EL ALLIOUI ·
+      <a href="mailto:y.elallioui@usms.ma">y.elallioui@usms.ma</a> ·
+      <a href="http://www.usms.ac.ma/" target="_blank">USMS</a>
+    </p>
+  </footer>
 
-            <!-- Colonne Établissement -->
-            <div class="footer-column">
-                <h3>Établissement</h3>
-                <p>
-                    Département Mathématiques & Informatique<br>
-                    Faculté Polydisciplinaire de Khouribga  
-                    (<a href="https://www.fpk.ac.ma/" target="_blank">FPK</a>)<br>
-                    Université Sultan Moulay Slimane  
-                    (<a href="https://www.usms.ac.ma/en" target="_blank">USMS</a>)
-                </p>
-                <p>
-                    Filières : SMI, SIIA, Filière d'excellence Informatique
-                </p>
-            </div>
-
-            <!-- Colonne Ressources -->
-            <div class="footer-column">
-                <h3>Ressources UML</h3>
-                <ul>
-                    <li>
-                        <a href="https://fr.slideshare.net/slideshow/uml-2-2-introduction-complete-a-la-modelisation-orientee-objet-et-aux-diagrammes-uml/283926647" target="_blank">
-                            Support de cours (Présentation PowerPoint)
-                        </a>
-                    </li>
-                    <li><a href="#">Résumé UML – Cas d'utilisation</a></li>
-                    <li><a href="#">Bonnes pratiques UML</a></li>
-                    <li><a href="#">Documentation UML officielle</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <span>© 2025 – Application pédagogique QCM UML</span>
-            <span>•</span>
-            <span>Développée pour l'enseignement universitaire</span>
-        </div>
-    </footer>
-
+  <script src="../script.js"></script>
 </body>
 </html>
