@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QCM Programmation Web — Pr. Youssouf EL ALLIOUI</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="icon" type="image/png" href="../../images/profile.png" />
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="../../index.html" class="nav-brand">Pr. EL ALLIOUI</a>
+        <ul class="nav-links">
+          <li><a href="../../index.html">About</a></li>
+          <li><a href="../../enseignement/index.html">Enseignement</a></li>
+          <li><a href="../../recherche/index.html">Recherche</a></li>
+          <li><a href="../../cv/index.html">CV</a></li>
+          <li><a href="../index.html" class="active">QCM</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="../../index.html">About</a>
+        <a href="../../enseignement/index.html">Enseignement</a>
+        <a href="../../recherche/index.html">Recherche</a>
+        <a href="../../cv/index.html">CV</a>
+        <a href="../index.html" class="active">QCM</a>
+        <a href="../../contact/index.html">Contact</a>
+      </nav>
+    </nav>
+  </header>
+  <nav class="subnav">
+    <div class="container">
+      <a href="../index.html">← Toutes les matières</a>
+      <span style="color:var(--cyan); font-family:var(--font-mono);">🌐 Programmation Web</span>
+    </div>
+  </nav>
+  <main>
+    <div class="container" style="padding-top:2rem; padding-bottom:4rem;">
+      <div class="page-header fade-up">
+        <h1>🌐 Programmation Web</h1>
+        <p>Quiz HTML/CSS, JavaScript et PHP. Chapitres bientôt disponibles.</p>
+      </div>
+      <div id="cards"></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© <span class="current-year"></span> Pr. Youssouf EL ALLIOUI ·
+      <a href="mailto:y.elallioui@usms.ma">y.elallioui@usms.ma</a> ·
+      <a href="http://www.usms.ac.ma/" target="_blank">USMS</a>
+    </p>
+  </footer>
+  <script src="../../script.js"></script>
+  <script src="data.js"></script>
+  <script>
+    document.getElementById('cards').innerHTML =
+      '<div class="cards-grid">' +
+      DATA.map(function(c,i){
+        return '<div class="card observe" style="animation-delay:'+(i*.08)+'s'+(!c.disponible?'; opacity:.65;':'')+'">' +
+          '<div class="card-meta"><h3>'+c.icon+' '+c.titre+'</h3>' +
+          (c.disponible?'<span class="tag" style="color:var(--green);border-color:var(--green);">Disponible</span>':'<span class="tag">Bientôt</span>') +
+          '</div><p style="font-size:.9rem;color:var(--text-dim);margin:.75rem 0 1.25rem;">'+c.description+'</p>' +
+          '<div class="card-actions">' +
+          (c.nb_questions?'<span class="tag">'+c.nb_questions+' questions</span>':'<span></span>') +
+          (c.disponible?'<a href="'+c.lien+'" class="btn btn-primary">Démarrer →</a>':'<button class="btn btn-outline" disabled style="opacity:.5;cursor:not-allowed;">Bientôt disponible</button>') +
+          '</div></div>';
+      }).join('')+'</div>';
+  </script>
+</body>
+</html>
