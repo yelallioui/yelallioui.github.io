@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curriculum Vitae — Pr. Youssouf EL ALLIOUI, Professeur-Chercheur en Informatique, USMS Khouribga." />
+  <title>CV — Pr. Youssouf EL ALLIOUI</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../images/profile.png" />
+  <style>
+    /* ── Styles spécifiques CV ── */
+    .cv-section { margin-bottom: 2.5rem; }
+
+    .cv-entry {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0 1.5rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-entry:last-child { border-bottom: none; }
+
+    .cv-date {
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      color: var(--cyan);
+      padding-top: .2rem;
+      line-height: 1.5;
+    }
+
+    .cv-body h4 { font-size: 1rem; margin-bottom: .2rem; }
+    .cv-body .cv-inst {
+      font-size: .85rem;
+      color: var(--text-muted);
+      margin-bottom: .3rem;
+    }
+    .cv-body .cv-detail {
+      font-size: .83rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .skill-block h4 {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--cyan);
+      margin-bottom: .6rem;
+      font-family: var(--font-mono);
+    }
+
+    .print-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 50;
+    }
+
+    @media (max-width: 600px) {
+      .cv-entry { grid-template-columns: 1fr; gap: .3rem; }
+      .cv-date  { color: var(--text-dim); }
+      .print-btn { bottom: 1rem; right: 1rem; }
+    }
+
+    @media print {
+      .nav, .subnav, .footer, .print-btn { display: none !important; }
+      body { background: #fff; color: #000; }
+      .card { border: 1px solid #ddd; }
+      .cv-date { color: #555; }
+      .cv-body h4 { color: #000; }
+      h2 { color: #000; }
+      h3 { color: #333; }
+      .tag { background: #eee; color: #333; border-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ Navigation ══ -->
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="../index.html" class="nav-brand">Pr. EL ALLIOUI</a>
+        <ul class="nav-links">
+          <li><a href="../index.html">About</a></li>
+          <li><a href="../enseignement/index.html">Enseignement</a></li>
+          <li><a href="../recherche/index.html">Recherche</a></li>
+          <li><a href="index.html" class="active">CV</a></li>
+          <li><a href="../qcm/index.html">QCM</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="../index.html">About</a>
+        <a href="../enseignement/index.html">Enseignement</a>
+        <a href="../recherche/index.html">Recherche</a>
+        <a href="index.html" class="active">CV</a>
+        <a href="../qcm/index.html">QCM</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <!-- ══ Contenu ══ -->
+  <main>
+    <div class="container" style="padding-top:2.5rem; padding-bottom:4rem;">
+
+      <!-- En-tête CV -->
+      <div class="card fade-up" style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap; margin-bottom:2.5rem;">
+        <img
+          src="../images/profile.jpg"
+          alt="Pr. Youssouf EL ALLIOUI"
+          style="width:90px; height:90px; border-radius:50%; object-fit:cover;
+                 border:2px solid var(--cyan); box-shadow:0 0 20px var(--cyan-glow); flex-shrink:0;"
+        />
+        <div style="flex:1;">
+          <h1 style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:.3rem;">Pr. Youssouf EL ALLIOUI</h1>
+          <p style="color:var(--cyan); font-family:var(--font-mono); font-size:.88rem; margin-bottom:.4rem;">
+            Professeur-Chercheur en Informatique
+          </p>
+          <p style="color:var(--text-dim); font-size:.83rem; margin-bottom:.6rem;">
+            Université Sultan Moulay Slimane — Faculté Polydisciplinaire de Khouribga, Maroc
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:.5rem;">
+            <a href="mailto:y.elallioui@usms.ma" class="badge">✉️ y.elallioui@usms.ma</a>
+            <a href="https://orcid.org/0000-0001-7176-7434" target="_blank" class="badge">🆔 ORCID</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ" target="_blank" class="badge">🎓 Scholar</a>
+            <a href="https://www.linkedin.com/in/yelallioui" target="_blank" class="badge">💼 LinkedIn</a>
+          </div>
+        </div>
+        <div>
+          <a href="pdfs/cv-yelallioui.pdf" class="btn btn-primary" target="_blank"
+             style="flex-shrink:0;" id="pdf-btn">
+            📄 Télécharger PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Formation ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Formation</h2>
+
+        <div class="cv-entry">
+          <div class="cv-date">Oct. 2012</div>
+          <div class="cv-body">
+            <h4>Doctorat en Informatique</h4>
+            <p class="cv-inst">Université Sidi Mohamed Ben Abdellah (USMBA), Fès · LAAS-CNRS, Toulouse · CHU Hassan II, Fès</p>
+            <p class="cv-detail">
+              <strong>Thèse :</strong> Une approche de gestion de profils et de personnalisation des réponses neurologiques dans un environnement mobile<br>
+              <strong>Projet :</strong> TENEMO — Télé-NEuroScience Mobile
+            </p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">2007</div>
+          <div class="cv-body">
+            <h4>DESS — Génie Informatique</h4>
+            <p class="cv-inst">Université Sidi Mohamed Ben Abdellah (USMBA), Fès</p>
+            <p class="cv-detail">Diplôme d'Études Supérieures Spécialisées</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Expérience professionnelle ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Expérience Professionnelle</h2>
+
+        <div class="cv-entry">
+          <div class="cv-date">Fév. 2013<br>— présent</div>
+          <div class="cv-body">
+            <h4>Enseignant-Chercheur</h4>
+            <p class="cv-inst">Université Sultan Moulay Slimane (USMS) — Faculté Polydisciplinaire de Khouribga</p>
+            <p class="cv-detail">
+              Département des Mathématiques et Informatique<br>
+              Enseignement Licence &amp; Master · Encadrement PFE &amp; Mémoires · Recherche en ML, EDM, Semantic Web
+            </p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">2013 — 2019</div>
+          <div class="cv-body">
+            <h4>Enseignant Vacataire</h4>
+            <p class="cv-inst">SUP'MANAGEMENT — École d'Ingénierie, Maroc</p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">Fév. — Mai 2012</div>
+          <div class="cv-body">
+            <h4>Enseignant Vacataire</h4>
+            <p class="cv-inst">IGA de Fès, Maroc</p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">Sept. 2008<br>— Juil. 2011</div>
+          <div class="cv-body">
+            <h4>Formateur — Concepteur Réalisateur Java EE</h4>
+            <p class="cv-inst">OFPPT — ISTA Al-Adarissa, Fès</p>
+            <p class="cv-detail">Formation qualifiante certifiante : Java EE, Servlets, JSP, EJB, JSF, Hibernate, JBoss</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Enseignement ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Enseignement <span style="font-size:.8rem; color:var(--text-dim); font-family:var(--font-mono); font-weight:400; margin-left:.5rem;">15+ ans</span></h2>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>Module</th><th>Niveau</th><th>Filière</th><th>Institution</th><th>Depuis</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Programmation Orientée Objet (Java)</strong></td>
+                <td><span class="tag">Licence Pro., S6</span></td>
+                <td>SMI</td><td>USMS — FPK</td>
+                <td class="mono">2020</td>
+              </tr>
+              <tr>
+                <td><strong>Web Dynamique (PHP &amp; MySQL)</strong></td>
+                <td><span class="tag">Licence, S6</span></td>
+                <td>SMI</td><td>USMS — FPK</td>
+                <td class="mono">2018</td>
+              </tr>
+              <tr>
+                <td><strong>UML &amp; Génie Logiciel</strong></td>
+                <td><span class="tag">Licence, S5</span></td>
+                <td>SMI</td><td>USMS — FPK</td>
+                <td class="mono">2013</td>
+              </tr>
+              <tr>
+                <td><strong>Informatique avancée</strong></td>
+                <td><span class="tag">Master II</span></td>
+                <td>Formation continue</td><td>FST — USMS</td>
+                <td class="mono">2014</td>
+              </tr>
+              <tr>
+                <td><strong>Concepteur Réalisateur Java EE</strong></td>
+                <td><span class="tag">Formation qualifiante</span></td>
+                <td>—</td><td>ISTA-OFPPT, Fès</td>
+                <td class="mono">2008–2011</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Publications sélectionnées ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Publications Sélectionnées</h2>
+
+        <div class="cv-entry">
+          <div class="cv-date">2019</div>
+          <div class="cv-body">
+            <h4>A fuzzy classification approach for learning style prediction based on web mining technique in e-learning environments</h4>
+            <p class="cv-inst">El Aissaoui O., El Alami El Madani Y., Oughdir L., <strong>El Allioui Y.</strong></p>
+            <p class="cv-detail">
+              <em>Education and Information Technologies</em>, 24, 1943–1959. Springer.
+              <a href="https://doi.org/10.1007/s10639-018-9820-5" target="_blank" style="color:var(--cyan); margin-left:.5rem;">DOI →</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">2019</div>
+          <div class="cv-body">
+            <h4>Advanced prediction of learner's profile based on Felder-Silverman learning styles using web usage mining and fuzzy c-means</h4>
+            <p class="cv-inst"><strong>El Allioui Y.</strong></p>
+            <p class="cv-detail">
+              <em>International Journal of Computer Aided Engineering and Technology</em>, 11(4/5), 495. Inderscience.
+              <a href="https://doi.org/10.1504/IJCAET.2019.100447" target="_blank" style="color:var(--cyan); margin-left:.5rem;">DOI →</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-date">2020</div>
+          <div class="cv-body">
+            <h4>A Multiple Linear Regression-Based Approach to Predict Student Performance</h4>
+            <p class="cv-inst">El Aissaoui O. et al., <strong>El Allioui Y.</strong></p>
+            <p class="cv-detail">
+              In: AI2SD'2019. <em>Springer</em>, AISC vol. 1102.
+              <a href="https://doi.org/10.1007/978-3-030-36653-7_2" target="_blank" style="color:var(--cyan); margin-left:.5rem;">DOI →</a>
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <a href="../recherche/articles/index.html" class="btn btn-outline">Voir toutes les publications →</a>
+        </div>
+      </div>
+
+      <!-- ── Compétences ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Compétences Techniques</h2>
+        <div class="skills-grid">
+
+          <div class="card skill-block">
+            <h4>Langages</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">Python</span><span class="tag">Java</span><span class="tag">Java EE</span>
+              <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">R</span>
+              <span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+              <span class="tag">OWL</span><span class="tag">RDF</span>
+            </div>
+          </div>
+
+          <div class="card skill-block">
+            <h4>ML &amp; IA</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span><span class="tag">PyTorch</span>
+              <span class="tag">HuggingFace</span><span class="tag">Weka</span>
+              <span class="tag">NLTK</span><span class="tag">spaCy</span>
+            </div>
+          </div>
+
+          <div class="card skill-block">
+            <h4>Semantic Web</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">Protégé</span><span class="tag">Apache Jena</span>
+              <span class="tag">SPARQL</span><span class="tag">Pellet</span>
+            </div>
+          </div>
+
+          <div class="card skill-block">
+            <h4>Bases de données</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span><span class="tag">Oracle</span>
+            </div>
+          </div>
+
+          <div class="card skill-block">
+            <h4>Analyse &amp; Conception</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">UML</span><span class="tag">Merise</span>
+              <span class="tag">Design Patterns</span><span class="tag">MVC</span><span class="tag">RUP</span>
+            </div>
+          </div>
+
+          <div class="card skill-block">
+            <h4>Outils</h4>
+            <div class="tags" style="margin-top:0;">
+              <span class="tag">Git</span><span class="tag">GitHub</span>
+              <span class="tag">Docker</span><span class="tag">Jupyter</span>
+              <span class="tag">LaTeX</span><span class="tag">Eclipse</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Responsabilités ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Responsabilités Académiques</h2>
+        <div class="cv-entry">
+          <div class="cv-date">Actuel</div>
+          <div class="cv-body">
+            <h4>Coordonnateur de la filière SMI</h4>
+            <p class="cv-inst">Sciences Mathématiques et Informatique — USMS, FPK</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-date">Actuel</div>
+          <div class="cv-body">
+            <h4>Chef de la Commission Scientifique</h4>
+            <p class="cv-inst">Recherche scientifique, bibliothèque et archives — USMS, FPK</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-date">Actuel</div>
+          <div class="cv-body">
+            <h4>Membre du Collège du Département</h4>
+            <p class="cv-inst">Mathématiques et Informatique — USMS, FPK</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-date">Actuel</div>
+          <div class="cv-body">
+            <h4>Membre des Commissions de Recrutement</h4>
+            <p class="cv-inst">Postes d'enseignants-chercheurs — USMS</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-date">Continu</div>
+          <div class="cv-body">
+            <h4>Membre de comités de programme</h4>
+            <p class="cv-inst">AI2SD · ICDS · ESAI et autres conférences internationales</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Profils académiques ── -->
+      <div class="cv-section observe">
+        <h2 class="section-title">Profils Académiques</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:.6rem;">
+          <a href="https://scholar.google.com/citations?hl=en&user=OeiqzH0AAAAJ" target="_blank" class="badge">🎓 Google Scholar</a>
+          <a href="https://www.researchgate.net/profile/Youssouf_El_Allioui" target="_blank" class="badge">🔬 ResearchGate</a>
+          <a href="https://orcid.org/0000-0001-7176-7434" target="_blank" class="badge">🆔 ORCID 0000-0001-7176-7434</a>
+          <a href="https://www.linkedin.com/in/yelallioui" target="_blank" class="badge">💼 LinkedIn</a>
+          <a href="https://github.com/yelallioui" target="_blank" class="badge">💻 GitHub</a>
+        </div>
+      </div>
+
+    </div><!-- .container -->
+  </main>
+
+  <!-- Bouton impression flottant -->
+  <button class="btn btn-outline print-btn" onclick="window.print()">🖨️ Imprimer</button>
+
+  <footer class="footer">
+    <p>© <span class="current-year"></span> Pr. Youssouf EL ALLIOUI ·
+      <a href="mailto:y.elallioui@usms.ma">y.elallioui@usms.ma</a> ·
+      <a href="http://www.usms.ac.ma/" target="_blank">USMS</a>
+    </p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    const pdfBtn = document.getElementById('pdf-btn');
+    if (pdfBtn) {
+      fetch('pdfs/cv-yelallioui.pdf', { method: 'HEAD' })
+        .then(r => { if (!r.ok) pdfBtn.style.display = 'none'; })
+        .catch(() => pdfBtn.style.display = 'none');
+    }
+  </script>
+</body>
+</html>
