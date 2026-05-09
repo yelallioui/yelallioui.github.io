@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM — Class Diagram</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="../../../images/profile.png" />
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="../../../index.html" class="nav-brand">Pr. EL ALLIOUI</a>
+        <ul class="nav-links">
+          <li><a href="../../../index.html">About</a></li>
+          <li><a href="../../../enseignement/index.html">Enseignement</a></li>
+          <li><a href="../../../recherche/index.html">Recherche</a></li>
+          <li><a href="../../../cv/index.html">CV</a></li>
+          <li><a href="../../index.html" class="active">QCM</a></li>
+          <li><a href="../../../contact/index.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="../../../index.html">About</a>
+        <a href="../../../enseignement/index.html">Enseignement</a>
+        <a href="../../../recherche/index.html">Recherche</a>
+        <a href="../../../cv/index.html">CV</a>
+        <a href="../../index.html" class="active">QCM</a>
+        <a href="../../../contact/index.html">Contact</a>
+      </nav>
+    </nav>
+  </header>
+
+  <div class="progress-container" role="status" aria-live="polite">
+    <div class="qcm-page-title" style="text-align:center; font-family:var(--font-mono); font-size:.8rem; color:var(--cyan); margin-bottom:8px;">Class Diagram</div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-text" id="progressText">Question 1 / ?</div>
+  </div>
+
+  <main class="quiz-container" id="quizContainer">
+    <div class="question-card">
+      <div style="display:flex; justify-content:flex-end; margin-bottom:.75rem;">
+        <span id="levelBadge" class="qcm-level-badge level-facile">Facile</span>
+      </div>
+      <h2 class="question-title" id="questionTitle">Chargement...</h2>
+      <div class="choices-container" id="choicesContainer" role="radiogroup" aria-label="Options de réponse"></div>
+    </div>
+  </main>
+
+  <div class="explanation-panel" id="explanationPanel" role="region" aria-live="assertive">
+    <div class="explanation-content" id="explanationContent"></div>
+  </div>
+
+  <div class="navigation-buttons">
+    <button class="nav-button nav-prev" id="prevButton" title="Précédent (flèche gauche)">
+      <span class="nav-icon">←</span>
+      <span class="nav-text">Précédent</span>
+    </button>
+    <button class="nav-button nav-next" id="nextButton" title="Suivant (flèche droite)">
+      <span class="nav-text">Suivant</span>
+      <span class="nav-icon">→</span>
+    </button>
+  </div>
+
+  <div class="answer-indicator" id="answerIndicator" aria-hidden="true"></div>
+
+  <script src="data.js"></script>
+  <script src="../../../script.js"></script>
+  <script src="../../engine.js"></script>
+</body>
+</html>
