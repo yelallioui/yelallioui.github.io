@@ -7,6 +7,57 @@
   <title>Cours — Enseignement — Pr. Youssouf EL ALLIOUI</title>
   <link rel="stylesheet" href="../../styles.css" />
   <link rel="icon" type="image/png" href="../../images/profile.png" />
+  <style>
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .filter-tab {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      color: var(--text-muted);
+      padding: .35rem 1rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+      font-family: var(--font-mono);
+    }
+    .filter-tab:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .filter-tab.active {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: var(--bg);
+    }
+    .type-badge {
+      font-size: .72rem;
+      font-weight: 600;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+    }
+    .type-support {
+      color: var(--cyan);
+      background: rgba(0,212,255,.12);
+      border: 1px solid var(--cyan);
+    }
+    .type-poly {
+      color: var(--purple);
+      background: rgba(139,92,246,.12);
+      border: 1px solid var(--purple);
+    }
+    .type-slides {
+      color: var(--green);
+      background: rgba(0,245,160,.12);
+      border: 1px solid var(--green);
+    }
+  </style>
 </head>
 <body>
 
@@ -54,7 +105,12 @@
 
       <div class="page-header fade-up">
         <h1>Cours Magistraux</h1>
-        <p>Supports de cours · Polycopiés · Slides</p>
+        <div class="filter-tabs" role="group" aria-label="Filtrer par type">
+          <button class="filter-tab active" data-filter="tous"              onclick="applyFilter(this,'tous')">Tous</button>
+          <button class="filter-tab"        data-filter="Supports-de-cours" onclick="applyFilter(this,'Supports-de-cours')">Supports de cours</button>
+          <button class="filter-tab"        data-filter="Polycopies"        onclick="applyFilter(this,'Polycopies')">Polycopiés</button>
+          <button class="filter-tab"        data-filter="Slides"            onclick="applyFilter(this,'Slides')">Slides</button>
+        </div>
       </div>
 
       <div class="cards-grid" id="cards">
@@ -74,34 +130,67 @@
   <script src="../../script.js"></script>
   <script src="data.js"></script>
   <script>
+    var currentFilter = 'tous';
+
+    function typeBadge(type) {
+      var map = {
+        'Supports-de-cours': { label: 'Support de cours', cls: 'type-support' },
+        'Polycopies':        { label: 'Polycopié',        cls: 'type-poly'    },
+        'Slides':            { label: 'Slides',           cls: 'type-slides'  }
+      };
+      var t = map[type] || { label: type, cls: '' };
+      return '<span class="type-badge ' + t.cls + '">' + t.label + '</span>';
+    }
+
     function renderCards(data) {
-      const container = document.getElementById('cards');
-      if (!data || data.length === 0) {
-        container.innerHTML = `
-          <div class="empty-state">
-            <span style="font-size:2rem;">📂</span>
-            <p>Aucun cours disponible pour le moment.</p>
-          </div>`;
+      var container = document.getElementById('cards');
+      var filtered = currentFilter === 'tous'
+        ? data
+        : data.filter(function(item) { return item.type === currentFilter; });
+
+      if (!filtered.length) {
+        container.innerHTML =
+          '<div class="empty-state">' +
+          '<span style="font-size:2rem;">📂</span>' +
+          '<p>Aucun cours disponible pour ce type.</p>' +
+          '</div>';
         return;
       }
-      container.innerHTML = data.map(item => `
-        <div class="card observe">
-          <div class="card-meta">
-            <h4>${item.module}</h4>
-            <span class="tag">${item.niveau}</span>
-          </div>
-          <p class="card-sub">${item.filiere} &nbsp;·&nbsp; ${item.institution}</p>
-          <p style="font-size:.9rem;">${item.description}</p>
-          <div class="card-actions">
-            <span class="mono" style="font-size:.78rem; color:var(--text-dim);">📅 ${item.annee}</span>
-            ${item.pdf
-              ? `<a href="${item.pdf}" class="btn btn-outline" target="_blank">📄 Télécharger</a>`
-              : `<span style="color:var(--text-dim); font-size:.78rem; font-family:var(--font-mono);">PDF bientôt disponible</span>`
-            }
-          </div>
-        </div>
-      `).join('');
+
+      container.innerHTML = filtered.map(function(item) {
+        var liensHtml = (item.liens && item.liens.length)
+          ? item.liens.map(function(l) {
+              return '<a href="' + l.url + '" class="btn btn-outline" target="_blank" rel="noopener">' + l.label + '</a>';
+            }).join('')
+          : '<span style="color:var(--text-dim);font-size:.78rem;font-family:var(--font-mono);">Lien bientôt disponible</span>';
+
+        return '<div class="card observe">' +
+          '<div class="card-meta">' +
+            '<h4>' + item.module + '</h4>' +
+            '<div style="display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-top:.25rem;">' +
+              '<span class="tag">' + item.niveau + '</span>' +
+              typeBadge(item.type) +
+            '</div>' +
+          '</div>' +
+          '<p class="card-sub">' + item.filiere + ' &nbsp;·&nbsp; ' + item.institution + '</p>' +
+          '<p style="font-size:.9rem;">' + item.description + '</p>' +
+          '<div class="card-actions">' +
+            '<span class="mono" style="font-size:.78rem;color:var(--text-dim);">📅 ' + item.annee + '</span>' +
+            '<div style="display:flex;gap:.5rem;flex-wrap:wrap;">' + liensHtml + '</div>' +
+          '</div>' +
+        '</div>';
+      }).join('');
     }
+
+    function applyFilter(btn, filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-tab').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      renderCards(DATA);
+    }
+
     renderCards(DATA);
   </script>
 </body>
