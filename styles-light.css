@@ -1,0 +1,47 @@
+/* ============================================================
+   styles-light.css — Thème clair
+   Pr. Youssouf EL ALLIOUI — yelallioui.github.io
+   Chargé dynamiquement par script.js quand le thème clair est actif.
+   Remplace uniquement les variables de couleur et les valeurs rgba codées en dur.
+   ============================================================ */
+
+/* ── Variables ── */
+:root {
+  --bg:          #f0f5fb;
+  --surface:     #ffffff;
+  --surface2:    #e2eaf4;
+  --border:      rgba(0, 0, 0, 0.1);
+  --cyan:        #0077b6;
+  --cyan-glow:   rgba(0, 119, 182, 0.1);
+  --purple:      #7c3aed;
+  --green:       #059669;
+  --text:        #1e293b;
+  --text-muted:  #475569;
+  --text-dim:    #94a3b8;
+}
+
+/* ── Nav — fond codé en dur dans styles.css ── */
+.nav {
+  background: rgba(240, 245, 251, 0.92);
+}
+
+/* ── Tag — rgba cyan codés en dur ── */
+.tag {
+  background: rgba(0, 119, 182, 0.08);
+  border-color: rgba(0, 119, 182, 0.2);
+}
+
+/* ── Card hover — rgba cyan codé en dur ── */
+.card:hover {
+  border-color: rgba(0, 119, 182, 0.3);
+}
+
+/* ── Table row hover — rgba cyan codé en dur ── */
+tr:hover td {
+  background: rgba(0, 119, 182, 0.04);
+}
+
+/* ── Btn outline hover text — force la lisibilité ── */
+.btn-outline {
+  color: var(--text-muted);
+}
